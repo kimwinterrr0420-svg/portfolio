@@ -27,7 +27,7 @@
 
   <main>
 
-    <!-- ============== PROJECT HEADER ============== -->
+    <!-- ============== PROJECT HERO ============== -->
     <section class="project-hero">
       <div class="container">
         <a class="back-link" href="./index.html">← 返回首页</a>
@@ -35,12 +35,11 @@
           <span class="tag-num">01</span>
           <span class="tag-text">百度 MEG 搜索产品部</span>
         </div>
-        <h1 class="project-title">Finscope 金融智能体</h1>
+        <h1 class="project-title">Finscope 金融智��体</h1>
         <p class="project-meta">2026.1 - 2026.4 · 产品经理 · 一站式金融助手</p>
         <p class="project-desc">
-          以「Agent 基础能力优化 → 多模态升级 → 核心场景深耕」为路径，将 Finscope FinChat 打造成能看懂行情、能选股、能复盘的金融 Agent。上线后 Agent 日均分发从 <b>1w+ 跃升至 5w+</b>，核心场景新增 PV <b>+30%</b>。
+          核心命题：<b>如何让一个金融搜索产品具备「智能体」的人格与决策能力？</b>以「Agent 基础能力 → 多模态升级 → AI 选股深耕」三阶段路径，把 Finscope FinChat 打造成能看懂行情、能选股、能复盘的金融 Agent。
         </p>
-
         <div class="project-links">
           <a class="link-btn" href="https://finance.baidu.com/finchat" target="_blank" rel="noopener">
             体验 Finscope FinChat ↗
@@ -49,90 +48,174 @@
       </div>
     </section>
 
-    <!-- ============== KEY METRICS ============== -->
-    <section class="project-section">
-      <div class="container">
-        <div class="section-head">
-          <span class="section-num">DATA</span>
-          <h2 class="section-title">关键数据</h2>
-        </div>
-        <div class="metrics-row">
-          <div class="metric">
-            <div class="metric-num">1w → 5w+</div>
-            <div class="metric-desc">日均分发次数（4 倍提升）</div>
-          </div>
-          <div class="metric">
-            <div class="metric-num">+15%</div>
-            <div class="metric-desc">多模态升级后 PV</div>
-          </div>
-          <div class="metric">
-            <div class="metric-num">+20%</div>
-            <div class="metric-desc">多模态升级后 UV</div>
-          </div>
-          <div class="metric">
-            <div class="metric-num">+30%</div>
-            <div class="metric-desc">AI 选股场景新增 PV</div>
+    <!-- ============== 闭环叙事 ============== -->
+    <div class="closed-loop">
+
+      <!-- 总数据摘要条 -->
+      <div class="loop-summary">
+        <div class="container">
+          <div class="loop-summary-row">
+            <div class="loop-summary-item">
+              <div class="loop-summary-num">1w → 5w+</div>
+              <div class="loop-summary-label">Agent 日均分发（4× 跃升）</div>
+            </div>
+            <div class="loop-summary-item">
+              <div class="loop-summary-num">+15%</div>
+              <div class="loop-summary-label">多模态升级后 PV</div>
+            </div>
+            <div class="loop-summary-item">
+              <div class="loop-summary-num">+20%</div>
+              <div class="loop-summary-label">多模态升级后 UV</div>
+            </div>
+            <div class="loop-summary-item">
+              <div class="loop-summary-num">+30%</div>
+              <div class="loop-summary-label">AI 选股场景 新增 PV</div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- ============== WHAT I DID ============== -->
-    <section class="project-section project-section-alt">
+      <!-- 阶段一：Agent 基础能力 -->
+      <section class="loop-stage">
+        <div class="container">
+          <div class="loop-stage__head">
+            <span class="loop-stage__num">1</span>
+            <span class="loop-stage__label">基础基建</span>
+          </div>
+          <h2 class="loop-stage__title">Agent 基础能力 —— 让它先「听懂问题」</h2>
+
+          <div class="loop-stage__body">
+            <!-- 截图 -->
+            <div class="loop-stage__screen">
+              <img src="assets/finscope-home.png" alt="Finscope FinChat 金融首页" loading="lazy" />
+              <p class="screen-caption">FinChat 入口 — 用户在行情页以自然语言调起金融助手</p>
+            </div>
+
+            <!-- 数据 + 贡献 -->
+            <div class="loop-stage__right">
+              <div class="loop-kpis">
+                <div class="loop-kpi">
+                  <div class="kpi-val">1w→5w+</div>
+                  <div class="kpi-label">日均分发（阶段上线后）</div>
+                </div>
+              </div>
+              <div class="loop-step">
+                <p class="loop-step__role">我的角色与贡献</p>
+                <p class="loop-step__text">
+                  接手时 Agent 经常「答非所问」——用户问「茅台 PE」却推了百度百科。我<b>构建了多级意图测试集 + 评分体系</b>，逐条拆解 200+ Badcase，细化<b>场景/实体/指标分类规则</b>并持续调优 Prompt。同时定义了不同强弱点场景的<b>「兜底策略」</b>���如无实时数据时给出最近一期财报而非空回复），让 Agent 从「偶尔能答对」进化为「多数场景能命中意图」。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 阶段二：多模态升级 -->
+      <section class="loop-stage">
+        <div class="container">
+          <div class="loop-stage__head">
+            <span class="loop-stage__num">2</span>
+            <span class="loop-stage__label">体验升级</span>
+          </div>
+          <h2 class="loop-stage__title">多模态交互 —— 从「纯文本」到「可看、可存、可传播」</h2>
+
+          <div class="loop-stage__body">
+            <!-- 双截图并排 -->
+            <div class="loop-stage__right" style="order: -1;">
+              <div class="loop-screens">
+                <div class="loop-stage__screen">
+                  <img src="assets/finscope-finchat-share.png" alt="FinChat 分享卡片" loading="lazy" />
+                  <p class="screen-caption">长按生成分享卡片：股评 / 链接 / 图片</p>
+                </div>
+                <div class="loop-stage__screen">
+                  <img src="assets/finscope-finchat-report.png" alt="FinChat 深度研究" loading="lazy" />
+                  <p class="screen-caption">输入自然语言 → 结构化研究报告（图文混排）</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="loop-stage__right">
+              <div class="loop-kpis">
+                <div class="loop-kpi">
+                  <div class="kpi-val">+15%</div>
+                  <div class="kpi-label">PV 提升</div>
+                </div>
+                <div class="loop-kpi">
+                  <div class="kpi-val">+20%</div>
+                  <div class="kpi-label">UV 提升</div>
+                </div>
+                <div class="loop-kpi">
+                  <div class="kpi-val">4 模块</div>
+                  <div class="kpi-label">完整 PRD 独立输出</div>
+                </div>
+              </div>
+              <div class="loop-step">
+                <p class="loop-step__role">我的角色与贡献</p>
+                <p class="loop-step__text">
+                  纯文本对话无法留住用户。我独立输出完整 PRD，规划了<b>A 页通栏强卡改造、项目化记忆、历史记录搜索、对话分享</b>四大模块。其中分享模块设计了「股评 / 链接 / 图片」三种分享形态，<b>打通了 Agent 对话到社区 Feed 的内容传播闭环</b>——用户分析完成后一键发布到 FinScope 社区，让优质内容从私域流向公域。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 阶段三：AI 选股 -->
+      <section class="loop-stage">
+        <div class="container">
+          <div class="loop-stage__head">
+            <span class="loop-stage__num">3</span>
+            <span class="loop-stage__label">核心场景</span>
+          </div>
+          <h2 class="loop-stage__title">AI 选股 —— 「点选 → 对话 → 策略」三阶段进化</h2>
+
+          <div class="loop-stage__body">
+            <!-- 截图 -->
+            <div class="loop-stage__screen">
+              <img src="assets/finscope-screener.png" alt="Finscope 基础选股器" loading="lazy" />
+              <p class="screen-caption">阶段一：基础选股器 GUI — 指标组合筛选</p>
+            </div>
+
+            <div class="loop-stage__right">
+              <div class="loop-kpis">
+                <div class="loop-kpi">
+                  <div class="kpi-val">+30%</div>
+                  <div class="kpi-label">选股场景 新增 PV</div>
+                </div>
+                <div class="loop-kpi">
+                  <div class="kpi-val">65%</div>
+                  <div class="kpi-label">组合指标 识别准确率</div>
+                </div>
+                <div class="loop-kpi">
+                  <div class="kpi-val">80%</div>
+                  <div class="kpi-label">核心场景 覆盖度</div>
+                </div>
+              </div>
+              <div class="loop-step">
+                <p class="loop-step__role">我的角色与贡献</p>
+                <p class="loop-step__text">
+                  分析了 16w+ 用户选股 query 后，发现 PC 端「指标选股」是最大刚需。我设计了三阶段进化路径：<b>阶段一</b>基础选股器（GUI 点选指标组合）；<b>阶段二</b>自然语言选股（如「找到市盈率&lt;20 且 ROE&gt;15% 的消费股」→ 结构化结果）；<b>阶段三</b>策略/形态选股（如「近期突破 60 日均线的 AI 概念股」）。引入<b>多轮追问 + 兜底逻辑</b>，确保同一 Session 内持续对话不跳脱。设计了拆分→纠错→反问的容错链路，让选股从「一次性查询」变成「可推敲的分析过程」。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 结果总览（深色） -->
+    <div class="loop-outcome">
       <div class="container">
         <div class="section-head">
-          <span class="section-num">WHAT I DID</span>
-          <h2 class="section-title">我做的事</h2>
+          <span class="section-num">OUTCOME</span>
+          <h2 class="section-title">项目闭环：从「工具」到「助理」</h2>
         </div>
-
-        <div class="features">
-          <div class="feature-card">
-            <div class="feature-num">A</div>
-            <h3>Agent 基础能力优化</h3>
-            <p>构建多级意图测试集与评分体系；逐条拆解 Badcase，细化场景/实体/指标分类规则与 Prompt，驱动意图识别准确率与场景覆盖度提升。</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-num">B</div>
-            <h3>多模态交互升级</h3>
-            <p>独立输出 PRD 规划 A 页通栏强卡改造、项目化记忆、历史记录搜索、对话分享（股评 / 链接 / 图片）四大模块，打通 Agent 与社区场景闭环。</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-num">C</div>
-            <h3>AI 选股 · 三阶段路径</h3>
-            <p>基于 16w+ 用户选股 query 挖掘 PC 端指标选股刚需：基础选股器（GUI）→ 自然语言选股（LUI+GUI）→ 策略/形态选股；多轮追问 + 兜底逻辑实现同 Session 连贯对话，组合指标识别准确率 <b>65%</b>，核心场景覆盖度 <b>80%</b>。</p>
-          </div>
-        </div>
+        <p style="font-size:15px;color:rgba(255,255,255,0.55);max-width:640px;line-height:1.7;margin-top:8px;">
+          三个阶段逐层叠加——基础能力让 Agent 能答、多模态让用户想看、选股能力让用户会来——最终推动 FinChat 从搜索页附属功能升级为独立流量入口，日均分发达成 <b style="color:#fde68a;font-weight:600;">4 倍跃升</b>。
+        </p>
       </div>
-    </section>
-
-    <!-- ============== SCREENSHOTS ============== -->
-    <section class="project-section">
-      <div class="container">
-        <div class="section-head">
-          <span class="section-num">SCREENSHOTS</span>
-          <h2 class="section-title">产品截图</h2>
-        </div>
-
-        <div class="screenshots">
-          <figure class="shot shot-wide">
-            <img src="assets/finscope-home.png" alt="Finscope 金融首页" loading="lazy" />
-            <figcaption>FinChat 入口 + 行情首页（自然语言即能调起金融助手）</figcaption>
-          </figure>
-          <figure class="shot shot-tall">
-            <img src="assets/finscope-screener.png" alt="Finscope 基础选股器" loading="lazy" />
-            <figcaption>基础选股器 GUI · 阶段一</figcaption>
-          </figure>
-          <figure class="shot shot-tall">
-            <img src="assets/finscope-finchat-report.png" alt="FinChat 深度报告" loading="lazy" />
-            <figcaption>自然语言选股 → 结构化研究报告（阶段二 · LUI+GUI）</figcaption>
-          </figure>
-          <figure class="shot shot-tall">
-            <img src="assets/finscope-finchat-share.png" alt="FinChat 分享卡片" loading="lazy" />
-            <figcaption>对话分享模块（股评 / 链接 / 图片 · 打通社区）</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
+    </div>
 
     <!-- ============== BOTTOM NAV ============== -->
     <section class="bottom-nav">
@@ -155,6 +238,5 @@
     </footer>
 
   </main>
-
 </body>
 </html>

@@ -1067,3 +1067,279 @@ button {
   }
 }
 
+/* ================================================================
+   CLOSED LOOP — 项目闭环叙事
+   ================================================================ */
+
+.closed-loop {
+  padding: 0;
+  counter-reset: loop-stage;
+}
+
+/* -------- 工具条：项目总数据摘要 -------- */
+.loop-summary {
+  padding: 56px 0 48px;
+  border-bottom: 1px solid var(--color-border);
+  background: #fff;
+}
+.loop-summary-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 72px;
+}
+.loop-summary-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.loop-summary-num {
+  font-family: "Inter", monospace;
+  font-size: clamp(28px, 3.2vw, 40px);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.loop-summary-label {
+  font-size: 13px;
+  color: #a8a29e;
+  line-height: 1.4;
+  max-width: 120px;
+  padding-top: 6px;
+}
+
+/* -------- 阶段卡片 -------- */
+.loop-stage {
+  padding: 72px 0;
+  border-bottom: 1px solid var(--color-border);
+  background: #fff;
+}
+.loop-stage:nth-child(even) {
+  background: #fafaf9;
+}
+.loop-stage:last-of-type {
+  border-bottom: none;
+}
+
+.loop-stage__head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+  /* 计数器自动编号 */
+}
+.loop-stage__num {
+  font-family: "Inter", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fde68a;
+  background: var(--color-text);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.loop-stage__label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #a8a29e;
+  padding: 4px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+.loop-stage__title {
+  font-family: "Noto Serif SC", "Inter", serif;
+  font-size: clamp(24px, 2.8vw, 36px);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+  flex: 1;
+}
+
+/* -------- 阶段体内：截图 + 数据 + 贡献 融合 -------- */
+.loop-stage__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* 截图区 */
+.loop-stage__screen {
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  background: #fafaf9;
+}
+.loop-stage__screen.loop-screen--phone {
+  max-width: 320px;
+  margin: 0 auto;
+}
+.loop-stage__screen img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.loop-stage__screen .screen-caption {
+  font-size: 12px;
+  color: #a8a29e;
+  padding: 12px 16px;
+  border-top: 1px solid var(--color-border);
+  background: #fff;
+}
+
+/* 多截图并排 */
+.loop-screens {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.loop-screens--three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* 数据 + 贡献（右侧列） */
+.loop-stage__right {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* 小指标徽章 */
+.loop-kpis {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.loop-kpi {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 16px 20px;
+  min-width: 100px;
+  flex: 1;
+  transition: box-shadow 0.2s ease;
+}
+.loop-kpi .kpi-val {
+  font-family: "Inter", monospace;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+.loop-kpi .kpi-label {
+  font-size: 11px;
+  color: #a8a29e;
+  letter-spacing: 0.04em;
+  margin-top: 4px;
+}
+
+/* 贡献文字 */
+.loop-step {
+  position: relative;
+  padding-left: 20px;
+  border-left: 2px solid #fde68a;
+}
+.loop-step__role {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+.loop-step__role::before {
+  content: "▸ ";
+  color: #fde68a;
+}
+.loop-step__text {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--color-text-2);
+}
+.loop-step__text b {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* 阶段间箭头分隔 */
+.loop-arrow {
+  text-align: center;
+  padding: 0;
+  margin: -1px 0;
+  position: relative;
+  z-index: 2;
+  background: inherit;
+}
+.loop-arrow span {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  line-height: 48px;
+  text-align: center;
+  font-size: 18px;
+  color: #a8a29e;
+  margin-top: -24px;
+}
+
+/* -------- 结果总览（页面底部） -------- */
+.loop-outcome {
+  padding: 80px 0;
+  background: var(--color-text);
+  color: #fff;
+  margin-top: 0;
+}
+.loop-outcome .section-head {
+  color: #fff;
+}
+.loop-outcome .section-head .section-num {
+  color: rgba(255,255,255,0.35);
+}
+.loop-outcome .section-head .section-title {
+  color: #fff;
+}
+.loop-outcome .loop-summary-row {
+  margin-top: 40px;
+}
+.loop-outcome .loop-summary-num {
+  color: #fde68a;
+}
+.loop-outcome .loop-summary-label {
+  color: rgba(255,255,255,0.5);
+}
+
+/* -------- 响应式 -------- */
+@media (max-width: 860px) {
+  .loop-stage__body {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .loop-summary-row {
+    gap: 32px 40px;
+  }
+  .loop-screens {
+    grid-template-columns: 1fr;
+  }
+  .loop-screens--three {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .loop-stage__screen.loop-screen--phone {
+    max-width: 240px;
+    margin: 0;
+  }
+  .loop-stage {
+    padding: 52px 0;
+  }
+}
+
