@@ -176,7 +176,7 @@ button {
 }
 
 .hero-title {
-  font-family: "Noto Serif SC", "Inter", serif;
+  font-family: "Noto Serif SC", "Songti SC", "STSongti-SC", "Source Han Serif SC", "SimSun", "Noto Serif CJK SC", "Inter", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", serif;
   font-size: clamp(40px, 6.5vw, 84px);
   font-weight: 700;
   line-height: 1.1;
@@ -227,7 +227,7 @@ button {
 }
 
 .stat-num {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Helvetica Neue", "Hiragino Sans GB", Arial, sans-serif;
   font-size: clamp(28px, 3.2vw, 40px);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -313,7 +313,7 @@ button {
   height: 32px;
   border: 1px solid var(--color-border);
   border-radius: 50%;
-  font-family: "Inter", monospace;
+  font-family: "Inter", "SF Mono", "JetBrains Mono", "Cascadia Code", "PingFang SC", "Microsoft YaHei", "Noto Sans Mono CJK SC", monospace;
   font-size: 12px;
   font-weight: 600;
   color: var(--color-text);
@@ -328,7 +328,7 @@ button {
 }
 
 .project-title {
-  font-family: "Noto Serif SC", "Inter", serif;
+  font-family: "Noto Serif SC", "Songti SC", "STSongti-SC", "Source Han Serif SC", "SimSun", "Noto Serif CJK SC", "Inter", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", serif;
   font-size: clamp(32px, 4.5vw, 56px);
   font-weight: 700;
   line-height: 1.15;
@@ -337,7 +337,7 @@ button {
 }
 
 .project-meta {
-  font-family: "Inter", monospace;
+  font-family: "Inter", "SF Mono", "JetBrains Mono", "Cascadia Code", "PingFang SC", "Microsoft YaHei", "Noto Sans Mono CJK SC", monospace;
   font-size: 13px;
   color: var(--color-text-3);
   margin-bottom: 24px;
@@ -388,7 +388,7 @@ button {
 }
 
 .metric-num {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Helvetica Neue", "Hiragino Sans GB", Arial, sans-serif;
   font-size: clamp(28px, 3vw, 38px);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -457,7 +457,7 @@ button {
   border-radius: var(--radius-sm);
   background: var(--color-text);
   color: #fff;
-  font-family: "Inter", monospace;
+  font-family: "Inter", "SF Mono", "JetBrains Mono", "Cascadia Code", "PingFang SC", "Microsoft YaHei", "Noto Sans Mono CJK SC", monospace;
   font-size: 13px;
   font-weight: 600;
   margin-bottom: 4px;
@@ -630,7 +630,7 @@ button {
   border-radius: 50%;
   background: var(--color-text);
   color: #fff;
-  font-family: "Inter", monospace;
+  font-family: "Inter", "SF Mono", "JetBrains Mono", "Cascadia Code", "PingFang SC", "Microsoft YaHei", "Noto Sans Mono CJK SC", monospace;
   font-size: 14px;
   font-weight: 600;
   flex-shrink: 0;
@@ -717,7 +717,7 @@ button {
   font-size: 16px;
   font-weight: 500;
   color: var(--color-text);
-  font-family: "Inter", monospace;
+  font-family: "Inter", "SF Mono", "JetBrains Mono", "Cascadia Code", "PingFang SC", "Microsoft YaHei", "Noto Sans Mono CJK SC", monospace;
   word-break: break-all;
 }
 
@@ -758,7 +758,7 @@ button {
 
 .section-num {
   display: inline-block;
-  font-family: "Inter", monospace;
+  font-family: "Inter", "SF Mono", "JetBrains Mono", "Cascadia Code", "PingFang SC", "Microsoft YaHei", "Noto Sans Mono CJK SC", monospace;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -771,7 +771,7 @@ button {
 }
 
 .section-title {
-  font-family: "Noto Serif SC", "Inter", serif;
+  font-family: "Noto Serif SC", "Songti SC", "STSongti-SC", "Source Han Serif SC", "SimSun", "Noto Serif CJK SC", "Inter", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", serif;
   font-size: clamp(28px, 3.6vw, 44px);
   font-weight: 700;
   line-height: 1.2;
@@ -845,7 +845,7 @@ button {
 }
 
 .project-card .card-tag .tag-num {
-  font-family: "Inter", monospace;
+  font-family: "Inter", "SF Mono", "JetBrains Mono", "Cascadia Code", "PingFang SC", "Microsoft YaHei", "Noto Sans Mono CJK SC", monospace;
   font-size: 12px;
   font-weight: 600;
   color: #a8a29e;
@@ -859,7 +859,7 @@ button {
 }
 
 .project-card .card-title {
-  font-family: "Noto Serif SC", "Inter", serif;
+  font-family: "Noto Serif SC", "Songti SC", "STSongti-SC", "Source Han Serif SC", "SimSun", "Noto Serif CJK SC", "Inter", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", serif;
   font-size: 26px;
   font-weight: 700;
   line-height: 1.25;
@@ -891,7 +891,7 @@ button {
 }
 
 .project-card .card-stats b {
-  font-family: "Inter", monospace;
+  font-family: "Inter", "SF Mono", "JetBrains Mono", "Cascadia Code", "PingFang SC", "Microsoft YaHei", "Noto Sans Mono CJK SC", monospace;
   font-size: 20px;
   font-weight: 700;
   color: var(--color-text);
@@ -951,7 +951,7 @@ button {
 }
 
 .project-hero .project-title {
-  font-family: "Noto Serif SC", "Inter", serif;
+  font-family: "Noto Serif SC", "Songti SC", "STSongti-SC", "Source Han Serif SC", "SimSun", "Noto Serif CJK SC", "Inter", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", serif;
   font-size: clamp(36px, 5vw, 64px);
   font-weight: 700;
   line-height: 1.1;
@@ -964,7 +964,7 @@ button {
   font-size: 14px;
   color: var(--color-text-2);
   margin-bottom: 24px;
-  font-family: "Inter", monospace;
+  font-family: "Inter", "SF Mono", "JetBrains Mono", "Cascadia Code", "PingFang SC", "Microsoft YaHei", "Noto Sans Mono CJK SC", monospace;
   letter-spacing: 0.02em;
 }
 
@@ -1042,7 +1042,7 @@ button {
 }
 
 .nav-dir {
-  font-family: "Inter", monospace;
+  font-family: "Inter", "SF Mono", "JetBrains Mono", "Cascadia Code", "PingFang SC", "Microsoft YaHei", "Noto Sans Mono CJK SC", monospace;
   font-size: 18px;
   color: #a8a29e;
   transition: color 0.2s ease;
@@ -1093,7 +1093,7 @@ button {
   align-items: flex-start;
 }
 .loop-summary-num {
-  font-family: "Inter", monospace;
+  font-family: "Inter", "SF Mono", "JetBrains Mono", "Cascadia Code", "PingFang SC", "Microsoft YaHei", "Noto Sans Mono CJK SC", monospace;
   font-size: clamp(28px, 3.2vw, 40px);
   font-weight: 700;
   color: var(--color-text);
@@ -1129,7 +1129,7 @@ button {
   /* 计数器自动编号 */
 }
 .loop-stage__num {
-  font-family: "Inter", monospace;
+  font-family: "Inter", "SF Mono", "JetBrains Mono", "Cascadia Code", "PingFang SC", "Microsoft YaHei", "Noto Sans Mono CJK SC", monospace;
   font-size: 13px;
   font-weight: 700;
   color: #fde68a;
@@ -1153,7 +1153,7 @@ button {
   border-radius: 4px;
 }
 .loop-stage__title {
-  font-family: "Noto Serif SC", "Inter", serif;
+  font-family: "Noto Serif SC", "Songti SC", "STSongti-SC", "Source Han Serif SC", "SimSun", "Noto Serif CJK SC", "Inter", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", serif;
   font-size: clamp(24px, 2.8vw, 36px);
   font-weight: 700;
   line-height: 1.25;
@@ -1186,6 +1186,38 @@ button {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* 两张并排的截图（小说英语"读→查词"完整体验） */
+.screen-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.screen-pair .screen-cell {
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  background: #fafaf9;
+}
+.screen-pair .screen-cell img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.screen-pair .screen-caption {
+  padding: 10px 12px;
+  margin: 0;
+  font-size: 12px;
+  color: #737373;
+  border-top: 1px solid var(--color-border);
+  background: #fff;
+  line-height: 1.5;
+}
+@media (max-width: 720px) {
+  .screen-pair {
+    grid-template-columns: 1fr;
+  }
 }
 .loop-stage__screen .screen-caption {
   font-size: 12px;
@@ -1228,7 +1260,7 @@ button {
   transition: box-shadow 0.2s ease;
 }
 .loop-kpi .kpi-val {
-  font-family: "Inter", monospace;
+  font-family: "Inter", "SF Mono", "JetBrains Mono", "Cascadia Code", "PingFang SC", "Microsoft YaHei", "Noto Sans Mono CJK SC", monospace;
   font-size: 24px;
   font-weight: 700;
   color: var(--color-text);
