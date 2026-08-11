@@ -161,43 +161,93 @@
       </section>
 
       <!-- 阶段三：AI 选股 -->
-      <section class="loop-stage">
+      <section class="loop-stage ai-selection-stage">
         <div class="container">
           <div class="loop-stage__head">
             <span class="loop-stage__num">3</span>
             <span class="loop-stage__label">核心场景</span>
           </div>
-          <h2 class="loop-stage__title">AI 选股 —— 「点选 → 对话 → 策略」三阶段进化</h2>
+          <h2 class="loop-stage__title">AI 选股 —— 从「选择指标」到「表达意图」，再到「沉淀策略」</h2>
+          <p class="ai-selection-intro">
+            基于 16w+ 用户选股 query，我将选股能力拆成三个逐层降低门槛、提高复用效率的产品阶段。每一步都对应一个真实产出，也共同构成从单次筛选到长期策略管理的完整闭环。
+          </p>
 
-          <div class="loop-stage__body">
-            <!-- 截图 -->
-            <div class="loop-stage__screen">
-              <img src="assets/finscope-screener.png" alt="Finscope 基础选股器" loading="lazy" />
-              <p class="screen-caption">阶段一：基础选股器 GUI — 指标组合筛选</p>
-            </div>
-
-            <div class="loop-stage__right">
-              <div class="loop-kpis">
-                <div class="loop-kpi">
-                  <div class="kpi-val">+30%</div>
-                  <div class="kpi-label">选股场景 新增 PV</div>
+          <div class="ai-selection-flow">
+            <!-- Phase 01 -->
+            <article class="ai-selection-phase">
+              <figure class="ai-phase-screen ai-phase-screen--wide">
+                <img src="assets/finscope-screener.png" alt="Finscope 基础选股器指标组合界面" loading="lazy" />
+                <figcaption>基础选股器：通过 GUI 选择行情、财务与技术指标</figcaption>
+              </figure>
+              <div class="ai-phase-content">
+                <div class="ai-phase-eyebrow">PHASE 01 · 指标点选</div>
+                <h3>基础选股器：让用户先能「选」</h3>
+                <p>将复杂金融指标拆成可浏览、可组合的筛选项，降低用户理解参数与编写条件的成本，覆盖明确知道“要看哪些指标”的选股需求。</p>
+                <div class="ai-phase-metric">
+                  <strong>GUI</strong>
+                  <span>指标组合与条件配置</span>
                 </div>
-                <div class="loop-kpi">
-                  <div class="kpi-val">65%</div>
-                  <div class="kpi-label">组合指标 识别准确率</div>
-                </div>
-                <div class="loop-kpi">
-                  <div class="kpi-val">80%</div>
-                  <div class="kpi-label">核心场景 覆盖度</div>
+                <div class="ai-phase-decision">
+                  <span>产品决策</span>
+                  <p>按用户决策顺序组织指标，并把已选条件持续可视化，避免多条件配置过程失焦。</p>
                 </div>
               </div>
-              <div class="loop-step">
-                <p class="loop-step__role">我的角色与贡献</p>
-                <p class="loop-step__text">
-                  分析了 16w+ 用户选股 query 后，发现 PC 端「指标选股」是最大刚需。我设计了三阶段进化路径：<b>阶段一</b>基础选股器（GUI 点选指标组合）；<b>阶段二</b>自然语言选股（如「找到市盈率&lt;20 且 ROE&gt;15% 的消费股」→ 结构化结果）；<b>阶段三</b>策略/形态选股（如「近期突破 60 日均线的 AI 概念股」）。引入<b>多轮追问 + 兜底逻辑</b>，确保同一 Session 内持续对话不跳脱。设计了拆分→纠错→反问的容错链路，让选股从「一次性查询」变成「可推敲的分析过程」。
-                </p>
+            </article>
+
+            <!-- Phase 02 -->
+            <article class="ai-selection-phase ai-selection-phase--reverse">
+              <figure class="ai-phase-screen ai-phase-screen--report">
+                <img src="assets/finscope-natural-language-selection.png" alt="FinChat 自然语言选股与结构化研究报告" loading="lazy" />
+                <figcaption>自然语言选股：“帮我选科技板块、成长性高、长期看涨的股票”</figcaption>
+              </figure>
+              <div class="ai-phase-content">
+                <div class="ai-phase-eyebrow">PHASE 02 · 自然语言选股</div>
+                <h3>从条件输入到意图表达：让用户直接「说」</h3>
+                <p>用户不必掌握指标名称，只需描述板块、成长性与投资周期等模糊偏好；FinChat 将其拆解为可执行条件，并输出候选方向、筛选逻辑、风险提示与后续工具建议。</p>
+                <div class="ai-phase-metrics">
+                  <div class="ai-phase-metric">
+                    <strong>65%</strong>
+                    <span>组合指标识别准确率</span>
+                  </div>
+                  <div class="ai-phase-metric">
+                    <strong>80%</strong>
+                    <span>核心选股场景覆盖度</span>
+                  </div>
+                </div>
+                <div class="ai-phase-decision">
+                  <span>我的贡献</span>
+                  <p>设计意图拆分、多轮追问与兜底逻辑，并将结果组织为“市场判断—筛选逻辑—风险提示—辅助工具”的结构化输出，让模糊需求也能形成可解释的选股过程。</p>
+                </div>
               </div>
-            </div>
+            </article>
+
+            <!-- Phase 03 -->
+            <article class="ai-selection-phase">
+              <figure class="ai-phase-screen ai-phase-screen--strategy">
+                <img src="assets/finscope-strategy-library.png" alt="FinChat 我的策略与新建策略界面" loading="lazy" />
+                <figcaption>策略库：推荐策略、我的策略与新建策略入口</figcaption>
+              </figure>
+              <div class="ai-phase-content">
+                <div class="ai-phase-eyebrow">PHASE 03 · 策略沉淀</div>
+                <h3>从一次性结果到可复用资产：让用户持续「用」</h3>
+                <p>将高频投资逻辑沉淀为“短线爆破手、高成长黑马、业绩翻倍”等策略，并支持用户新建与管理自己的策略，让一次选股结果转化为可持续调用的个人投资工具。</p>
+                <div class="ai-phase-metric ai-phase-metric--accent">
+                  <strong>+30%</strong>
+                  <span>AI 选股场景新增 PV</span>
+                </div>
+                <div class="ai-phase-decision">
+                  <span>产品决策</span>
+                  <p>用“推荐策略”帮助冷启动，用“我的策略”承接个性化沉淀，再通过“新建策略”完成从发现、复用到自主创建的成长路径。</p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="loop-step ai-selection-conclusion">
+            <p class="loop-step__role">我的产品闭环</p>
+            <p class="loop-step__text">
+              三阶段不是功能堆叠，而是围绕用户能力逐步演进：<b>GUI 点选解决“不会写条件”</b>，<b>自然语言解决“不懂专业指标”</b>，<b>策略库解决“优质逻辑无法复用”</b>。通过“拆分 → 纠错 → 反问”的容错链路与策略沉淀机制，最终把选股从一次性查询升级为可解释、可复用、可持续优化的分析流程。
+            </p>
           </div>
         </div>
       </section>
