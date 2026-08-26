@@ -20,8 +20,8 @@
       </a>
       <nav class="nav">
         <a href="./index.html">首页</a>
+        <a href="#ai-thinking">AI 使用思考</a>
         <a href="#work">项目闭环</a>
-        <a href="#method">方法沉淀</a>
       </nav>
     </div>
   </header>
@@ -37,13 +37,13 @@
         <h1 class="project-title">央视频 · AI 产品化实践</h1>
         <p class="project-meta">2026.06 - 2026.08 · 产品策划实习生 · 推荐组</p>
         <p class="project-desc">
-          聚焦<b>搜索体验、内容分发、小游戏生态</b>三大方向，落地 3 个项目。我的核心贡献不是单点功能堆叠，而是把模糊业务问题转化为可度量目标，再通过<b>算法产品化 + Vibe Coding</b>完成低成本验证与规模化。
+          聚焦<b>搜索体验、内容分发、小游戏生态</b>三大方向，落地 3 个项目。贯穿全程的核心命题是：<b>什么问题值得用 AI、AI 应该做到哪一步、产品如何定义边界并验证结果</b>。我将 AI 分别用作规模化生产工具、快速验证工具与独立交付杠杆，而不是把 AI 当作功能标签。
         </p>
-        <div class="answer-hero__tags" aria-label="核心能力">
-          <span>用户问题定义</span>
-          <span>机制设计</span>
-          <span>AI-Native 工作流</span>
-          <span>数据验证</span>
+        <div class="answer-hero__tags" aria-label="AI 使用思考">
+          <span>先判断是否该用 AI</span>
+          <span>产品定义质量底线</span>
+          <span>人机协同而非全自动</span>
+          <span>评测驱动规则迭代</span>
         </div>
       </div>
     </section>
@@ -77,6 +77,45 @@
             <p>以卡牌策略承接长时消费，独立完成从玩法设计到可玩产品的交付闭环。</p>
             <strong>零占研发排期</strong>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ai-thinking" id="ai-thinking" aria-labelledby="ai-thinking-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">AI THINKING</span>
+          <h2 class="section-title" id="ai-thinking-title">我的 AI 使用判断框架</h2>
+          <p class="section-sub">不是“哪里都加 AI”，而是先判断任务特性，再设计人机分工和验证闭环。</p>
+        </div>
+        <div class="ai-thinking__flow">
+          <article>
+            <span>01 · WHY</span>
+            <h3>为什么要用 AI？</h3>
+            <p>优先用于高频、规模化、规则可描述，但人工生产成本高的任务；如果规则机制本身更关键，就先解决产品问题。</p>
+          </article>
+          <i>→</i>
+          <article>
+            <span>02 · WHAT</span>
+            <h3>AI 负责哪一段？</h3>
+            <p>让 AI 承担内容生成、代码实现和批量处理；产品负责问题定义、机制选择与用户价值判断。</p>
+          </article>
+          <i>→</i>
+          <article>
+            <span>03 · BOUNDARY</span>
+            <h3>边界如何被控制？</h3>
+            <p>通过准入规则、候选池、概率约束、人工审核与可编辑后台，把不确定输出收敛为可运营能力。</p>
+          </article>
+          <i>→</i>
+          <article>
+            <span>04 · VERIFY</span>
+            <h3>结果如何验证？</h3>
+            <p>先用 Demo 验证交互和机制，再用覆盖、点击、播放、使用率等数据校准判断，并将结论沉淀为可复用能力。</p>
+          </article>
+        </div>
+        <div class="ai-thinking__rule">
+          <b>AI 是能力杠杆，不是产品目的</b>
+          <span>模型负责扩大生产与落地效率，产品经理负责定义正确的问题、质量底线和反馈回路。</span>
         </div>
       </div>
     </section>
@@ -177,15 +216,19 @@
             </div>
           </div>
 
-          <div class="answer-contribution">
+          <div class="answer-contribution answer-contribution--ai">
             <div>
-              <span class="answer-contribution__label">我的产品贡献</span>
-              <p>我完成了从数据诊断、聚合卡方案、准入与审核机制，到试点复盘和规模化规划的完整链路。重点不是“做一张卡”，而是把算法结果变成运营可干预、业务可复制的产品能力。</p>
+              <span class="answer-contribution__label">为什么这里需要 AI</span>
+              <p>运动员看点数量大、热点变化快，靠运营逐条找内容无法规模化；但模型直接上线又会带来错配和质量波动。因此我没有让 AI 直接“决定结果”，而是让它承担高成本的生产环节。</p>
             </div>
             <div class="answer-contribution__principle">
-              <span>方法沉淀</span>
-              <b>AI 负责高效生产，产品定义质量底线；评测不是验收终点，而是规则迭代的反馈回路。</b>
+              <span>我设计的人机分工</span>
+              <b>AI 自动识别、召回和组装；产品定义核心看点与准入规则；运营通过看板审核、修改、发布；效果数据再反向迭代规则。</b>
             </div>
+          </div>
+          <div class="ai-case-note">
+            <span>AI 使用思考</span>
+            <p><b>真正被产品化的不是一次模型输出，而是“生产—审核—发布—评测—迭代”的反馈闭环。</b>这让搜索聚合能力既能守住质量底线，也能以零新增研发成本扩展到更多 query。</p>
           </div>
         </div>
       </section>
@@ -272,11 +315,15 @@
                 <span>机制自运转</span>
                 <p>产品价值不仅是体验，也包含运营成本下降。</p>
               </div>
-              <div class="answer-contribution answer-contribution--stacked">
+              <div class="answer-contribution answer-contribution--stacked answer-contribution--ai">
                 <div>
-                  <span class="answer-contribution__label">我的产品贡献</span>
-                  <p>识别无目标用户场景，设计候选池 / 概率 / 范围三层约束和场景 / 心情标签；再用 Vibe Coding 独立完成可体验 Demo，以实物替代需求文档推进验证。</p>
+                  <span class="answer-contribution__label">AI 使用思考</span>
+                  <p><b>这个项目的核心不是让 AI 推荐，而是先把“随机”做成可控的产品机制。</b>AI 的价值在于 Vibe Coding：把机制迅速做成可体验 Demo，提前验证标签是否易懂、开盒路径是否顺畅，避免在需求文档阶段反复空转。</p>
                 </div>
+              </div>
+              <div class="ai-case-mini">
+                <div><span>产品负责</span><b>用户分层、三层约束、标签体系、指标定义</b></div>
+                <div><span>AI 负责</span><b>快速实现、反复修改、缩短从想法到反馈的路径</b></div>
               </div>
               <a class="link-btn" href="https://aibox.yangshipin.cn/tx/shake_movie_box/" target="_blank" rel="noopener">体验随机推剧 ↗</a>
             </div>
@@ -362,11 +409,15 @@
                 <span>上线后验证目标</span>
                 <p>明确标注为目标，而非已实现结果。</p>
               </div>
-              <div class="answer-contribution answer-contribution--stacked">
+              <div class="answer-contribution answer-contribution--stacked answer-contribution--ai">
                 <div>
-                  <span class="answer-contribution__label">我的产品贡献</span>
-                  <p>完成品类判断、玩法循环、收藏与成就体系、双卡池和分解经济系统，并通过 Vibe Coding 全流程开发，把“概念方案”推进为可以直接体验和验收的产品。</p>
+                  <span class="answer-contribution__label">AI 使用思考</span>
+                  <p><b>AI 能显著降低开发门槛，但不能替代玩法与经济系统判断。</b>我先定义卡牌循环、留存目标、资源产消和内容边界，再用 AI 完成代码实现与快速调试，最终把抽象玩法文档变成可直接验收的产品。</p>
                 </div>
+              </div>
+              <div class="ai-case-mini">
+                <div><span>产品负责</span><b>品类判断、玩法循环、经济系统、文化内容准确性</b></div>
+                <div><span>AI 负责</span><b>代码搭建、界面实现、快速调试与低成本试错</b></div>
               </div>
               <a class="link-btn" href="https://ai.ysp.qq.com/poetry-game/" target="_blank" rel="noopener">体验诗词卡牌 ↗</a>
             </div>
@@ -382,27 +433,32 @@
           <h2 class="section-title">从完成项目，到沉淀可复用方法</h2>
           <p class="section-sub">三类业务结果，最终沉淀为 AI 时代产品策划的判断力与落地力。</p>
         </div>
-        <div class="answer-method__grid">
+        <div class="answer-method__grid answer-method__grid--four">
           <article>
-            <span>01 · 产品思维</span>
-            <h3>先看供给，再看交互</h3>
-            <p>很多体验问题不是按钮和页面问题，而是供给组织、决策成本与业务机制问题。先定义结构性矛盾，再选择产品形态。</p>
+            <span>01 · 适用性判断</span>
+            <h3>不为 AI 而 AI</h3>
+            <p>先判断瓶颈是规模化生产、验证成本，还是产品机制本身；只有 AI 能显著改变成本或效率结构时才使用。</p>
           </article>
           <article>
-            <span>02 · 算法产品化</span>
-            <h3>结果必须可审、可改、可发</h3>
-            <p>AI 是生产工具，不是交付主体。产品需要定义质量底线，并让评测结果反向驱动规则迭代。</p>
+            <span>02 · 人机边界</span>
+            <h3>AI 生产，人定义底线</h3>
+            <p>AI 承担生成、召回、代码实现等高成本环节；产品负责问题定义、准入规则、用户价值和最终责任。</p>
           </article>
           <article>
-            <span>03 · Vibe Coding</span>
-            <h3>用实物替代文档</h3>
-            <p>Demo 是最低成本的假设验证方式。产品经理不仅要描述方案，也要主动缩短从判断到真实反馈的距离。</p>
+            <span>03 · 反馈回路</span>
+            <h3>评测不是验收终点</h3>
+            <p>通过审核看板、业务指标与真实使用数据发现偏差，再反向修改提示、规则、候选池和产品机制。</p>
+          </article>
+          <article>
+            <span>04 · 能力复用</span>
+            <h3>从一次输出到产品能力</h3>
+            <p>把有效方案抽象为可审、可改、可发的工作流，或可快速复用的开发方法，才能形成持续价值。</p>
           </article>
         </div>
         <div class="answer-method__conclusion">
-          <span>AI 时代产品策划</span>
-          <b>判断力 × 落地力</b>
-          <p>用户视角定义问题 · 数据验证校准判断 · 抽象能力降低复用成本</p>
+          <span>我的 AI 产品观</span>
+          <b>AI 放大判断力，但不替代判断</b>
+          <p>正确的问题定义 × 清晰的人机边界 × 可验证的反馈回路 × 可复用的产品能力</p>
         </div>
       </div>
     </section>

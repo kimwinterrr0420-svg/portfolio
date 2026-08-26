@@ -2437,3 +2437,184 @@ button {
   }
 }
 
+/* ---------- AI 使用判断框架 ---------- */
+.ai-thinking {
+  padding: 88px 0;
+  background: #fff;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ai-thinking__flow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  gap: 14px;
+  align-items: center;
+  margin-top: 38px;
+}
+
+.ai-thinking__flow article {
+  min-height: 240px;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: #fafaf9;
+}
+
+.ai-thinking__flow article span {
+  color: var(--color-text-3);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.ai-thinking__flow article h3 {
+  margin: 28px 0 12px;
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.ai-thinking__flow article p {
+  color: var(--color-text-2);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.ai-thinking__flow > i {
+  color: var(--color-text-3);
+  font-style: normal;
+  font-size: 16px;
+}
+
+.ai-thinking__rule {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.7fr) 1.3fr;
+  gap: 28px;
+  align-items: center;
+  margin-top: 14px;
+  padding: 24px 28px;
+  border-radius: 12px;
+  background: var(--color-text);
+  color: #fff;
+}
+
+.ai-thinking__rule b {
+  color: #fde68a;
+  font-size: 21px;
+}
+
+.ai-thinking__rule span {
+  color: rgba(255,255,255,0.62);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.answer-contribution--ai {
+  border-color: #e8cf6c;
+}
+
+.answer-contribution--ai .answer-contribution__label,
+.answer-contribution--ai .answer-contribution__principle span {
+  color: #8a6b00;
+}
+
+.ai-case-note {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 22px;
+  align-items: start;
+  margin-top: 14px;
+  padding: 22px 24px;
+  border: 1px solid #f1d66d;
+  border-radius: 12px;
+  background: #fffbeb;
+}
+
+.ai-case-note > span {
+  color: #8a6b00;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.ai-case-note p {
+  color: var(--color-text-2);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.ai-case-note b {
+  color: var(--color-text);
+}
+
+.ai-case-mini {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.ai-case-mini div {
+  padding: 16px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.ai-case-mini span {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--color-text-3);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.ai-case-mini b {
+  display: block;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.answer-method__grid--four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.answer-method__grid--four article {
+  min-height: 290px;
+}
+
+@media (max-width: 1060px) {
+  .ai-thinking__flow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ai-thinking__flow > i {
+    display: none;
+  }
+
+  .answer-method__grid--four {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .ai-thinking {
+    padding: 64px 0;
+  }
+
+  .ai-thinking__flow,
+  .ai-thinking__rule,
+  .ai-case-note,
+  .ai-case-mini,
+  .answer-method__grid--four {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-thinking__flow article,
+  .answer-method__grid--four article {
+    min-height: 0;
+  }
+
+  .ai-thinking__flow article h3 {
+    margin-top: 18px;
+  }
+}
+
