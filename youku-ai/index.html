@@ -37,8 +37,9 @@ tailwind.config = {
     <nav id="stepNav" class="flex items-center gap-1 p-1 rounded-xl bg-slate-100">
       <button data-step="pain" class="view-tab is-active"><i class="ri-error-warning-line mr-1"></i>1 痛点×解法</button>
       <button data-step="solution" class="view-tab"><i class="ri-stack-line mr-1"></i>2 解法架构</button>
-      <button data-step="proof" class="view-tab"><i class="ri-chat-search-line mr-1"></i>3 效果验证</button>
-      <button data-step="loop" class="view-tab"><i class="ri-loop-right-line mr-1"></i>4 闭环</button>
+      <button data-step="demo" class="view-tab"><i class="ri-smartphone-line mr-1"></i>3 产品Demo</button>
+      <button data-step="proof" class="view-tab"><i class="ri-chat-search-line mr-1"></i>4 效果验证</button>
+      <button data-step="loop" class="view-tab"><i class="ri-loop-right-line mr-1"></i>5 闭环</button>
     </nav>
   </div>
 </header>
@@ -118,12 +119,38 @@ tailwind.config = {
     </details>
   </section>
 
+  <!-- ============ 第三步：产品 Demo（形态/入口/交互） ============ -->
+  <section id="step-demo" class="step-panel hidden space-y-5">
+    <div class="rounded-2xl bg-white border border-slate-200 shadow-soft p-6">
+      <div class="flex flex-col lg:flex-row lg:items-end gap-4">
+        <div class="min-w-0">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-[11px] font-extrabold tracking-widest mb-3">STEP 3 · 产品 Demo</span>
+          <h2 class="text-lg lg:text-2xl font-extrabold leading-tight">三个产品，落到优酷 App 的真实界面上</h2>
+          <p class="text-xs text-slate-500 mt-2 max-w-4xl leading-relaxed">切换产品，看它<strong class="text-slate-700">是什么形态</strong>、<strong class="text-slate-700">入口在 App 哪里</strong>、<strong class="text-slate-700">用户怎么交互</strong>。左侧是优酷 App 界面还原，编号圆点即入口位置；右侧是形态、入口、交互的完整拆解。</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2 lg:ml-auto" id="demoTabs"></div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+      <!-- 左侧：手机 mockup -->
+      <div class="lg:col-span-5 xl:col-span-4">
+        <div class="rounded-2xl bg-slate-50 border border-slate-200 p-5 flex flex-col items-center lg:sticky lg:top-24">
+          <div class="phone" id="demoPhone"></div>
+          <p class="text-[11px] text-slate-500 mt-4 text-center leading-relaxed" id="demoScreenNote"></p>
+        </div>
+      </div>
+      <!-- 右侧：形态 / 入口 / 交互 -->
+      <div class="lg:col-span-7 xl:col-span-8 space-y-4" id="demoDetail"></div>
+    </div>
+  </section>
+
   <!-- ============ 第四步：效果验证 ============ -->
   <section id="step-proof" class="step-panel hidden space-y-6">
     <div class="rounded-2xl bg-white border border-slate-200 shadow-soft p-6">
       <div class="flex flex-col lg:flex-row lg:items-end gap-4">
         <div class="min-w-0">
-          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-[11px] font-extrabold tracking-widest mb-3">STEP 3 · 效果验证</span>
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-[11px] font-extrabold tracking-widest mb-3">STEP 4 · 效果验证</span>
           <h2 class="text-lg lg:text-2xl font-extrabold leading-tight">三大产品分别怎么验证</h2>
           <p class="text-xs text-slate-500 mt-2">切换产品查看各自的能力演示与验证指标，三个产品都要能被单独证明有效。</p>
         </div>
@@ -168,7 +195,7 @@ tailwind.config = {
   <!-- ============ 第五步：双闭环 ============ -->
   <section id="step-loop" class="step-panel hidden space-y-6">
     <div class="rounded-2xl bg-white border border-slate-200 shadow-soft p-6">
-      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-[11px] font-extrabold tracking-widest mb-3">STEP 4 · 两层闭环</span>
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-[11px] font-extrabold tracking-widest mb-3">STEP 5 · 两层闭环</span>
       <h2 class="text-lg lg:text-2xl font-extrabold leading-tight">从「活动驱动」到「生态驱动」</h2>
       <p class="text-xs text-slate-500 mt-2 max-w-4xl leading-relaxed">闭环分两层：<strong class="text-slate-700">内循环</strong>是三大 AI 产品互为上下游，自己就能转起来；<strong class="text-slate-700">外循环</strong>是把优酷接进阿里生态，让内容消费延伸到电商、支付、本地生活与算力，这是纯内容平台复制不了的部分。</p>
     </div>
@@ -243,7 +270,7 @@ tailwind.config = {
 
 <footer class="mt-10 border-t border-slate-200 bg-white">
   <div class="mx-auto max-w-[1500px] px-4 lg:px-8 py-6 text-center text-xs text-slate-500 space-y-1">
-    <p>痛点诊断 → 对应关系 → 解法架构 → 效果验证 → 产品内循环 × 阿里生态外循环</p>
+    <p>痛点诊断 → 解法架构 → 产品 Demo（形态/入口/交互）→ 效果验证 → 产品内循环 × 阿里生态外循环</p>
     <p>由 <a href="https://with.woa.com/" style="color: #8A2BE2;" target="_blank">With</a> 通过自然语言生成</p>
   </div>
 </footer>

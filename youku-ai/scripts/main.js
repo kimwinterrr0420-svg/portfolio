@@ -1,14 +1,15 @@
 import {
   painDomains, solutions, layerLib, demoCases,
   compareRows, loopAssets, memberBenefit, proofBySolution,
-  productLoop, productLoopCore, ecoLoop
+  productLoop, productLoopCore, ecoLoop, productDemo
 } from './data.js';
 import { renderStack, focusLayer, fitToViewport } from './stack.js';
 
 const $ = id => document.getElementById(id);
-const STEPS = ['pain', 'solution', 'proof', 'loop'];
+const STEPS = ['pain', 'solution', 'demo', 'proof', 'loop'];
 let curStep = 'pain';
 let curSol = solutions[0];
+let curDemo = productDemo[0];
 let fitMode = true;
 let painOpen = false;
 
@@ -191,6 +192,153 @@ function openNodeModal(key) {
       <p class="text-xs text-slate-600 leading-relaxed">${l.why}</p>
     </div>`;
   showModal();
+}
+
+/* ================= STEP 3 产品 Demo（形态/入口/交互） ================= */
+function renderDemoTabs() {
+  $('demoTabs').innerHTML = productDemo.map(d => `
+    <button class="sol-tab ${d.id === curDemo.id ? 'is-active' : ''}" data-demo-sol="${d.id}">
+      <i class="${d.icon} text-base"></i><span>${d.name}</span>
+      <span class="text-[10px] font-semibold opacity-60">${d.side}</span>
+    </button>`).join('');
+}
+
+function screenHtml(d) {
+  const status = `<div class="app-status"><span>9:41</span><span class="app-status-right"><i class="ri-signal-wifi-line"></i><i class="ri-battery-2-fill"></i></span></div>`;
+  if (d.id === 'sol-search') {
+    return `
+      <div class="app-screen">
+        ${status}
+        <div class="app-topbar">
+          <span class="app-logo">优酷</span>
+          <div class="app-searchbar spot" data-spot="1">
+            <i class="ri-search-line"></i>
+            <span class="app-search-ph">问任何剧情 / 人物 / 看点问题</span>
+            <span class="app-ai-badge">AI</span>
+          </div>
+        </div>
+        <div class="app-chips">
+          <span class="app-chip is-on">推荐</span><span class="app-chip">电视剧</span><span class="app-chip">电影</span><span class="app-chip">综艺</span>
+        </div>
+        <div class="app-answer">
+          <div class="app-answer-head"><span class="app-ai-badge">AI</span> 搜索结果</div>
+          <div class="app-answer-q">类似《隐秘的角落》的悬疑剧</div>
+          <div class="app-answer-item"><span class="ari-title">《漫长的季节》</span><span class="ari-reason">悬疑+生活质感</span><span class="ari-jump"><i class="ri-play-circle-line"></i>92%</span></div>
+          <div class="app-answer-item"><span class="ari-title">《沉默的真相》</span><span class="ari-reason">紫金陈原著 · 多线叙事</span><span class="ari-jump"><i class="ri-play-circle-line"></i>89%</span></div>
+          <div class="app-answer-item"><span class="ari-title">《八角亭谜雾》</span><span class="ari-reason">家庭伦理裹挟悬疑</span><span class="ari-jump"><i class="ri-play-circle-line"></i>81%</span></div>
+          <div class="app-answer-foot"><i class="ri-focus-3-line"></i> 点击卡片直达对应剧集分钟</div>
+        </div>
+      </div>`;
+  }
+  if (d.id === 'sol-interact') {
+    return `
+      <div class="app-screen">
+        ${status}
+        <div class="app-video">
+          <span class="app-video-tag">《琅琊榜》 第 18 集</span>
+          <div class="app-video-center"><i class="ri-play-fill"></i></div>
+          <div class="app-role spot" data-spot="1">
+            <span class="role-avatar">苏</span>
+            <span class="role-msg">想聊聊刚才这段吗？</span>
+          </div>
+        </div>
+        <div class="app-progress"><span class="app-progress-bar"></span></div>
+        <div class="app-ctrl">
+          <i class="ri-play-circle-line"></i><i class="ri-speed-up-line"></i><i class="ri-chat-1-line"></i><i class="ri-fullscreen-line"></i>
+        </div>
+        <div class="app-ask"><i class="ri-search-eye-line"></i><span>边看边问 · 这个角色是谁？</span></div>
+        <div class="app-gen"><i class="ri-magic-line"></i><span>一键二创</span></div>
+      </div>`;
+  }
+  return `
+    <div class="app-screen">
+      ${status}
+      <div class="app-user">
+        <span class="app-avatar">冬</span>
+        <div>
+          <div class="app-nick">winterduan</div>
+          <div class="app-vip"><i class="ri-vip-crown-2-fill"></i> 优酷 VIP</div>
+        </div>
+      </div>
+      <div class="app-create-card spot" data-spot="1">
+        <span class="app-create-ic"><i class="ri-magic-line"></i></span>
+        <div>
+          <div class="app-create-title">创作中心</div>
+          <div class="app-create-sub">一键角色 cut · 混剪 · AI 番外</div>
+        </div>
+        <i class="ri-arrow-right-s-line"></i>
+      </div>
+      <div class="app-create-grid">
+        <div class="cg-item"><i class="ri-scissors-2-line"></i><span>一键二创</span></div>
+        <div class="cg-item"><i class="ri-folder-5-line"></i><span>我的作品</span></div>
+        <div class="cg-item"><i class="ri-flag-line"></i><span>官方活动</span></div>
+        <div class="cg-item"><i class="ri-shield-star-line"></i><span>正版素材</span></div>
+      </div>
+    </div>`;
+}
+
+function renderProductDemo() {
+  renderDemoTabs();
+  const d = curDemo;
+  $('demoPhone').style.setProperty('--spot-c', d.accent);
+  $('demoPhone').innerHTML = `<div class="phone-notch"></div>${screenHtml(d)}`;
+
+  const note = {
+    'sol-search': '首页搜索页还原 · 圆圈① 即 AI 搜索主入口（顶部搜索框升级为自然语言问答）',
+    'sol-interact': '播放页还原 · 圆圈① 为 AI 互动主入口「角色气泡」；播放页同时是搜索/二创的汇合点',
+    'sol-gen': '我的页还原 · 圆圈① 为创作中心主入口，一键二创 / 混剪 / AI 番外从这里进'
+  };
+  $('demoScreenNote').textContent = note[d.id] || '';
+
+  const entryTags = d.entries.map((e, i) => `
+    <div class="entry-row">
+      <span class="entry-dot" style="background:${d.accent}">${i + 1}</span>
+      <div class="min-w-0 flex-1">
+        <div class="flex items-center gap-2">
+          <span class="text-[12.5px] font-bold text-slate-800">${e.name}</span>
+          ${e.primary ? '<span class="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-brand-600 text-white">主入口</span>' : '<span class="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-slate-200 text-slate-600">次入口</span>'}
+        </div>
+        <div class="text-[11px] text-slate-500 mt-0.5">${e.where}</div>
+        <div class="text-[11px] text-slate-500 mt-0.5 leading-relaxed">${e.note}</div>
+      </div>
+    </div>`).join('');
+
+  const stepTags = d.interactions.map((it, i) => `
+    <div class="flow-step">
+      <span class="flow-no" style="background:${d.accent}">${i + 1}</span>
+      <div class="min-w-0 flex-1">
+        <div class="text-[12px] font-bold text-slate-800 leading-snug">${it.text}</div>
+        <div class="text-[11px] text-slate-500 mt-0.5">${it.sub}</div>
+      </div>
+    </div>`).join('');
+
+  $('demoDetail').innerHTML = `
+    <div class="rounded-2xl bg-white border border-slate-200 shadow-soft p-5 fade-in">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="h-9 w-9 rounded-xl grid place-items-center text-white" style="background:${d.accent}"><i class="${d.icon} text-lg"></i></span>
+        <div>
+          <h3 class="text-sm font-bold">产品形态</h3>
+          <p class="text-[11px] text-slate-400">${d.tagline}</p>
+        </div>
+      </div>
+      <h4 class="text-[13px] font-bold text-slate-800 mt-3">${d.form.title}</h4>
+      <p class="text-xs text-slate-600 leading-relaxed mt-1.5">${d.form.desc}</p>
+      <div class="flex flex-wrap gap-2 mt-3">
+        ${d.form.points.map(p => `<span class="text-[11px] font-bold px-2.5 py-1 rounded-lg bg-slate-50 text-slate-600 border border-slate-200"><i class="ri-check-line text-brand-500 mr-1"></i>${p}</span>`).join('')}
+      </div>
+    </div>
+
+    <div class="rounded-2xl bg-white border border-slate-200 shadow-soft p-5 fade-in">
+      <h3 class="text-sm font-bold mb-1"><i class="ri-map-pin-line text-brand-500 mr-1"></i>入口在哪</h3>
+      <p class="text-[11px] text-slate-500 mb-3">主入口已在左侧手机界面标注，次入口用文字补充位置</p>
+      <div class="space-y-2.5">${entryTags}</div>
+    </div>
+
+    <div class="rounded-2xl bg-white border border-slate-200 shadow-soft p-5 fade-in">
+      <h3 class="text-sm font-bold mb-1"><i class="ri-gesture-line text-brand-500 mr-1"></i>怎么交互</h3>
+      <p class="text-[11px] text-slate-500 mb-3">从进入到完整体验的三步</p>
+      <div class="space-y-2.5">${stepTags}</div>
+    </div>`;
 }
 
 /* ================= STEP 4 效果验证 ================= */
@@ -399,7 +547,7 @@ function renderMemberBenefit() {
 
 /* ================= 步骤切换 ================= */
 function renderDots() {
-  const labels = { pain:'痛点×解法', solution:'解法', proof:'验证', loop:'闭环' };
+  const labels = { pain:'痛点×解法', solution:'解法', demo:'产品Demo', proof:'验证', loop:'闭环' };
   $('stepDots').innerHTML = STEPS.map(s => `
     <button data-goto-step="${s}" class="flex items-center gap-1.5 px-2 py-1 rounded-lg transition ${s === curStep ? 'bg-brand-600 text-white' : 'bg-slate-100 text-slate-500 hover:bg-slate-200'}">
       <span class="h-1.5 w-1.5 rounded-full ${s === curStep ? 'bg-white' : 'bg-slate-400'}"></span>
@@ -509,6 +657,13 @@ function bind() {
       return;
     }
 
+    const demoTab = e.target.closest('[data-demo-sol]');
+    if (demoTab) {
+      const d = productDemo.find(x => x.id === demoTab.dataset.demoSol);
+      if (d && d.id !== curDemo.id) { curDemo = d; renderProductDemo(); }
+      return;
+    }
+
     const pairToggle = e.target.closest('[data-pair-toggle]');
     if (pairToggle) {
       const pair = pairToggle.closest('.pair');
@@ -565,6 +720,7 @@ function bind() {
 function boot() {
   renderPain();
   renderSolution();
+  renderProductDemo();
   renderMemberBenefit();
   renderProof();
   renderCompare();
