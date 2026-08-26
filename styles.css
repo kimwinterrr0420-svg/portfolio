@@ -1888,8 +1888,8 @@ button {
   min-height: 205px;
   padding: 18px;
   border-radius: 10px;
-  background: linear-gradient(145deg, #111 0%, #1F2937 100%);
-  color: #fff;
+  background: linear-gradient(145deg, #E4DBFF 0%, #D8C9F7 100%);
+  color: #1F2937;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -3724,8 +3724,8 @@ button {
   font-weight: 700;
   letter-spacing: 0.12em;
   padding: 3px 7px;
-  background: #1F2937;
-  color: #B9A5F5;
+  background: #E4DBFF;
+  color: #5B3FCF;
   border-radius: 4px;
 }
 .myscope-head em {
@@ -3960,13 +3960,14 @@ button {
   box-shadow: 0 18px 36px -16px rgba(10, 10, 10, 0.18);
 }
 .edu-card--featured {
-  background: linear-gradient(160deg, #1F2937 0%, #1F2937 100%);
-  color: #fff;
-  border-color: #1F2937;
+  background: linear-gradient(160deg, #FFFFFF 0%, #F5F2FF 100%);
+  color: #1F2937;
+  border-color: #C4B5FD;
+  box-shadow: 0 12px 28px -16px rgba(124, 92, 245, 0.22);
 }
 .edu-card--featured .edu-card__badge {
   background: #E4DBFF;
-  color: #1F2937;
+  color: #5B3FCF;
 }
 .edu-card--soft {
   background: #F1EFFF;
@@ -3986,11 +3987,11 @@ button {
   opacity: 0.65;
   letter-spacing: 0.06em;
 }
-.edu-card--featured .edu-card__period { color: #B9A5F5; opacity: 1; }
+.edu-card--featured .edu-card__period { color: #5B3FCF; opacity: 1; }
 .edu-card__badge {
   padding: 3px 9px;
-  background: #1F2937;
-  color: #fff;
+  background: #E4DBFF;
+  color: #5B3FCF;
   font-size: 11px;
   font-weight: 700;
   border-radius: 4px;
@@ -4003,7 +4004,7 @@ button {
   line-height: 1.2;
   color: inherit;
 }
-.edu-card--featured h3 { color: #fff; }
+.edu-card--featured h3 { color: #1F2937; }
 .edu-card__major {
   font-size: 14.5px;
   color: inherit;
@@ -4029,8 +4030,8 @@ button {
   font-size: 13px;
 }
 .edu-card--featured .edu-card__list li {
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
+  background: #F1F0FF;
+  color: #1F2937;
 }
 .edu-card--soft .edu-card__list li {
   background: rgba(255, 255, 255, 0.6);
@@ -4134,8 +4135,8 @@ button {
   font-size: 12px;
   font-weight: 600;
   padding: 4px 10px;
-  background: #1F2937;
-  color: #B9A5F5;
+  background: #E4DBFF;
+  color: #5B3FCF;
   border-radius: 4px;
   letter-spacing: 0.04em;
 }
@@ -4228,8 +4229,8 @@ button {
   display: inline-flex;
   width: fit-content;
   padding: 4px 10px;
-  background: #1F2937;
-  color: #B9A5F5;
+  background: #E4DBFF;
+  color: #5B3FCF;
   border-radius: 4px;
   font-family: "Inter", monospace;
   font-size: 11px;
@@ -4466,8 +4467,8 @@ button {
   display: inline-block;
   width: fit-content;
   padding: 3px 8px;
-  background: #1F2937;
-  color: #B9A5F5;
+  background: #E4DBFF;
+  color: #5B3FCF;
   border-radius: 4px;
   font-family: "Inter", monospace;
   font-size: 10px;
@@ -4516,8 +4517,8 @@ button {
 
 /* ---------- Footer (rich) ---------- */
 .site-footer--rich {
-  background: #1F2937;
-  color: rgba(255, 255, 255, 0.6);
+  background: #F5F2FF;
+  color: #737373;
   padding: 40px 0;
   text-align: center;
   font-size: 13px;
@@ -4559,8 +4560,8 @@ button {
   font-weight: 700;
   letter-spacing: 0.12em;
   padding: 2px 7px;
-  background: #1F2937;
-  color: #B9A5F5;
+  background: #E4DBFF;
+  color: #5B3FCF;
   border-radius: 4px;
 }
 .tl-project__name {
