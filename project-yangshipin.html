@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>央视频 · 搜推全链路 · 段雨萱</title>
-  <meta name="description" content="腾讯 PCG 央视频搜推全链路产品优化：搜索结果页聚合卡、摇剧随机分发应用、诗魂对弈游戏化留存三个子项目。" />
+  <title>央视频 · AI 产品化实践 · 段雨萱</title>
+  <meta name="description" content="腾讯 PCG 央视频产品实践：围绕搜索体验、内容分发与小游戏生态落地三个项目，展示算法产品化、Vibe Coding 与数据验证能力。" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -20,234 +20,393 @@
       </a>
       <nav class="nav">
         <a href="./index.html">首页</a>
-        <a href="./index.html">关于</a>
+        <a href="#work">项目闭环</a>
+        <a href="#method">方法沉淀</a>
       </nav>
     </div>
   </header>
 
   <main>
-
-    <!-- ============== PROJECT HERO ============== -->
-    <section class="project-hero">
+    <section class="project-hero answer-hero">
       <div class="container">
         <a class="back-link" href="./index.html">← 返回首页</a>
         <div class="project-tag">
           <span class="tag-num">02</span>
-          <span class="tag-text">腾讯 PCG · 央视频</span>
+          <span class="tag-text">腾讯 PCG · 在线视频BU · 央视频</span>
         </div>
-        <h1 class="project-title">央视频 · 搜推全链路</h1>
-        <p class="project-meta">2026.7 - 至今 · 产品经理 · 与央视合作</p>
+        <h1 class="project-title">央视频 · AI 产品化实践</h1>
+        <p class="project-meta">2026.06 - 2026.08 · 产品策划实习生 · 推荐组</p>
         <p class="project-desc">
-          核心命题：<b>如何把「内容找人」从依赖人力的运营动作升级为可复评、可规模化的 AI-Native 工作流？</b>三条产品线并行推进——搜索结果页供给效率、摇剧应用决策成本、诗魂对弈游戏化留存——覆盖从「用户搜什么」到「搜完看什么」到「看完留下」的完整链路。
+          聚焦<b>搜索体验、内容分发、小游戏生态</b>三大方向，落地 3 个项目。我的核心贡献不是单点功能堆叠，而是把模糊业务问题转化为可度量目标，再通过<b>算法产品化 + Vibe Coding</b>完成低成本验证与规模化。
         </p>
+        <div class="answer-hero__tags" aria-label="核心能力">
+          <span>用户问题定义</span>
+          <span>机制设计</span>
+          <span>AI-Native 工作流</span>
+          <span>数据验证</span>
+        </div>
       </div>
     </section>
 
-    <!-- ============== 闭环叙事 ============== -->
-    <div class="closed-loop">
-
-      <!-- 总数据摘要 -->
-      <div class="loop-summary">
-        <div class="container">
-          <div class="loop-summary-row">
-            <div class="loop-summary-item">
-              <div class="loop-summary-num">3.08w</div>
-              <div class="loop-summary-label">摇剧 30 天 UV</div>
-            </div>
-            <div class="loop-summary-item">
-              <div class="loop-summary-num">54.9%</div>
-              <div class="loop-summary-label">摇剧 有效使用率</div>
-            </div>
-            <div class="loop-summary-item">
-              <div class="loop-summary-num">40%+</div>
-              <div class="loop-summary-label">诗魂对弈 次留</div>
-            </div>
-            <div class="loop-summary-item">
-              <div class="loop-summary-num">+3%</div>
-              <div class="loop-summary-label">搜索 CTR</div>
-            </div>
-          </div>
+    <section class="answer-map" aria-labelledby="answer-map-title">
+      <div class="container">
+        <div class="section-head answer-map__head">
+          <span class="section-num">OVERVIEW</span>
+          <h2 class="section-title" id="answer-map-title">三条业务线，一套产品判断</h2>
+          <p class="section-sub">先识别供给与用户决策中的结构性问题，再选择合适的 AI 杠杆。</p>
+        </div>
+        <div class="answer-map__grid">
+          <a class="answer-map__card" href="#search-case">
+            <span class="answer-map__num">01</span>
+            <span class="answer-map__type">搜索体验优化</span>
+            <h3>运动员看点聚合</h3>
+            <p>把零散结果组织为集中消费入口，并沉淀可审、可改、可发的 AI 内容生产闭环。</p>
+            <strong>日均点击 +66.7%</strong>
+          </a>
+          <a class="answer-map__card" href="#shake-case">
+            <span class="answer-map__num">02</span>
+            <span class="answer-map__type">内容分发提效</span>
+            <h3>随机推剧小应用</h3>
+            <p>用可控随机与场景标签降低“看什么”的决策成本，并让机制自运转。</p>
+            <strong>30 天 UV 3.08 万</strong>
+          </a>
+          <a class="answer-map__card" href="#poetry-case">
+            <span class="answer-map__num">03</span>
+            <span class="answer-map__type">小游戏生态补全</span>
+            <h3>诗词卡牌小游戏</h3>
+            <p>以卡牌策略承接长时消费，独立完成从玩法设计到可玩产品的交付闭环。</p>
+            <strong>零占研发排期</strong>
+          </a>
         </div>
       </div>
+    </section>
 
-      <!-- 阶段一：摇剧 -->
-      <section class="loop-stage">
+    <div class="answer-work" id="work">
+      <section class="answer-case" id="search-case">
         <div class="container">
-          <div class="loop-stage__head">
-            <span class="loop-stage__num">1</span>
-            <span class="loop-stage__label">小应用创新</span>
+          <div class="answer-case__eyebrow">
+            <span class="answer-case__index">01</span>
+            <span>搜索体验优化 · 算法产品化</span>
           </div>
-          <h2 class="loop-stage__title">摇剧 —— 用「开盲盒」切「看什么」决策成本</h2>
+          <div class="answer-case__title-row">
+            <div>
+              <h2>运动员看点聚合</h2>
+              <p>从“用户搜不到重点”到“首屏形成集中消费入口”。</p>
+            </div>
+            <div class="answer-case__headline">
+              <b>+66.7%</b>
+              <span>日均点击提升</span>
+            </div>
+          </div>
 
-          <div class="loop-stage__body">
-            <!-- 4 张手机截图 2x2 -->
-            <div style="display:flex; flex-direction:column; gap:16px;">
-              <div class="loop-screens">
-                <div class="loop-stage__screen">
-                  <img src="assets/tx-shake-home.png" alt="摇剧首页" loading="lazy" />
-                  <p class="screen-caption">首页 · 盲盒仪式感</p>
+          <div class="answer-brief">
+            <div class="answer-brief__item">
+              <span>问题</span>
+              <p>运动员 query 下缺少集中消费入口，单条视频匹配质量低，长尾看点需求没有被承接。</p>
+            </div>
+            <div class="answer-brief__item">
+              <span>判断</span>
+              <p>问题不只在排序，而在供给组织：需要把赛事回放、央视频视频和新热视频组织成一个“可连续消费”的答案。</p>
+            </div>
+            <div class="answer-brief__item">
+              <span>目标</span>
+              <p>短期验证聚合卡能否提升点击与播放；长期沉淀模板，扩展到运动员、球队、热点事件与赛程。</p>
+            </div>
+          </div>
+
+          <div class="answer-split answer-split--search">
+            <div class="answer-visual">
+              <div class="answer-visual__title">产品方案 · 首屏聚合消费入口</div>
+              <div class="search-mockup" aria-label="运动员搜索聚合卡示意">
+                <div class="search-mockup__query">搜索：运动员</div>
+                <div class="search-mockup__card">
+                  <div class="search-mockup__cover">
+                    <span>核心赛事回放</span>
+                    <b>首屏直达</b>
+                  </div>
+                  <div class="search-mockup__list">
+                    <div><i>01</i><span>赛事高光与完整回放</span></div>
+                    <div><i>02</i><span>央视频优质内容</span></div>
+                    <div><i>03</i><span>站内新热视频</span></div>
+                  </div>
                 </div>
-                <div class="loop-stage__screen">
-                  <img src="assets/tx-shake-scene.png" alt="看场景" loading="lazy" />
-                  <p class="screen-caption">看场景 · 8 类场景</p>
-                </div>
-                <div class="loop-stage__screen">
-                  <img src="assets/tx-shake-mood.png" alt="看心情" loading="lazy" />
-                  <p class="screen-caption">看心情 · 8 种心情</p>
-                </div>
-                <div class="loop-stage__screen">
-                  <img src="assets/tx-shake-result.png" alt="推荐结果" loading="lazy" />
-                  <p class="screen-caption">推荐结果 · 开盒即看</p>
-                </div>
+                <div class="search-mockup__footer">聚合卡既是搜索答案，也是连续消费入口</div>
               </div>
             </div>
 
-            <div class="loop-stage__right">
-              <div class="loop-kpis">
-                <div class="loop-kpi">
-                  <div class="kpi-val">3.08w</div>
-                  <div class="kpi-label">30 天 UV</div>
-                </div>
-                <div class="loop-kpi">
-                  <div class="kpi-val">54.9%</div>
-                  <div class="kpi-label">有效使用率</div>
-                </div>
-                <div class="loop-kpi">
-                  <div class="kpi-val">#1</div>
-                  <div class="kpi-label">小应用榜</div>
-                </div>
+            <div class="answer-process">
+              <div class="answer-process__step">
+                <b>01 数据定位</b>
+                <p>识别运动员 query 点击率低、首屏缺少集中入口。</p>
               </div>
-              <div class="loop-step">
-                <p class="loop-step__role">我的角色与贡献</p>
-                <p class="loop-step__text">
-                  央视频内容多但用户「不知道该看什么」。我 0→1 推进摇剧小应用上线：<b>内容池设计</b>确保每次摇出的结果都有消费闭环；<b>露出算法</b>按内容优先级 × 分类权重 × 加权去重保证质量。关键创新是用<b>「小红盒开盲盒」</b>仪式感完成冷启动，再把纯随机升级为结构化轻决策——<b>「看场景」</b>（历史控/强剧情/全家看/通勤路等 8 类）和<b>「看心情」</b>（想开心/想热血/想治愈等 8 种）。上线后登顶央视频小应用榜。
-                </p>
+              <div class="answer-process__step">
+                <b>02 形态设计</b>
+                <p>聚合赛事回放、央视频 vid 与新热视频，首屏直达核心看点。</p>
               </div>
-              <div class="project-links" style="margin-top:12px;">
-                <a class="link-btn" href="https://aibox.yangshipin.cn/tx/shake_movie_box/" target="_blank" rel="noopener">体验摇剧 ↗</a>
+              <div class="answer-process__step">
+                <b>03 AI 上线</b>
+                <p>搭建自动生成工作流，运营看板支持审核、修改与发布。</p>
               </div>
+              <div class="answer-process__step">
+                <b>04 复盘规模化</b>
+                <p>试点有效后抽象模板，以双轨策略承接比赛期与流量低谷期。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="answer-metrics answer-metrics--four">
+            <div class="answer-metric">
+              <span>日均点击</span>
+              <div><small>183</small><em>→</em><b>305</b></div>
+              <strong>+66.7%</strong>
+            </div>
+            <div class="answer-metric">
+              <span>日均播放</span>
+              <div><small>1,014</small><em>→</em><b>2,094</b></div>
+              <strong>+106%</strong>
+            </div>
+            <div class="answer-metric">
+              <span>原有短视频点击率</span>
+              <div><small>1.00%</small><em>→</em><b>2.45%</b></div>
+              <strong>×2.5</strong>
+            </div>
+            <div class="answer-metric">
+              <span>聚合卡点击占比</span>
+              <div><b>50.8%</b></div>
+              <strong>验证集中入口价值</strong>
+            </div>
+          </div>
+
+          <div class="answer-contribution">
+            <div>
+              <span class="answer-contribution__label">我的产品贡献</span>
+              <p>我完成了从数据诊断、聚合卡方案、准入与审核机制，到试点复盘和规模化规划的完整链路。重点不是“做一张卡”，而是把算法结果变成运营可干预、业务可复制的产品能力。</p>
+            </div>
+            <div class="answer-contribution__principle">
+              <span>方法沉淀</span>
+              <b>AI 负责高效生产，产品定义质量底线；评测不是验收终点，而是规则迭代的反馈回路。</b>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 阶段二：诗魂对弈 -->
-      <section class="loop-stage">
+      <section class="answer-case" id="shake-case">
         <div class="container">
-          <div class="loop-stage__head">
-            <span class="loop-stage__num">2</span>
-            <span class="loop-stage__label">游戏化留存</span>
+          <div class="answer-case__eyebrow">
+            <span class="answer-case__index">02</span>
+            <span>内容分发提效 · Vibe Coding Demo</span>
           </div>
-          <h2 class="loop-stage__title">诗魂对弈 —— 把「背诗」转译为「用诗」</h2>
-
-          <div class="loop-stage__body">
-            <!-- 3 张手机截图 -->
-            <div style="display:flex; flex-direction:column; gap:16px;">
-              <div class="loop-screens loop-screens--three">
-                <div class="loop-stage__screen">
-                  <img src="assets/tx-poetry-battle.png" alt="诗魂对弈战斗" loading="lazy" />
-                  <p class="screen-caption">卡牌战斗 · 回合制</p>
-                </div>
-                <div class="loop-stage__screen">
-                  <img src="assets/tx-poetry-map.png" alt="诗词山河" loading="lazy" />
-                  <p class="screen-caption">诗词山河 · 地理+羁绊</p>
-                </div>
-                <div class="loop-stage__screen">
-                  <img src="assets/tx-poetry-wordgame.png" alt="寻花令" loading="lazy" />
-                  <p class="screen-caption">寻花令 · 每日猜词</p>
-                </div>
-              </div>
+          <div class="answer-case__title-row">
+            <div>
+              <h2>随机推剧小应用</h2>
+              <p>从“完全随机”到“可控随机”，把决策疲劳转化为轻量探索。</p>
             </div>
+            <div class="answer-case__headline">
+              <b>3.08 万</b>
+              <span>上线 30 天累计 UV</span>
+            </div>
+          </div>
 
-            <div class="loop-stage__right">
-              <div class="loop-kpis">
-                <div class="loop-kpi">
-                  <div class="kpi-val">1000+</div>
-                  <div class="kpi-label">日均 UV</div>
-                </div>
-                <div class="loop-kpi">
-                  <div class="kpi-val">40%+</div>
-                  <div class="kpi-label">次留率</div>
-                </div>
-                <div class="loop-kpi">
-                  <div class="kpi-val">200+</div>
-                  <div class="kpi-label">诗词收藏馆</div>
+          <div class="answer-brief">
+            <div class="answer-brief__item">
+              <span>用户洞察</span>
+              <p>35% 用户处于无目标滑动状态；内容多，但“选什么”本身成为流失来源。</p>
+            </div>
+            <div class="answer-brief__item">
+              <span>业务约束</span>
+              <p>原运营位覆盖窄、同会话重复率高，并且需要持续人工配置。</p>
+            </div>
+            <div class="answer-brief__item">
+              <span>产品目标</span>
+              <p>内容广覆盖、同会话零重复、零日常人力，并验证机制能否迁移到更多分发场景。</p>
+            </div>
+          </div>
+
+          <div class="answer-mechanism">
+            <div class="answer-mechanism__intro">
+              <span>核心机制</span>
+              <h3>“可控随机”三层约束</h3>
+              <p>随机只是交互感受，背后仍需产品定义供给范围与质量边界。</p>
+            </div>
+            <div class="answer-mechanism__steps">
+              <div><b>候选池</b><span>先筛出可分发内容</span></div>
+              <i>→</i>
+              <div><b>概率</b><span>按质量与运营目标加权</span></div>
+              <i>→</i>
+              <div><b>范围</b><span>会话去重并控制探索边界</span></div>
+            </div>
+          </div>
+
+          <div class="answer-split">
+            <div class="answer-phone-grid">
+              <figure>
+                <img src="assets/tx-shake-home.png" alt="摇剧首页" loading="lazy" />
+                <figcaption>盲盒入口 · 降低选择压力</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/tx-shake-scene.png" alt="摇剧场景选择" loading="lazy" />
+                <figcaption>场景标签 · 缩小决策范围</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/tx-shake-mood.png" alt="摇剧情绪选择" loading="lazy" />
+                <figcaption>心情标签 · 翻译用户状态</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/tx-shake-result.png" alt="摇剧推荐结果" loading="lazy" />
+                <figcaption>开盒即看 · 同会话零重复</figcaption>
+              </figure>
+            </div>
+            <div class="answer-evidence">
+              <div class="answer-evidence__item">
+                <b>20+ → 3000+</b>
+                <span>内容覆盖</span>
+                <p>从有限运营位升级为全量内容池探索。</p>
+              </div>
+              <div class="answer-evidence__item">
+                <b>54.9%</b>
+                <span>有效使用率</span>
+                <p>真实使用数据验证“轻决策”并非噱头。</p>
+              </div>
+              <div class="answer-evidence__item">
+                <b>零日常人力</b>
+                <span>机制自运转</span>
+                <p>产品价值不仅是体验，也包含运营成本下降。</p>
+              </div>
+              <div class="answer-contribution answer-contribution--stacked">
+                <div>
+                  <span class="answer-contribution__label">我的产品贡献</span>
+                  <p>识别无目标用户场景，设计候选池 / 概率 / 范围三层约束和场景 / 心情标签；再用 Vibe Coding 独立完成可体验 Demo，以实物替代需求文档推进验证。</p>
                 </div>
               </div>
-              <div class="loop-step">
-                <p class="loop-step__role">我的角色与贡献</p>
-                <p class="loop-step__text">
-                  文化类产品天然面临「用完即走」困境。我围绕三个轴设计留存体系：<b>核心玩法层</b>——卡牌策略战斗（用诗句组合出招），让诗词变成可博弈的资源而非静态文本；<b>收集驱动层</b>——200+ 诗词收藏馆 + 成就系统，让「收集」成为回访动力；<b>玩法矩阵层</b>——外接诗人百科 / 寻花令（每日猜词）/ 诗塔 Roguelike，拓展不同偏好的留存路径。从<b>「背诗」到「用诗」</b>，让文化内容有重玩价值。
-                </p>
-              </div>
-              <div class="project-links" style="margin-top:12px;">
-                <a class="link-btn" href="https://ai.ysp.qq.com/poetry-game/" target="_blank" rel="noopener">体验诗魂对弈 ↗</a>
-              </div>
+              <a class="link-btn" href="https://aibox.yangshipin.cn/tx/shake_movie_box/" target="_blank" rel="noopener">体验随机推剧 ↗</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 阶段三：搜索结果页 -->
-      <section class="loop-stage">
+      <section class="answer-case" id="poetry-case">
         <div class="container">
-          <div class="loop-stage__head">
-            <span class="loop-stage__num">3</span>
-            <span class="loop-stage__label">搜索供给</span>
+          <div class="answer-case__eyebrow">
+            <span class="answer-case__index">03</span>
+            <span>小游戏生态补全 · Vibe Coding 全流程</span>
           </div>
-          <h2 class="loop-stage__title">搜索合集聚合卡 —— 从「零散单点」到「可运营资产」</h2>
-
-          <div class="loop-stage__body">
-            <div class="loop-stage__right">
-              <div class="loop-kpis">
-                <div class="loop-kpi">
-                  <div class="kpi-val">+3%</div>
-                  <div class="kpi-label">CTR 提升</div>
-                </div>
-                <div class="loop-kpi">
-                  <div class="kpi-val">+5%</div>
-                  <div class="kpi-label">SUG 点击率</div>
-                </div>
-                <div class="loop-kpi">
-                  <div class="kpi-val">+1.7</div>
-                  <div class="kpi-label">人均播放视频数</div>
-                </div>
-              </div>
-              <div class="loop-step">
-                <p class="loop-step__role">我的角色与贡献</p>
-                <p class="loop-step__text">
-                  站内搜索结果只有零散单点视频与专辑，用户搜「张国荣电影」只能看到散落条目。我设计了<b>合集聚合卡</b>，并引入完整的 AI-Native 工作流：<b>意图解析</b>（识别用户搜的是人物/题材/年代/奖项）→ <b>AI 召回</b>（自动匹配内容池）→ <b>合集组装</b>（按主题+热度+时效排序生成卡片）→ <b>触发校验</b>（评估质量门控）→ <b>效果回流</b>（CTR/Satisfaction 数据回灌优化）。把原本「运营手搓合集→逐条审核→上线」的<b>人力密集型流程</b>升级为<b>可审可改可发的机器生产资产</b>。
-                </p>
-              </div>
+          <div class="answer-case__title-row">
+            <div>
+              <h2>诗词卡牌小游戏</h2>
+              <p>把静态文化内容转译成可博弈、可收集、可循环的长线玩法。</p>
             </div>
-            <div class="loop-stage__right">
-              <div class="loop-step">
-                <p class="loop-step__role">产品设计细节</p>
-                <p class="loop-step__text">
-                  卡片视觉上采用<b>主视频大图 + 副视频缩略图</b>的布局，让用户一眼感知合集主题；左下角展示<b>合集动态标签</b>（如「春节特辑」「高分经典」），右下角展示「共 N 集」引导连续消费；卡片底部加入<b>「一键连播」</b>入口，减少每一步的操作摩擦。整个卡片既是「搜索结果的答案」，也是「内容分发的入口」。
-                </p>
+            <div class="answer-case__headline">
+              <b>开发完成</b>
+              <span>待上线验证</span>
+            </div>
+          </div>
+
+          <div class="answer-brief">
+            <div class="answer-brief__item">
+              <span>生态缺口</span>
+              <p>站内小游戏偏休闲，缺少卡牌策略类长线玩法，难以承接长时消费。</p>
+            </div>
+            <div class="answer-brief__item">
+              <span>验证假设</span>
+              <p>诗词 IP 具备角色、名句和收集资产，可与卡牌策略形成差异化组合。</p>
+            </div>
+            <div class="answer-brief__item">
+              <span>产品目标</span>
+              <p>零研发资源下跑通玩法闭环，验证留存较休闲游戏提升 20% 的可能性。</p>
+            </div>
+          </div>
+
+          <div class="answer-loop-diagram" aria-label="诗魂对弈核心玩法循环">
+            <div><span>1</span><b>策略对弈</b><small>诗句组合出招</small></div>
+            <i>→</i>
+            <div><span>2</span><b>抽卡获得</b><small>双卡池控制供给</small></div>
+            <i>→</i>
+            <div><span>3</span><b>收藏成就</b><small>177 首 + 30 项成就</small></div>
+            <i>→</i>
+            <div><span>4</span><b>分解养成</b><small>资源自给自足</small></div>
+          </div>
+
+          <div class="answer-split">
+            <div class="answer-poetry-grid">
+              <figure>
+                <img src="assets/tx-poetry-battle.png" alt="诗魂对弈卡牌战斗" loading="lazy" />
+                <figcaption>核心玩法 · 卡牌策略对弈</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/tx-poetry-map.png" alt="诗词山河收藏馆" loading="lazy" />
+                <figcaption>留存体系 · 诗词收藏馆</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/tx-poetry-wordgame.png" alt="诗魂对弈寻花令" loading="lazy" />
+                <figcaption>玩法拓展 · 寻花令</figcaption>
+              </figure>
+            </div>
+            <div class="answer-evidence">
+              <div class="answer-evidence__item">
+                <b>177 首</b>
+                <span>诗词收藏馆</span>
+                <p>把内容资产变成持续收集目标。</p>
               </div>
+              <div class="answer-evidence__item">
+                <b>30 项</b>
+                <span>成就体系</span>
+                <p>为长期目标提供阶段性反馈。</p>
+              </div>
+              <div class="answer-evidence__item">
+                <b>零占用</b>
+                <span>研发排期</span>
+                <p>从玩法设计到可玩产品由我独立闭环。</p>
+              </div>
+              <div class="answer-evidence__item answer-evidence__item--target">
+                <b>+20%</b>
+                <span>上线后验证目标</span>
+                <p>明确标注为目标，而非已实现结果。</p>
+              </div>
+              <div class="answer-contribution answer-contribution--stacked">
+                <div>
+                  <span class="answer-contribution__label">我的产品贡献</span>
+                  <p>完成品类判断、玩法循环、收藏与成就体系、双卡池和分解经济系统，并通过 Vibe Coding 全流程开发，把“概念方案”推进为可以直接体验和验收的产品。</p>
+                </div>
+              </div>
+              <a class="link-btn" href="https://ai.ysp.qq.com/poetry-game/" target="_blank" rel="noopener">体验诗词卡牌 ↗</a>
             </div>
           </div>
         </div>
       </section>
-
     </div>
 
-    <!-- 结果总览（深色） -->
-    <div class="loop-outcome">
+    <section class="answer-method" id="method">
       <div class="container">
         <div class="section-head">
-          <span class="section-num">OUTCOME</span>
-          <h2 class="section-title">项目闭环：覆盖「搜 → 看 → 留」全链路</h2>
+          <span class="section-num">REFLECTION</span>
+          <h2 class="section-title">从完成项目，到沉淀可复用方法</h2>
+          <p class="section-sub">三类业务结果，最终沉淀为 AI 时代产品策划的判断力与落地力。</p>
         </div>
-        <p style="font-size:15px;color:rgba(255,255,255,0.55);max-width:640px;line-height:1.7;margin-top:8px;">
-          搜索结果页解决「供给效率」、摇剧解决「决策成本」、诗魂对弈解决「长期留存」——三条产品线虽独立上线，但共同回答一个问题：<b style="color:#fde68a;font-weight:600;">如何用产品杠杆而非人力堆砌来驱动内容分发？</b>
-        </p>
+        <div class="answer-method__grid">
+          <article>
+            <span>01 · 产品思维</span>
+            <h3>先看供给，再看交互</h3>
+            <p>很多体验问题不是按钮和页面问题，而是供给组织、决策成本与业务机制问题。先定义结构性矛盾，再选择产品形态。</p>
+          </article>
+          <article>
+            <span>02 · 算法产品化</span>
+            <h3>结果必须可审、可改、可发</h3>
+            <p>AI 是生产工具，不是交付主体。产品需要定义质量底线，并让评测结果反向驱动规则迭代。</p>
+          </article>
+          <article>
+            <span>03 · Vibe Coding</span>
+            <h3>用实物替代文档</h3>
+            <p>Demo 是最低成本的假设验证方式。产品经理不仅要描述方案，也要主动缩短从判断到真实反馈的距离。</p>
+          </article>
+        </div>
+        <div class="answer-method__conclusion">
+          <span>AI 时代产品策划</span>
+          <b>判断力 × 落地力</b>
+          <p>用户视角定义问题 · 数据验证校准判断 · 抽象能力降低复用成本</p>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- ============== BOTTOM NAV ============== -->
     <section class="bottom-nav">
       <div class="container">
         <a class="nav-link nav-prev" href="./project-finscope.html">
@@ -266,7 +425,6 @@
         <p>© 2026 段雨萱 · 个人作品集 · Built for Interview</p>
       </div>
     </footer>
-
   </main>
 </body>
 </html>
