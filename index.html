@@ -3,33 +3,548 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>段雨萱 · AI 产品经理 / 武汉大学金融硕士</title>
-  <meta name="description" content="段雨萱 · AI 产品经理 · 武汉大学金融硕士在读（2025-2027）。前腾讯 PCG 视频 / 百度 MEG 搜索产品 / 美团点评 产品实习经历。" />
+  <title>段雨萱 · AI 产品经理 · 个人作品集</title>
+  <meta name="description" content="段雨萱 · AI 产品经理 · 武汉大学金融硕士在读（2025-2027）。前腾讯 PCG 视频 / 百度 MEG 搜索 / 美团点评 产品实习。" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="page-rich">
 
-  <header class="site-header">
+  <!-- ============== HEADER (sticky nav) ============== -->
+  <header class="site-header site-header--rich">
     <div class="container header-inner">
-      <a class="brand" href="./index.html">
-        <span class="brand-dot"></span>
-        <span class="brand-name">段雨萱</span>
+      <a class="brand brand--rich" href="#hero">
+        <span class="brand-planet" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="32" height="32"><defs><linearGradient id="g1" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#FFD0E0"/><stop offset="1" stop-color="#B4E4FF"/></linearGradient></defs><circle cx="16" cy="16" r="11" fill="url(#g1)"/><path d="M4 16a12 12 0 0 0 24 0M4 16a12 12 0 0 1 24 0" stroke="#0a0a0a" stroke-width="1.2" fill="none" opacity=".7"/><circle cx="16" cy="16" r="1.4" fill="#0a0a0a"/></svg>
+        </span>
+        <span class="brand-name">PORTFOLIO</span>
       </a>
-      <nav class="nav">
-        <a href="./index.html">首页</a>
+
+      <nav class="nav nav--rich" aria-label="主导航">
+        <a href="#about" class="nav-pill">关于我</a>
+        <a href="#education" class="nav-pill">教育背景</a>
+        <a href="#experience" class="nav-pill">工作经历</a>
+        <a href="#works" class="nav-pill">个人作品</a>
+        <a href="#hobbies" class="nav-pill">技能与爱好</a>
+        <a href="#contact" class="nav-pill">联系我</a>
       </nav>
+
+      <a class="resume-link" href="./assets/段雨萱-简历.pdf" download>
+        <span>简历.pdf</span>
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h4v12H3V4l6-2z"/><path d="M8 11l2 2 2-2M10 7v6"/></svg>
+      </a>
     </div>
   </header>
 
   <main>
 
-    <!-- ============== INTRO + 个人信息 ============== -->
-    <section class="intro">
+    <!-- ============== HERO ============== -->
+    <section id="hero" class="hero-rich">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="orb orb--pink"></span>
+        <span class="orb orb--yellow"></span>
+        <span class="orb orb--mint"></span>
+        <span class="ring ring--1"></span>
+        <span class="ring ring--2"></span>
+        <span class="ring ring--3"></span>
+        <span class="sparkle sparkle--1">✦</span>
+        <span class="sparkle sparkle--2">✦</span>
+        <span class="sparkle sparkle--3">✦</span>
+        <span class="sparkle sparkle--4">✧</span>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <span class="hero-pill"><i class="dot"></i> HELLO / 你好</span>
+
+          <h1 class="hero-title">
+            <span class="hero-hi">Hi,</span>
+            <span class="hero-name">我是<span class="hero-name-mark">段雨萱</span></span>
+          </h1>
+
+          <p class="hero-role">Product Manager / 产品经理</p>
+          <p class="hero-underline"></p>
+
+          <div class="hero-myscope">
+            <div class="myscope-head">
+              <span>MY SCOPE</span>
+              <em>我的关键词</em>
+            </div>
+            <div class="myscope-body">
+              AI 内容产品 · 搜索/推荐策略 · 用户洞察 · 数据驱动 · Vibe Coding · 内容生态理解
+            </div>
+          </div>
+
+          <div class="hero-skill-tags">
+            <span class="skill-tag">用户产品</span>
+            <span class="skill-tag">AI 产品</span>
+            <span class="skill-tag">策略产品</span>
+            <span class="skill-tag">数据分析</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="./assets/段雨萱-简历.pdf" download>
+              <span>下载简历</span>
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 8l4 4 4-4M3 14h10"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#contact">联系我</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="bubble bubble--1" aria-hidden="true"></div>
+          <div class="bubble bubble--2" aria-hidden="true"></div>
+          <div class="bubble bubble--3" aria-hidden="true"></div>
+          <div class="bubble bubble--4" aria-hidden="true"></div>
+          <div class="bubble bubble--5" aria-hidden="true"></div>
+          <div class="bubble bubble--6" aria-hidden="true"></div>
+          <div class="bubble bubble--7" aria-hidden="true"></div>
+
+          <div class="photo-slot" aria-label="个人照占位">
+            <div class="photo-slot__inner">
+              <svg class="photo-slot__silhouette" viewBox="0 0 200 280" width="200" height="280" aria-hidden="true">
+                <defs>
+                  <linearGradient id="g-sil" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0" stop-color="#FFD7E5" stop-opacity="0.55"/>
+                    <stop offset="1" stop-color="#C6E8FF" stop-opacity="0.55"/>
+                  </linearGradient>
+                </defs>
+                <!-- head -->
+                <circle cx="100" cy="80" r="44" fill="url(#g-sil)"/>
+                <!-- body -->
+                <path d="M30 280 C30 200 60 140 100 140 C140 140 170 200 170 280 Z" fill="url(#g-sil)"/>
+                <!-- bubble gun -->
+                <g transform="translate(118 160) rotate(-20)">
+                  <rect x="0" y="0" width="22" height="34" rx="5" fill="#FFE15B" stroke="#0a0a0a" stroke-width="1.4"/>
+                  <rect x="3" y="6" width="16" height="6" rx="2" fill="#0a0a0a"/>
+                  <rect x="6" y="14" width="10" height="4" rx="1.5" fill="#0a0a0a" opacity=".5"/>
+                  <circle cx="11" cy="26" r="2" fill="#FFB1C8"/>
+                </g>
+              </svg>
+              <span class="photo-slot__label">个人照占位</span>
+            </div>
+          </div>
+
+          <div class="now-badge" aria-label="现状">
+            <span class="now-badge__tag">NOW</span>
+            <div class="now-badge__body">
+              <b>AI × 用户决策</b>
+              <small>正在解锁新故事</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-down" href="#about">
+        <span>继续下滑，探索更多</span>
+        <span class="scroll-down__dot"></span>
+      </a>
+    </section>
+
+    <!-- ============== ABOUT ME ============== -->
+    <section id="about" class="about">
       <div class="container">
-        <p class="intro-sub">求职意向：AI 产品经理 / 增长产品 / 金融科技方向。可随时到岗/实习。</p>
+        <div class="section-head section-head--left">
+          <span class="section-num">01 · ABOUT ME</span>
+          <h2 class="section-title">关于我</h2>
+          <p class="section-sub">在内容、搜索、推荐与 AI 的交叉口，做一个有手感的产品经理</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card about-card--lead">
+            <p>我是一名 <b>武汉大学金融硕士在读</b>的产品实习生，过去 4 段实习横跨 <b>京东 / 百度 / 美团 / 腾讯</b>，分别做过数据看板、ToC 搜索 AI 智能体、UGC 内容运营和视频内容平台产品。</p>
+            <p>我尤其喜欢在 <b>内容、搜索、推荐与 AI 的交叉口</b>工作——把算法变成"用户能感知到的功能"，把"看上去很酷的 demo"变成"每天有人在用的能力"。</p>
+            <p>日常我关注的关键词是 <b>AI 产品化、人机分工、增量效果、可持续的内容增长</b>，愿意思考也愿意动手：会自己写 prompt 跑评测，也会在产研团队里写 PR 与文档。</p>
+          </div>
+
+          <div class="about-stats">
+            <div class="about-stat">
+              <b>4</b>
+              <span>互联网产品实习</span>
+            </div>
+            <div class="about-stat">
+              <b>3</b>
+              <span>完整项目闭环</span>
+            </div>
+            <div class="about-stat">
+              <b>1</b>
+              <span>独立上线的<br>Vibe Coding 作品</span>
+            </div>
+            <div class="about-stat">
+              <b>2026.08</b>
+              <span>腾讯 PCG 转正答辩</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== EDUCATION ============== -->
+    <section id="education" class="education">
+      <div class="container">
+        <div class="section-head section-head--left">
+          <span class="section-num">02 · EDUCATION</span>
+          <h2 class="section-title">教育背景</h2>
+          <p class="section-sub">金融学的训练，叠加产品经理的长期主义</p>
+        </div>
+
+        <div class="edu-grid">
+
+          <article class="edu-card edu-card--featured">
+            <div class="edu-card__head">
+              <span class="edu-card__period">2025 — 2027</span>
+              <span class="edu-card__badge">在读 · 硕士</span>
+            </div>
+            <h3>武汉大学</h3>
+            <p class="edu-card__major">金融学 · 硕士</p>
+            <ul class="edu-card__list">
+              <li><span>学院</span><b>经济与管理学院</b></li>
+              <li><span>GPA</span><b>3.85 / 4.0</b></li>
+              <li><span>综合排名</span><b>3 / 93</b></li>
+              <li><span>核心课程</span><b>计量经济学、公司金融、资产定价、机器学习导论</b></li>
+            </ul>
+          </article>
+
+          <article class="edu-card">
+            <div class="edu-card__head">
+              <span class="edu-card__period">2021 — 2025</span>
+              <span class="edu-card__badge">学士</span>
+            </div>
+            <h3>武汉大学</h3>
+            <p class="edu-card__major">金融学 · 本科</p>
+            <ul class="edu-card__list">
+              <li><span>学院</span><b>经济与管理学院</b></li>
+              <li><span>学位</span><b>经济学学士（金融学）</b></li>
+              <li><span>核心课程</span><b>金融工程、风险管理、计量经济学、Python 数据分析</b></li>
+            </ul>
+          </article>
+
+          <article class="edu-card edu-card--soft">
+            <h3>在校经历</h3>
+            <ul class="edu-card__list edu-card__list--plain">
+              <li><span>社团</span><b>校级金融协会 项目部部长</b></li>
+              <li><span>赛事</span><b>全国大学生数学建模竞赛 省级一等奖</b></li>
+              <li><span>实践</span><b>学院职业发展中心 校园大使</b></li>
+              <li><span>语言</span><b>CET-6 · 610</b></li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== WORK EXPERIENCE TIMELINE ============== -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <div class="section-head section-head--left">
+          <span class="section-num">03 · EXPERIENCE</span>
+          <h2 class="section-title">实习打怪之路</h2>
+          <p class="section-sub">从数据看板到 AI 产品，每段都在上一个台阶</p>
+        </div>
+
+        <ol class="timeline">
+          <li class="tl-item">
+            <div class="tl-marker">
+              <span class="tl-num">04</span>
+            </div>
+            <div class="tl-card">
+              <div class="tl-head">
+                <span class="tl-period">2026.06 — 至今</span>
+                <h3>腾讯 · PCG 在线视频 BU</h3>
+                <p class="tl-role">融媒体项目中心 · 推荐组 · 产品实习生</p>
+              </div>
+              <p class="tl-desc">负责「央视频搜推全链路」：从运动员搜索的语义召回，到摇一摇推剧的智能分发，到诗词小游戏的 AI 化生产，把 AI 当作一个"业务方"来管理。</p>
+              <div class="tl-skill-row">
+                <span class="tl-skill">AI 产品化</span>
+                <span class="tl-skill">搜索策略</span>
+                <span class="tl-skill">推荐分发</span>
+                <span class="tl-skill">Vibe Coding</span>
+                <span class="tl-skill">A/B 评测</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-marker">
+              <span class="tl-num">03</span>
+            </div>
+            <div class="tl-card">
+              <div class="tl-head">
+                <span class="tl-period">2026.05 — 2026.06</span>
+                <h3>美团 · 点评事业部</h3>
+                <p class="tl-role">当地人推荐榜 · 产品实习生</p>
+              </div>
+              <p class="tl-desc">围绕"为什么这个商家值得被推荐"梳理推荐理由与榜单规则；为商家运营与 C 端体验搭建更清晰的信息分层。</p>
+              <div class="tl-skill-row">
+                <span class="tl-skill">UGC 内容运营</span>
+                <span class="tl-skill">推荐规则</span>
+                <span class="tl-skill">用户调研</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-marker">
+              <span class="tl-num">02</span>
+            </div>
+            <div class="tl-card">
+              <div class="tl-head">
+                <span class="tl-period">2026.01 — 2026.05</span>
+                <h3>百度 · MEG 搜索产品部</h3>
+                <p class="tl-role">Finscope 金融智能体 · 产品实习生</p>
+              </div>
+              <p class="tl-desc">把 FinChat 打造成能看懂行情、能选股、能复盘的金融 Agent：日均分发 1w → 5w+，AI 选股 PV +30%，完成"指标选股 → 自然语言选股 → 策略沉淀"三阶段演进。</p>
+              <div class="tl-skill-row">
+                <span class="tl-skill">AI Agent</span>
+                <span class="tl-skill">金融场景</span>
+                <span class="tl-skill">指标点选</span>
+                <span class="tl-skill">NL2Query</span>
+                <span class="tl-skill">Prompt 评测</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="tl-item">
+            <div class="tl-marker">
+              <span class="tl-num">01</span>
+            </div>
+            <div class="tl-card">
+              <div class="tl-head">
+                <span class="tl-period">2024.10 — 2024.12</span>
+                <h3>京东 · 平台产品与研发中心</h3>
+                <p class="tl-role">EasyBI 看板 · 产品运营实习生</p>
+              </div>
+              <p class="tl-desc">从工单与售后数据中提炼 Top 问题，反哺产品迭代；搭建指标看板与自动告警，沉淀"数据 → 假设 → 行动"的闭环。</p>
+              <div class="tl-skill-row">
+                <span class="tl-skill">数据分析</span>
+                <span class="tl-skill">工单挖掘</span>
+                <span class="tl-skill">指标看板</span>
+                <span class="tl-skill">跨团队协作</span>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============== VIBE CODING WORKS ============== -->
+    <section id="works" class="works">
+      <div class="container">
+        <div class="section-head section-head--left">
+          <span class="section-num">04 · VIBE CODING</span>
+          <h2 class="section-title">个人作品</h2>
+          <p class="section-sub">左图 · 右文 · 一键直达，3 段完整项目闭环</p>
+        </div>
+
+        <div class="works-stack">
+
+          <article class="work-row">
+            <a class="work-shot" href="./project-yangshipin.html" aria-label="进入央视频项目详情">
+              <div class="work-shot__tag">01 / 央视频</div>
+              <div class="work-shot__frame">
+                <img src="./assets/tx-shake-home.png" alt="央视频摇一摇推剧首页" loading="lazy">
+              </div>
+              <div class="work-shot__cta">查看详情 →</div>
+            </a>
+            <div class="work-info">
+              <h3>腾讯央视频 · AI 产品化实践</h3>
+              <p class="work-info__meta">2026.06 — 至今 · 推荐组</p>
+              <p class="work-info__desc">围绕「<b>为什么用 AI、边界如何定义、结果如何验证</b>」三个问题，在搜索、分发和小游戏中实践算法产品化与 Vibe Coding。沉淀了 4 个 AI 角色 + 1 个人工控制面、变更治理四步、AI 内容增长底座等方法论。</p>
+              <ul class="work-info__highlights">
+                <li><b>+66.7%</b><span>搜索日均点击</span></li>
+                <li><b>+106%</b><span>播放量</span></li>
+                <li><b>3.08 万</b><span>摇剧 30 天 UV</span></li>
+                <li><b>50.8%</b><span>聚合卡点击占比</span></li>
+              </ul>
+              <a class="work-info__link" href="./project-yangshipin.html">打开项目页 →</a>
+            </div>
+          </article>
+
+          <article class="work-row work-row--reverse">
+            <a class="work-shot" href="./project-finscope.html" aria-label="进入 Finscope 项目详情">
+              <div class="work-shot__tag">02 / Finscope</div>
+              <div class="work-shot__frame">
+                <img src="./assets/finscope-natural-language-selection.png" alt="Finscope 自然语言选股" loading="lazy">
+              </div>
+              <div class="work-shot__cta">查看详情 →</div>
+            </a>
+            <div class="work-info">
+              <h3>百度 Finscope · 金融智能体</h3>
+              <p class="work-info__meta">2026.01 — 2026.05 · 搜索产品部</p>
+              <p class="work-info__desc">把 FinChat 打造成能看懂行情、能选股、能复盘的金融 Agent。走通"指标点选 → 自然语言选股 → 策略沉淀"三阶段演进，把 Prompt 与数据回写沉淀成可复用资产。</p>
+              <ul class="work-info__highlights">
+                <li><b>1w → 5w+</b><span>日均分发</span></li>
+                <li><b>+30%</b><span>AI 选股 PV</span></li>
+                <li><b>3 阶段</b><span>AI 能力演进</span></li>
+              </ul>
+              <a class="work-info__link" href="./project-finscope.html">打开项目页 →</a>
+            </div>
+          </article>
+
+          <article class="work-row">
+            <a class="work-shot" href="./project-novel.html" aria-label="进入小说英语项目详情">
+              <div class="work-shot__tag">03 / Vibe Coding</div>
+              <div class="work-shot__frame">
+                <img src="./assets/novel-shelf.png" alt="小说英语学习" loading="lazy">
+              </div>
+              <div class="work-shot__cta">查看详情 →</div>
+            </a>
+            <div class="work-info">
+              <h3>小说英语学习 · 独立作品</h3>
+              <p class="work-info__meta">个人项目 · 全流程独立完成</p>
+              <p class="work-info__desc">从 0 到 1 独立完成的产品：自由导入英文小说文本、段落级双语互译、4 套分级词库、个人词本。完整跑通"立项 → 建模 → UI → 评测 → 部署"全部环节。</p>
+              <ul class="work-info__highlights">
+                <li><b>段落级</b><span>双语互译</span></li>
+                <li><b>4 套</b><span>分级词库</span></li>
+                <li><b>1 套</b><span>个人词本</span></li>
+              </ul>
+              <a class="work-info__link" href="./project-novel.html">打开项目页 →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== SKILLS & HOBBIES ============== -->
+    <section id="hobbies" class="hobbies">
+      <div class="container">
+        <div class="section-head section-head--left">
+          <span class="section-num">05 · SKILLS &amp; HOBBIES</span>
+          <h2 class="section-title">技能与爱好</h2>
+          <p class="section-sub">左滑抽卡 · 把「能干的事」和「喜欢的事」分开看</p>
+        </div>
+
+        <div class="hobby-grid">
+          <div class="hobby-block">
+            <header class="hobby-block__head">
+              <h3>技能卡 <span>SKILLS</span></h3>
+              <p>职业能力 / 工具栈 / 软技能</p>
+            </header>
+            <div class="card-pack" id="skill-pack">
+              <button class="pack-card" data-side="skill" data-i="0" type="button">
+                <div class="pack-card__face pack-card__back">点击抽卡</div>
+                <div class="pack-card__face pack-card__front">
+                  <span class="card-eyebrow">产品力</span>
+                  <h4>用户需求拆解</h4>
+                  <p>从用户调研到 PRD、到 A/B 验证的完整闭环。</p>
+                </div>
+              </button>
+              <button class="pack-card" data-side="skill" data-i="1" type="button">
+                <div class="pack-card__face pack-card__back">点击抽卡</div>
+                <div class="pack-card__face pack-card__front">
+                  <span class="card-eyebrow">AI 落地</span>
+                  <h4>Prompt 与评测</h4>
+                  <p>设计提示词 + 自动化评测集，量化 AI 能力边界。</p>
+                </div>
+              </button>
+              <button class="pack-card" data-side="skill" data-i="2" type="button">
+                <div class="pack-card__face pack-card__back">点击抽卡</div>
+                <div class="pack-card__face pack-card__front">
+                  <span class="card-eyebrow">数据</span>
+                  <h4>SQL &amp; 指标体系</h4>
+                  <p>能用 SQL 自助取数，搭指标看板，发现产品问题。</p>
+                </div>
+              </button>
+              <button class="pack-card" data-side="skill" data-i="3" type="button">
+                <div class="pack-card__face pack-card__back">点击抽卡</div>
+                <div class="pack-card__face pack-card__front">
+                  <span class="card-eyebrow">Vibe Coding</span>
+                  <h4>HTML / CSS / JS</h4>
+                  <p>会用代码把想法从 0 做成 1，已独立上线个人作品。</p>
+                </div>
+              </button>
+              <button class="pack-card" data-side="skill" data-i="4" type="button">
+                <div class="pack-card__face pack-card__back">点击抽卡</div>
+                <div class="pack-card__face pack-card__front">
+                  <span class="card-eyebrow">金融</span>
+                  <h4>金融学训练</h4>
+                  <p>财务建模、估值、量化因子，金融场景的产品更上手。</p>
+                </div>
+              </button>
+              <button class="pack-card" data-side="skill" data-i="5" type="button">
+                <div class="pack-card__face pack-card__back">点击抽卡</div>
+                <div class="pack-card__face pack-card__front">
+                  <span class="card-eyebrow">协作</span>
+                  <h4>跨团队沟通</h4>
+                  <p>研发 / 设计 / 算法 / 运营对齐，把项目推上日程。</p>
+                </div>
+              </button>
+            </div>
+            <p class="pack-hint">点击任意卡片抽卡 · 再点收起</p>
+          </div>
+
+          <div class="hobby-block">
+            <header class="hobby-block__head">
+              <h3>兴趣卡 <span>HOBBIES</span></h3>
+              <p>业余时间 · 让产品更有"人味儿"</p>
+            </header>
+            <div class="card-pack" id="hobby-pack">
+              <button class="pack-card pack-card--alt" data-side="hobby" data-i="0" type="button">
+                <div class="pack-card__face pack-card__back">点击抽卡</div>
+                <div class="pack-card__face pack-card__front">
+                  <span class="card-eyebrow">追星</span>
+                  <h4>用户洞察的活水</h4>
+                  <p>蹲超话 / 做数据站妹，看「内容生态」是一种本能。</p>
+                </div>
+              </button>
+              <button class="pack-card pack-card--alt" data-side="hobby" data-i="1" type="button">
+                <div class="pack-card__face pack-card__back">点击抽卡</div>
+                <div class="pack-card__face pack-card__front">
+                  <span class="card-eyebrow">看剧</span>
+                  <h4>叙事结构敏感度</h4>
+                  <p>看见节奏点与情绪曲线，会下意识拆「为什么这里留人」。</p>
+                </div>
+              </button>
+              <button class="pack-card pack-card--alt" data-side="hobby" data-i="2" type="button">
+                <div class="pack-card__face pack-card__back">点击抽卡</div>
+                <div class="pack-card__face pack-card__front">
+                  <span class="card-eyebrow">写作</span>
+                  <h4>PRD 的另一半</h4>
+                  <p>写公众号 / 小红书，把观点组织成别人能读懂的结构。</p>
+                </div>
+              </button>
+              <button class="pack-card pack-card--alt" data-side="hobby" data-i="3" type="button">
+                <div class="pack-card__face pack-card__back">点击抽卡</div>
+                <div class="pack-card__face pack-card__front">
+                  <span class="card-eyebrow">跑步</span>
+                  <h4>身体是产品的本钱</h4>
+                  <p>周末 5km，跑的过程就是和自我对线、做小步迭代。</p>
+                </div>
+              </button>
+              <button class="pack-card pack-card--alt" data-side="hobby" data-i="4" type="button">
+                <div class="pack-card__face pack-card__back">点击抽卡</div>
+                <div class="pack-card__face pack-card__front">
+                  <span class="card-eyebrow">摄影</span>
+                  <h4>构图即取舍</h4>
+                  <p>出门带一台胶片机，练「在一堆信息里留下最对的那一帧」。</p>
+                </div>
+              </button>
+              <button class="pack-card pack-card--alt" data-side="hobby" data-i="5" type="button">
+                <div class="pack-card__face pack-card__back">点击抽卡</div>
+                <div class="pack-card__face pack-card__front">
+                  <span class="card-eyebrow">钢琴</span>
+                  <h4>和声音打交道</h4>
+                  <p>练琴像做体验设计，每一段旋律都要找到让人记住的那一拍。</p>
+                </div>
+              </button>
+            </div>
+            <p class="pack-hint">点击任意卡片抽卡 · 再点收起</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== CONTACT ============== -->
+    <section id="contact" class="contact-rich">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="section-num">06 · CONTACT</span>
+          <h2 class="section-title">联系我</h2>
+          <p class="section-sub">欢迎约面试 / 聊产品 / 约咖啡</p>
+        </div>
 
         <div class="contact-grid">
           <a class="contact-card" href="mailto:2017336834@qq.com">
@@ -40,83 +555,60 @@
             <div class="contact-label">电话</div>
             <div class="contact-val">18107278963</div>
           </a>
-          <a class="contact-card" href="#" onclick="return false;">
+          <div class="contact-card">
             <div class="contact-label">微信</div>
             <div class="contact-val">K-Rain11</div>
-          </a>
+          </div>
           <div class="contact-card">
             <div class="contact-label">学校</div>
             <div class="contact-val">武汉大学 · 金融硕士</div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ============== PROJECTS ============== -->
-    <section class="projects-index">
-      <div class="container">
-        <div class="section-head">
-          <span class="section-num">PROJECTS</span>
-          <h2 class="section-title">项目经历</h2>
-          <p class="section-sub">点击卡片进入查看详情</p>
-        </div>
-
-        <div class="project-cards">
-
-          <a class="project-card" href="./project-finscope.html">
-            <div class="card-tag">
-              <span class="tag-num">01</span>
-              <span class="tag-text">百度 MEG 搜索产品部</span>
-            </div>
-            <h3 class="card-title">Finscope 金融智能体</h3>
-            <p class="card-desc">将 FinChat 打造成能看懂行情、能选股、能复盘的金融 Agent。日均分发从 1w 跃升至 5w+。</p>
-            <div class="card-stats">
-              <div><b>1w → 5w+</b><span>日均分发</span></div>
-              <div><b>+30%</b><span>AI 选股 PV</span></div>
-            </div>
-            <div class="card-cta">查看详情 →</div>
+        <div class="contact-cta-row">
+          <a class="btn btn--primary btn--lg" href="./assets/段雨萱-简历.pdf" download>
+            <span>下载简历 PDF</span>
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 8l4 4 4-4M3 14h10"/></svg>
           </a>
-
-          <a class="project-card" href="./project-yangshipin.html">
-            <div class="card-tag">
-              <span class="tag-num">02</span>
-              <span class="tag-text">腾讯 PCG 在线视频BU · 央视频</span>
-            </div>
-            <h3 class="card-title">央视频 · AI 产品化实践</h3>
-            <p class="card-desc">围绕“为什么用 AI、边界如何定义、结果如何验证”，在搜索、分发和小游戏中实践算法产品化与 Vibe Coding。</p>
-            <div class="card-stats">
-              <div><b>+66.7%</b><span>搜索日均点击</span></div>
-              <div><b>3.08 万</b><span>摇剧 30 天 UV</span></div>
-            </div>
-            <div class="card-cta">查看详情 →</div>
-          </a>
-
-          <a class="project-card" href="./project-novel.html">
-            <div class="card-tag">
-              <span class="tag-num">03</span>
-              <span class="tag-text">个人项目 · Vibe-Coding</span>
-            </div>
-            <h3 class="card-title">小说英语学习</h3>
-            <p class="card-desc">vibe-coding 全流程独立完成。自由导入文本 + 段落级双语互译 + 分级词库 + 个人词本。</p>
-            <div class="card-stats">
-              <div><b>段落级</b><span>双语互译</span></div>
-              <div><b>4 套</b><span>分级词库</span></div>
-            </div>
-            <div class="card-cta">查看详情 →</div>
-          </a>
-
+          <a class="btn btn--ghost btn--lg" href="mailto:2017336834@qq.com">发邮件</a>
         </div>
       </div>
     </section>
-
-    <!-- ============== FOOTER ============== -->
-    <footer class="site-footer">
-      <div class="container">
-        <p>© 2026 段雨萱 · 个人作品集 · Built for Interview</p>
-      </div>
-    </footer>
-
   </main>
 
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer site-footer--rich">
+    <div class="container">
+      <p>© 2026 段雨萱 · Personal Portfolio · Designed &amp; Coded with care.</p>
+    </div>
+  </footer>
+
+  <script>
+    // 抽卡翻转
+    document.querySelectorAll('.pack-card').forEach(function (card) {
+      card.addEventListener('click', function () {
+        card.classList.toggle('is-flipped');
+      });
+    });
+
+    // 滚动时高亮当前导航
+    const navLinks = document.querySelectorAll('.nav--rich a');
+    const sections = ['#about', '#education', '#experience', '#works', '#hobbies', '#contact']
+      .map(id => document.querySelector(id))
+      .filter(Boolean);
+
+    function setActive() {
+      const scrollY = window.scrollY + 120;
+      let current = sections[0]?.id;
+      sections.forEach(sec => {
+        if (sec.offsetTop <= scrollY) current = sec.id;
+      });
+      navLinks.forEach(a => {
+        a.classList.toggle('is-active', a.getAttribute('href') === '#' + current);
+      });
+    }
+    window.addEventListener('scroll', setActive, { passive: true });
+    setActive();
+  </script>
 </body>
 </html>
