@@ -6,10 +6,11 @@ import {
 import { renderStack, focusLayer, fitToViewport } from './stack.js';
 
 const $ = id => document.getElementById(id);
-const STEPS = ['pain', 'solution', 'demo', 'proof', 'loop'];
+const STEPS = ['pain', 'solution', 'demo', 'loop'];
 let curStep = 'pain';
 let curSol = solutions[0];
 let curDemo = productDemo[0];
+let curScreen = productDemo[0].screens[0].key;
 let fitMode = true;
 let painOpen = false;
 
@@ -203,9 +204,9 @@ function renderDemoTabs() {
     </button>`).join('');
 }
 
-function screenHtml(d) {
+function screenHtml(d, key) {
   const status = `<div class="app-status"><span>9:41</span><span class="app-status-right"><i class="ri-signal-wifi-line"></i><i class="ri-battery-2-fill"></i></span></div>`;
-  if (d.id === 'sol-search') {
+  if (key === 'search') {
     return `
       <div class="app-screen">
         ${status}
@@ -230,65 +231,135 @@ function screenHtml(d) {
         </div>
       </div>`;
   }
-  if (d.id === 'sol-interact') {
+  if (key === 'community') {
     return `
       <div class="app-screen">
         ${status}
-        <div class="app-video">
-          <span class="app-video-tag">《琅琊榜》 第 18 集</span>
-          <div class="app-video-center"><i class="ri-play-fill"></i></div>
-          <div class="app-role spot" data-spot="1">
-            <span class="role-avatar">苏</span>
-            <span class="role-msg">想聊聊刚才这段吗？</span>
+        <div class="app-community-head">
+          <div class="app-community-title">社区</div>
+          <div class="app-community-sub">角色朋友圈 · 你的追剧同好圈</div>
+        </div>
+        <div class="app-feed">
+          <div class="app-feed-card">
+            <div class="app-feed-role">
+              <span class="role-avatar sm">苏</span>
+              <div class="app-feed-roleinfo">
+                <div class="app-feed-name">梅长苏 <span class="app-ai-badge">AI</span></div>
+                <div class="app-feed-time">2 小时前 · 追剧中</div>
+              </div>
+              <i class="ri-more-2-fill app-feed-more"></i>
+            </div>
+            <div class="app-feed-text">琅琊榜首，江左梅郎。今日秋色正好，诸位可愿与我共饮一杯？</div>
+            <div class="app-feed-actions">
+              <span><i class="ri-heart-3-line"></i>1.2万</span><span><i class="ri-chat-1-line"></i>2860</span><span><i class="ri-share-forward-line"></i>分享</span>
+            </div>
+          </div>
+          <div class="app-feed-card spot" data-spot="1">
+            <div class="app-feed-role">
+              <span class="role-avatar sm rev">萧</span>
+              <div class="app-feed-roleinfo">
+                <div class="app-feed-name">靖王萧景琰 <span class="app-ai-badge">AI</span></div>
+                <div class="app-feed-time">刚刚 · 互动提醒</div>
+              </div>
+              <i class="ri-more-2-fill app-feed-more"></i>
+            </div>
+            <div class="app-feed-text">今日份的追剧打卡：第 18 集，赤焰旧案渐明。评论区聊聊你们最想对苏先生说的一句话。</div>
+            <div class="app-feed-actions">
+              <span><i class="ri-heart-3-line"></i>3.4万</span><span><i class="ri-chat-1-line"></i>9120</span><span><i class="ri-share-forward-line"></i>分享</span>
+            </div>
+          </div>
+          <div class="app-feed-remix">
+            <i class="ri-magic-line"></i>
+            <div class="app-feed-remix-info">
+              <div class="app-feed-remix-title">二创推荐 · 用户混剪《赤焰旧事》</div>
+              <div class="app-feed-remix-sub">来自创作中心 · 正版素材授权</div>
+            </div>
+            <i class="ri-play-circle-fill"></i>
           </div>
         </div>
-        <div class="app-progress"><span class="app-progress-bar"></span></div>
-        <div class="app-ctrl">
-          <i class="ri-play-circle-line"></i><i class="ri-speed-up-line"></i><i class="ri-chat-1-line"></i><i class="ri-fullscreen-line"></i>
+        <div class="app-bottom-tab">
+          <span class="app-tab"><i class="ri-home-5-line"></i>首页</span>
+          <span class="app-tab is-on"><i class="ri-team-line"></i>社区</span>
+          <span class="app-tab"><i class="ri-user-3-line"></i>我的</span>
         </div>
-        <div class="app-ask"><i class="ri-search-eye-line"></i><span>边看边问 · 这个角色是谁？</span></div>
-        <div class="app-gen"><i class="ri-magic-line"></i><span>一键二创</span></div>
       </div>`;
   }
+  if (key === 'mine') {
+    return `
+      <div class="app-screen">
+        ${status}
+        <div class="app-user">
+          <span class="app-avatar">冬</span>
+          <div>
+            <div class="app-nick">winterduan</div>
+            <div class="app-vip"><i class="ri-vip-crown-2-fill"></i> 优酷 VIP</div>
+          </div>
+        </div>
+        <div class="app-create-card spot" data-spot="1">
+          <span class="app-create-ic"><i class="ri-magic-line"></i></span>
+          <div>
+            <div class="app-create-title">创作中心</div>
+            <div class="app-create-sub">一键角色 cut · 混剪 · AI 番外</div>
+          </div>
+          <i class="ri-arrow-right-s-line"></i>
+        </div>
+        <div class="app-create-grid">
+          <div class="cg-item"><i class="ri-scissors-2-line"></i><span>一键二创</span></div>
+          <div class="cg-item"><i class="ri-folder-5-line"></i><span>我的作品</span></div>
+          <div class="cg-item"><i class="ri-flag-line"></i><span>官方活动</span></div>
+          <div class="cg-item"><i class="ri-shield-star-line"></i><span>正版素材</span></div>
+        </div>
+      </div>`;
+  }
+  // player：播放页（暂停态，展示调起后的 AI 浮层）
   return `
     <div class="app-screen">
       ${status}
-      <div class="app-user">
-        <span class="app-avatar">冬</span>
-        <div>
-          <div class="app-nick">winterduan</div>
-          <div class="app-vip"><i class="ri-vip-crown-2-fill"></i> 优酷 VIP</div>
+      <div class="app-video">
+        <span class="app-video-tag">《琅琊榜》 第 18 集</span>
+        <span class="app-paused"><i class="ri-pause-circle-fill"></i> 已暂停</span>
+        <div class="app-video-center"><i class="ri-play-fill"></i></div>
+        <div class="app-ai-capsule spot" data-spot="1"><i class="ri-sparkling-2-line"></i>AI</div>
+        <div class="app-role">
+          <span class="role-avatar">苏</span>
+          <span class="role-msg">想聊聊刚才这段吗？</span>
         </div>
       </div>
-      <div class="app-create-card spot" data-spot="1">
-        <span class="app-create-ic"><i class="ri-magic-line"></i></span>
-        <div>
-          <div class="app-create-title">创作中心</div>
-          <div class="app-create-sub">一键角色 cut · 混剪 · AI 番外</div>
-        </div>
-        <i class="ri-arrow-right-s-line"></i>
+      <div class="app-progress"><span class="app-progress-bar"></span></div>
+      <div class="app-ctrl">
+        <i class="ri-play-circle-line"></i><i class="ri-speed-up-line"></i><i class="ri-chat-1-line"></i><i class="ri-fullscreen-line"></i>
       </div>
-      <div class="app-create-grid">
-        <div class="cg-item"><i class="ri-scissors-2-line"></i><span>一键二创</span></div>
-        <div class="cg-item"><i class="ri-folder-5-line"></i><span>我的作品</span></div>
-        <div class="cg-item"><i class="ri-flag-line"></i><span>官方活动</span></div>
-        <div class="cg-item"><i class="ri-shield-star-line"></i><span>正版素材</span></div>
-      </div>
+      <div class="app-ask"><i class="ri-search-eye-line"></i><span>边看边问 · 这个角色是谁？</span></div>
+      <div class="app-gen"><i class="ri-magic-line"></i><span>一键二创</span></div>
     </div>`;
+}
+
+function renderScreenTabs() {
+  const d = curDemo;
+  const wrap = $('demoScreenTabs');
+  if (!d.screens || d.screens.length <= 1) { wrap.innerHTML = ''; wrap.classList.add('hidden'); return; }
+  wrap.classList.remove('hidden');
+  wrap.innerHTML = d.screens.map(s => `
+    <button class="screen-tab ${s.key === curScreen ? 'is-active' : ''}" data-screen="${s.key}">
+      <span class="screen-tab-dot"></span>${s.label}
+    </button>`).join('');
 }
 
 function renderProductDemo() {
   renderDemoTabs();
+  renderScreenTabs();
   const d = curDemo;
+  const screenKey = d.screens.some(s => s.key === curScreen) ? curScreen : d.screens[0].key;
   $('demoPhone').style.setProperty('--spot-c', d.accent);
-  $('demoPhone').innerHTML = `<div class="phone-notch"></div>${screenHtml(d)}`;
+  $('demoPhone').innerHTML = `<div class="phone-notch"></div>${screenHtml(d, screenKey)}`;
 
-  const note = {
-    'sol-search': '首页搜索页还原 · 圆圈① 即 AI 搜索主入口（顶部搜索框升级为自然语言问答）',
-    'sol-interact': '播放页还原 · 圆圈① 为 AI 互动主入口「角色气泡」；播放页同时是搜索/二创的汇合点',
-    'sol-gen': '我的页还原 · 圆圈① 为创作中心主入口，一键二创 / 混剪 / AI 番外从这里进'
+  const noteMap = {
+    'sol-search': '搜索页还原 · 圆圈① 即 AI 搜索主入口（顶部搜索框升级为自然语言问答）',
+    'sol-interact:player': '播放页还原（暂停态）· 圆圈① 为右下角 AI 胶囊（调起入口），点击后角色气泡与边看边问才浮现',
+    'sol-interact:community': '社区页还原 · 角色朋友圈：角色动态流 + 二创分发 + 粉丝互动，圆圈① 为角色动态入口',
+    'sol-gen': '我的页还原 · 圆圈① 为创作中心入口，一键二创 / 混剪 / AI 番外从这里进'
   };
-  $('demoScreenNote').textContent = note[d.id] || '';
+  $('demoScreenNote').textContent = noteMap[`${d.id}:${screenKey}`] || noteMap[d.id] || '';
 
   const entryTags = d.entries.map((e, i) => `
     <div class="entry-row">
@@ -311,6 +382,22 @@ function renderProductDemo() {
         <div class="text-[11px] text-slate-500 mt-0.5">${it.sub}</div>
       </div>
     </div>`).join('');
+
+  const overlayHtml = d.overlay ? `
+    <div class="rounded-2xl bg-white border border-slate-200 shadow-soft p-5 fade-in">
+      <h3 class="text-sm font-bold mb-1"><i class="ri-eye-off-line text-brand-500 mr-1"></i>${d.overlay.title}</h3>
+      <p class="text-[11px] text-slate-500 mb-3 leading-relaxed">${d.overlay.principle}</p>
+      <div class="space-y-2">
+        ${d.overlay.states.map((s, i) => `
+          <div class="overlay-state">
+            <span class="overlay-state-no" style="background:${d.accent}">${i + 1}</span>
+            <div class="min-w-0 flex-1">
+              <div class="text-[12px] font-bold text-slate-800">${s.name}</div>
+              <div class="text-[11px] text-slate-500 mt-0.5 leading-relaxed">${s.desc}</div>
+            </div>
+          </div>`).join('')}
+      </div>
+    </div>` : '';
 
   $('demoDetail').innerHTML = `
     <div class="rounded-2xl bg-white border border-slate-200 shadow-soft p-5 fade-in">
@@ -338,26 +425,25 @@ function renderProductDemo() {
       <h3 class="text-sm font-bold mb-1"><i class="ri-gesture-line text-brand-500 mr-1"></i>怎么交互</h3>
       <p class="text-[11px] text-slate-500 mb-3">从进入到完整体验的三步</p>
       <div class="space-y-2.5">${stepTags}</div>
-    </div>`;
+    </div>
+
+    ${overlayHtml}`;
+
+  // 效果验证（能力演示 + 验证指标）已并入本步，随当前产品联动
+  renderDemoQuestions();
+  renderDemoAnswer();
+  renderProofMetrics();
 }
 
-/* ================= STEP 4 效果验证 ================= */
-let proofSol = 'sol-search';
+/* ================= 效果验证（能力演示 + 指标，已并入 STEP 3 产品 Demo） ================= */
 let demoIdx = 0;
 let typeTimer = null;
 
-const demoList = () => demoCases.filter(d => d.sol === proofSol);
-
-function renderProofTabs() {
-  $('proofTabs').innerHTML = proofBySolution.map(p => `
-    <button class="sol-tab ${p.sol === proofSol ? 'is-active' : ''}" data-proof-sol="${p.sol}">
-      <i class="${p.icon} text-base"></i><span>${p.name}</span>
-    </button>`).join('');
-}
+const demoList = () => demoCases.filter(d => d.sol === curDemo.id);
 
 function renderDemoQuestions() {
   const list = demoList();
-  const cur = proofBySolution.find(p => p.sol === proofSol);
+  const cur = proofBySolution.find(p => p.sol === curDemo.id);
   $('demoTitle').textContent = `${cur ? cur.name : ''} 能力演示`;
   $('demoHint').textContent = cur ? cur.verify : '';
   $('demoQuestions').innerHTML = list.map((d, i) => `
@@ -411,7 +497,7 @@ function renderDemoAnswer() {
 }
 
 function renderProofMetrics() {
-  const p = proofBySolution.find(x => x.sol === proofSol);
+  const p = proofBySolution.find(x => x.sol === curDemo.id);
   if (!p) return;
   $('proofMetrics').innerHTML = p.metrics.map(m => `
     <div class="rounded-xl bg-white border border-slate-200 p-3.5 fade-in">
@@ -425,13 +511,6 @@ function renderProofMetrics() {
         <span class="text-[11px] text-slate-700 font-medium leading-relaxed">${m.after}</span>
       </div>
     </div>`).join('');
-}
-
-function renderProof() {
-  renderProofTabs();
-  renderDemoQuestions();
-  renderDemoAnswer();
-  renderProofMetrics();
 }
 
 function renderCompare() {
@@ -449,7 +528,7 @@ function renderCompare() {
     </div>`).join('');
 }
 
-/* ================= STEP 5 双闭环 ================= */
+/* ================= STEP 4 双闭环 ================= */
 function renderLoop() {
   $('productLoopGrid').innerHTML = productLoop.map(s => `
     <div class="loop-step fade-in">
@@ -547,7 +626,7 @@ function renderMemberBenefit() {
 
 /* ================= 步骤切换 ================= */
 function renderDots() {
-  const labels = { pain:'痛点×解法', solution:'解法', demo:'产品Demo', proof:'验证', loop:'闭环' };
+  const labels = { pain:'痛点×解法', solution:'解法', demo:'产品Demo×验证', loop:'闭环' };
   $('stepDots').innerHTML = STEPS.map(s => `
     <button data-goto-step="${s}" class="flex items-center gap-1.5 px-2 py-1 rounded-lg transition ${s === curStep ? 'bg-brand-600 text-white' : 'bg-slate-100 text-slate-500 hover:bg-slate-200'}">
       <span class="h-1.5 w-1.5 rounded-full ${s === curStep ? 'bg-white' : 'bg-slate-400'}"></span>
@@ -569,7 +648,7 @@ function goStep(step) {
   $('btnPrev').style.opacity = i === 0 ? '.4' : '1';
   $('btnNext').style.opacity = i === STEPS.length - 1 ? '.4' : '1';
 
-  if (step === 'proof') renderDemoAnswer();
+  if (step === 'demo') renderDemoAnswer();
   if (step === 'solution') applyFit();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -640,16 +719,6 @@ function bind() {
       return;
     }
 
-    const proofTab = e.target.closest('[data-proof-sol]');
-    if (proofTab) {
-      if (proofTab.dataset.proofSol !== proofSol) {
-        proofSol = proofTab.dataset.proofSol;
-        demoIdx = 0;
-        renderProof();
-      }
-      return;
-    }
-
     const solTab = e.target.closest('[data-sol]');
     if (solTab) {
       const s = solutions.find(x => x.id === solTab.dataset.sol);
@@ -660,7 +729,13 @@ function bind() {
     const demoTab = e.target.closest('[data-demo-sol]');
     if (demoTab) {
       const d = productDemo.find(x => x.id === demoTab.dataset.demoSol);
-      if (d && d.id !== curDemo.id) { curDemo = d; renderProductDemo(); }
+      if (d && d.id !== curDemo.id) { curDemo = d; curScreen = d.screens[0].key; demoIdx = 0; renderProductDemo(); }
+      return;
+    }
+
+    const screenTab = e.target.closest('[data-screen]');
+    if (screenTab) {
+      if (screenTab.dataset.screen !== curScreen) { curScreen = screenTab.dataset.screen; renderProductDemo(); }
       return;
     }
 
@@ -722,7 +797,6 @@ function boot() {
   renderSolution();
   renderProductDemo();
   renderMemberBenefit();
-  renderProof();
   renderCompare();
   renderLoop();
   bind();

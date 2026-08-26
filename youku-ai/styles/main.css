@@ -510,3 +510,100 @@ body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft
 @media (max-width: 1023px) {
   .phone { margin: 0 auto; }
 }
+
+/* ============ 播放页：暂停标签 + AI 胶囊（调起入口） ============ */
+.app-paused {
+  position: absolute; top: 8px; right: 10px;
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 3px 8px; border-radius: 8px;
+  background: rgba(0,0,0,.45); color: #fff;
+  font-size: 9.5px; font-weight: 700;
+}
+.app-ai-capsule {
+  position: absolute; right: 10px; bottom: 10px; z-index: 5;
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 6px 11px; border-radius: 999px;
+  background: rgba(0,0,0,.42); backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,.28);
+  color: #fff; font-size: 10px; font-weight: 800;
+}
+.app-ai-capsule i { color: #7fd8ff; font-size: 12px; }
+/* 角色气泡移到 AI 胶囊上方，避免重叠 */
+.app-video .app-role { bottom: 48px; }
+
+/* ============ 社区页：角色朋友圈 ============ */
+.app-community-head { padding: 10px 16px 8px; }
+.app-community-title { font-size: 16px; font-weight: 800; color: #fff; }
+.app-community-sub { font-size: 10px; color: #8fa3c0; margin-top: 2px; }
+.app-feed { flex: 1; overflow: hidden; padding: 6px 14px 10px; }
+.app-feed-card {
+  position: relative;
+  background: #1c2a44; border-radius: 12px; padding: 10px 11px; margin-bottom: 8px;
+}
+.app-feed-role { display: flex; align-items: center; gap: 8px; }
+.role-avatar.sm { height: 26px; width: 26px; font-size: 11px; }
+.role-avatar.rev { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+.app-feed-roleinfo { flex: 1; min-width: 0; }
+.app-feed-name { font-size: 11px; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 5px; }
+.app-feed-time { font-size: 9px; color: #8fa3c0; margin-top: 1px; }
+.app-feed-more { color: #8fa3c0; font-size: 14px; }
+.app-feed-text { font-size: 11px; color: #dbe4f0; line-height: 1.55; margin-top: 7px; }
+.app-feed-actions {
+  display: flex; gap: 16px; margin-top: 8px;
+  color: #8fa3c0; font-size: 10px; font-weight: 600;
+}
+.app-feed-actions span { display: inline-flex; align-items: center; gap: 4px; }
+.app-feed-remix {
+  display: flex; align-items: center; gap: 9px;
+  background: linear-gradient(135deg, #1a2740, #22314f);
+  border: 1px solid rgba(106,92,255,.4); border-radius: 12px;
+  padding: 9px 11px; margin-bottom: 8px;
+}
+.app-feed-remix > i { color: #6a5cff; font-size: 16px; flex: 0 0 auto; }
+.app-feed-remix-info { flex: 1; min-width: 0; }
+.app-feed-remix-title { font-size: 10.5px; font-weight: 700; color: #fff; }
+.app-feed-remix-sub { font-size: 9px; color: #8fa3c0; margin-top: 2px; }
+.app-feed-remix > i:last-child { color: #fff; font-size: 16px; }
+
+/* 底部 tab 栏 */
+.app-bottom-tab {
+  display: flex; justify-content: space-around; align-items: center;
+  padding: 10px 20px 14px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  background: rgba(14,26,47,.5);
+}
+.app-tab {
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  color: #6b7f9e; font-size: 9.5px; font-weight: 600;
+}
+.app-tab i { font-size: 17px; }
+.app-tab.is-on { color: #6a5cff; }
+
+/* ============ 手机多屏切换 tab ============ */
+.screen-tabs-wrap {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-bottom: 14px;
+}
+.screen-tabs-wrap.hidden { display: none; }
+.screen-tab {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 5px 11px; border-radius: 999px;
+  background: #fff; border: 1.5px solid #e2e8f0;
+  color: #475569; font-size: 11px; font-weight: 700;
+  transition: all .2s ease; white-space: nowrap;
+}
+.screen-tab:hover { border-color: #bcd0ff; }
+.screen-tab.is-active { border-color: #2a52d4; color: #1d4ed8; background: #eef4ff; }
+.screen-tab-dot { height: 6px; width: 6px; border-radius: 50%; background: #94a3b8; }
+.screen-tab.is-active .screen-tab-dot { background: #2a52d4; }
+
+/* ============ 调起 / 隐藏机制状态 ============ */
+.overlay-state {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 10px 12px; border-radius: 12px;
+  background: #f8fafc; border: 1px solid #eef2f7;
+}
+.overlay-state-no {
+  flex: 0 0 auto; height: 22px; width: 22px; border-radius: 7px;
+  color: #fff; font-size: 12px; font-weight: 800;
+  display: grid; place-items: center;
+}
