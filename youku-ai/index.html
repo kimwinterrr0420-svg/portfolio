@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>从痛点到解法 · 长视频平台 AI 化可视化</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+<link rel="stylesheet" href="./styles/main.css">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand: { 50:'#eef4ff',100:'#dce7ff',200:'#bcd0ff',300:'#8fb0ff',400:'#5b86fa',500:'#3b6bf0',600:'#2a52d4',700:'#2342a8',800:'#213a86',900:'#1f346b' },
+        pain:  { 50:'#fff1f2',100:'#ffe4e6',200:'#fecdd3',400:'#fb7185',500:'#e11d48',600:'#be123c' }
+      },
+      boxShadow: { soft:'0 6px 24px -8px rgba(31,52,107,.25)' }
+    }
+  }
+}
+</script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+<header class="sticky top-0 z-40 backdrop-blur bg-white/90 border-b border-slate-200">
+  <div class="mx-auto max-w-[1500px] px-4 lg:px-8 py-3 flex flex-wrap items-center gap-3">
+    <div class="flex items-center gap-3 mr-auto">
+      <div class="h-10 w-10 rounded-xl bg-brand-600 text-white grid place-items-center shadow-soft">
+        <i class="ri-arrow-right-circle-line text-xl"></i>
+      </div>
+      <div>
+        <h1 class="text-base lg:text-lg font-bold leading-tight">从痛点到解法</h1>
+        <p class="text-xs text-slate-500 leading-tight">长视频平台的三大痛点域 × 三大 AI 产品解法</p>
+      </div>
+    </div>
+    <nav id="stepNav" class="flex items-center gap-1 p-1 rounded-xl bg-slate-100">
+      <button data-step="pain" class="view-tab is-active"><i class="ri-error-warning-line mr-1"></i>1 痛点×解法</button>
+      <button data-step="solution" class="view-tab"><i class="ri-stack-line mr-1"></i>2 解法架构</button>
+      <button data-step="proof" class="view-tab"><i class="ri-chat-search-line mr-1"></i>3 效果验证</button>
+      <button data-step="loop" class="view-tab"><i class="ri-loop-right-line mr-1"></i>4 闭环</button>
+    </nav>
+  </div>
+</header>
+
+<main class="mx-auto max-w-[1500px] px-4 lg:px-8 py-7">
+
+  <!-- ============ 第一步：痛点 × 解法（同页对照） ============ -->
+  <section id="step-pain" class="step-panel space-y-4">
+    <div class="rounded-2xl bg-gradient-to-br from-pain-500 via-pain-600 to-brand-600 text-white px-6 py-5 shadow-soft">
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
+        <div class="min-w-0 flex-1">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-white/20 text-[10px] font-extrabold tracking-widest">STEP 1 · 痛点 × 解法</span>
+          <h2 class="text-lg lg:text-2xl font-extrabold leading-tight mt-2">三类结构性痛点，九个小点，逐条给出解法</h2>
+          <p class="text-xs mt-2 text-white/90 leading-relaxed max-w-4xl">左边是问题，右边紧跟着答案，每条痛点都标注了承接产品与对应能力层。<strong class="text-white">详细说明默认收起</strong>，点击任意一条即可展开；三类痛点的根源都指向同一件事——内容没有被结构化，所以九条解法最终都落回同一个「AI 内容理解底座」。</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="btnExpandAll" class="px-3 py-2 rounded-xl bg-white/20 hover:bg-white/30 text-white text-xs font-bold transition"><i class="ri-expand-vertical-line mr-1"></i>展开全部说明</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4" id="painGrid"></div>
+
+    <div class="rounded-2xl bg-white border border-slate-200 shadow-soft p-5">
+      <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-3">
+        <h3 class="text-sm font-bold"><i class="ri-focus-3-line text-pain-500 mr-1"></i>九条解法的共同根因</h3>
+        <p class="text-[11px] text-slate-500">三类痛点表现不同，但根因只有三条，且都由同一个底座解决</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="rootCauseGrid"></div>
+      <div class="mt-5 flex flex-wrap justify-center gap-3">
+        <button data-goto-step="solution" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-600 text-white text-sm font-bold hover:bg-brand-700 transition">
+          看解法的三层架构 <i class="ri-arrow-right-line"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 第二步：解法架构 ============ -->
+  <section id="step-solution" class="step-panel hidden space-y-4">
+    <div class="rounded-2xl bg-white border border-slate-200 shadow-soft px-5 py-4 flex flex-wrap items-center gap-x-5 gap-y-3">
+      <div class="min-w-0">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-brand-50 text-brand-600 text-[10px] font-extrabold tracking-widest">STEP 2</span>
+          <h2 class="text-base lg:text-xl font-extrabold leading-tight">三大 AI 产品的分层架构</h2>
+        </div>
+        <p class="text-[11px] text-slate-500 mt-1">三者共享同一个「AI 内容理解底座」，自下而上依赖</p>
+      </div>
+      <div class="flex flex-wrap items-center gap-2 lg:ml-auto" id="solTabs"></div>
+    </div>
+
+    <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 lg:p-5">
+      <div class="flex flex-wrap items-center gap-3 mb-3">
+        <div class="mr-auto">
+          <h3 class="text-sm font-bold" id="stackTitle"></h3>
+          <p class="text-xs text-slate-500 mt-0.5" id="stackClaim"></p>
+        </div>
+        <button id="btnFitScreen" class="tool-btn is-active"><i class="ri-fullscreen-exit-line mr-1"></i>一屏展示</button>
+        <button id="btnFocusReset" class="tool-btn"><i class="ri-refresh-line mr-1"></i>取消聚焦</button>
+      </div>
+      <div id="stackScene" class="stack-scene"></div>
+    </div>
+
+    <details id="detailWrap" class="rounded-2xl bg-white border border-slate-200 shadow-soft overflow-hidden">
+      <summary class="px-5 py-3.5 cursor-pointer flex items-center gap-2 text-sm font-bold hover:bg-slate-50 transition">
+        <i class="ri-information-line text-brand-500"></i>
+        <span>展开当前层详情与设计意图</span>
+        <i class="ri-arrow-down-s-line ml-auto text-slate-400"></i>
+      </summary>
+      <div class="border-t border-slate-100 p-5 grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div class="lg:col-span-2" id="layerDetail"></div>
+        <div class="rounded-2xl bg-brand-600 text-white p-5">
+          <h3 class="text-sm font-bold mb-2"><i class="ri-lightbulb-flash-line mr-1"></i>为什么必须自下而上</h3>
+          <p class="text-xs leading-relaxed text-brand-50/95">先把影视内容从「视频文件」变成「可计算的知识」，再往上长出搜索问答、陪看互动和创作工具。<strong class="text-white">没有底座，上层应用都是空中楼阁</strong>——这也是三大产品共享同一个底座的原因。</p>
+          <div class="mt-4 pt-4 border-t border-white/20" id="solveBack"></div>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ 第四步：效果验证 ============ -->
+  <section id="step-proof" class="step-panel hidden space-y-6">
+    <div class="rounded-2xl bg-white border border-slate-200 shadow-soft p-6">
+      <div class="flex flex-col lg:flex-row lg:items-end gap-4">
+        <div class="min-w-0">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-[11px] font-extrabold tracking-widest mb-3">STEP 3 · 效果验证</span>
+          <h2 class="text-lg lg:text-2xl font-extrabold leading-tight">三大产品分别怎么验证</h2>
+          <p class="text-xs text-slate-500 mt-2">切换产品查看各自的能力演示与验证指标，三个产品都要能被单独证明有效。</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2 lg:ml-auto" id="proofTabs"></div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 xl:grid-cols-5 gap-5">
+      <div class="xl:col-span-3 rounded-2xl bg-white border border-slate-200 shadow-soft overflow-hidden">
+        <div class="px-5 py-3.5 border-b border-slate-100 flex items-center gap-2">
+          <span class="h-8 w-8 rounded-lg bg-brand-50 text-brand-600 grid place-items-center"><i class="ri-chat-search-line"></i></span>
+          <div class="min-w-0">
+            <h3 class="text-sm font-bold leading-tight" id="demoTitle">能力演示</h3>
+            <p class="text-[11px] text-slate-500 leading-snug mt-0.5" id="demoHint"></p>
+          </div>
+        </div>
+        <div class="p-5 flex flex-wrap gap-2" id="demoQuestions"></div>
+        <div class="px-5 pb-5"><div id="demoAnswer" class="rounded-xl bg-slate-50 border border-slate-200 p-4 min-h-[190px]"></div></div>
+      </div>
+      <div class="xl:col-span-2 rounded-2xl bg-white border border-slate-200 shadow-soft p-5">
+        <h3 class="text-sm font-bold mb-3"><i class="ri-database-2-line text-brand-500 mr-1"></i>本次回答调用的底座能力</h3>
+        <div class="flex flex-wrap gap-2" id="usedBases"></div>
+        <p class="text-[11px] text-slate-500 mt-3 leading-relaxed">每个答案都由底座的结构化数据支撑，可反向追溯到具体的内容理解维度——这就是底座价值的直接证明。</p>
+      </div>
+    </div>
+
+    <div class="rounded-2xl bg-white border border-slate-200 shadow-soft p-5">
+      <h3 class="text-sm font-bold mb-1"><i class="ri-focus-2-line text-brand-500 mr-1"></i>当前产品的验证指标</h3>
+      <p class="text-xs text-slate-500 mb-3">每个指标都给出「现在什么样」与「AI 化之后什么样」，可直接拿去做实验设计。</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3" id="proofMetrics"></div>
+    </div>
+
+    <div class="rounded-2xl bg-white border border-slate-200 shadow-soft overflow-hidden">
+      <div class="px-5 py-4 border-b border-slate-100">
+        <h3 class="text-sm font-bold">现状 vs AI 化之后</h3>
+        <p class="text-xs text-slate-500 mt-0.5">全平台维度的能力跃迁对照</p>
+      </div>
+      <div class="divide-y divide-slate-100" id="compareList"></div>
+    </div>
+  </section>
+
+  <!-- ============ 第五步：双闭环 ============ -->
+  <section id="step-loop" class="step-panel hidden space-y-6">
+    <div class="rounded-2xl bg-white border border-slate-200 shadow-soft p-6">
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-[11px] font-extrabold tracking-widest mb-3">STEP 4 · 两层闭环</span>
+      <h2 class="text-lg lg:text-2xl font-extrabold leading-tight">从「活动驱动」到「生态驱动」</h2>
+      <p class="text-xs text-slate-500 mt-2 max-w-4xl leading-relaxed">闭环分两层：<strong class="text-slate-700">内循环</strong>是三大 AI 产品互为上下游，自己就能转起来；<strong class="text-slate-700">外循环</strong>是把优酷接进阿里生态，让内容消费延伸到电商、支付、本地生活与算力，这是纯内容平台复制不了的部分。</p>
+    </div>
+
+    <!-- 会员权益：三产品通用收益 -->
+    <div id="memberWrap"></div>
+
+    <!-- 闭环一：三大产品内循环 -->
+    <div class="rounded-2xl bg-white border border-slate-200 shadow-soft p-6">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="text-[10.5px] font-extrabold px-2.5 py-1 rounded-full bg-brand-600 text-white">闭环一</span>
+        <h3 class="text-sm lg:text-base font-extrabold">三大产品内循环</h3>
+      </div>
+      <p class="text-xs text-slate-500 mb-4">搜索引流 → 互动留存 → 生成造供给 → 回到搜索，每一环的产出都是下一环的输入。</p>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4" id="productLoopGrid"></div>
+      <div class="mt-4 rounded-xl bg-gradient-to-br from-brand-700 to-brand-900 text-white p-4" id="loopCore"></div>
+    </div>
+
+    <!-- 闭环二：阿里生态外循环 -->
+    <div class="rounded-2xl bg-white border border-slate-200 shadow-soft p-6">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="text-[10.5px] font-extrabold px-2.5 py-1 rounded-full bg-emerald-600 text-white">闭环二</span>
+        <h3 class="text-sm lg:text-base font-extrabold">阿里生态外循环（优酷 × 阿里）</h3>
+      </div>
+      <p class="text-xs text-slate-500 mb-4 max-w-4xl leading-relaxed" id="ecoIntro"></p>
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4" id="ecoGrid"></div>
+    </div>
+
+    <div class="rounded-2xl bg-white border border-slate-200 shadow-soft overflow-hidden">
+      <div class="px-5 py-4 border-b border-slate-100">
+        <h3 class="text-sm font-bold">打通阿里生态前后对比</h3>
+        <p class="text-xs text-slate-500 mt-0.5">生态协同带来的能力差异</p>
+      </div>
+      <div class="divide-y divide-slate-100" id="ecoCompare"></div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div class="lg:col-span-2 rounded-2xl bg-white border border-slate-200 shadow-soft p-5">
+        <h3 class="text-sm font-bold mb-3"><i class="ri-treasure-map-line text-brand-500 mr-1"></i>闭环依赖的三大资产</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3" id="assetGrid"></div>
+        <p class="text-xs text-slate-500 mt-4 leading-relaxed">内容源头决定闭环能不能起步，消费与付费承接决定闭环能不能变现，算力底座决定闭环的边际成本是否可控——三者缺一，闭环都转不满一圈。</p>
+      </div>
+      <div class="rounded-2xl bg-gradient-to-br from-brand-600 to-brand-800 text-white p-5 shadow-soft">
+        <h3 class="text-sm font-bold mb-2"><i class="ri-flag-line mr-1"></i>最终主张</h3>
+        <p class="text-xs leading-relaxed text-brand-50/95">用 AI 搜索、AI 互动、AI 视频生成三件套，把优酷从<strong class="text-white">单向长视频供给</strong>改造成<strong class="text-white">可搜、可玩、可再创作</strong>的内容生态；再借<strong class="text-white">阿里生态</strong>把内容热度接到电商、支付与本地生活，让会员权益从「为了某部剧」变成「为了 AI 这个功能本身」。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 步骤导航 -->
+  <div class="mt-8 flex items-center justify-between gap-3">
+    <button id="btnPrev" class="tool-btn"><i class="ri-arrow-left-line mr-1"></i>上一步</button>
+    <div id="stepDots" class="flex items-center gap-2"></div>
+    <button id="btnNext" class="tool-btn">下一步 <i class="ri-arrow-right-line ml-1"></i></button>
+  </div>
+
+</main>
+
+<div id="modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4 bg-slate-900/55 backdrop-blur-sm">
+  <div class="w-full max-w-xl max-h-[85vh] overflow-auto rounded-2xl bg-white shadow-2xl">
+    <div class="flex items-start gap-3 p-5 border-b border-slate-100">
+      <div id="modalIcon" class="h-11 w-11 shrink-0 rounded-xl grid place-items-center bg-brand-50 text-brand-600 text-xl"></div>
+      <div class="mr-auto">
+        <h3 id="modalTitle" class="font-bold text-lg leading-snug"></h3>
+        <p id="modalPath" class="text-xs text-slate-400 mt-0.5"></p>
+      </div>
+      <button id="modalClose" class="h-9 w-9 rounded-lg hover:bg-slate-100 grid place-items-center text-slate-500"><i class="ri-close-line text-xl"></i></button>
+    </div>
+    <div id="modalBody" class="p-5 text-sm leading-relaxed text-slate-600"></div>
+  </div>
+</div>
+
+<footer class="mt-10 border-t border-slate-200 bg-white">
+  <div class="mx-auto max-w-[1500px] px-4 lg:px-8 py-6 text-center text-xs text-slate-500 space-y-1">
+    <p>痛点诊断 → 对应关系 → 解法架构 → 效果验证 → 产品内循环 × 阿里生态外循环</p>
+    <p>由 <a href="https://with.woa.com/" style="color: #8A2BE2;" target="_blank">With</a> 通过自然语言生成</p>
+  </div>
+</footer>
+
+<script type="module" src="./scripts/main.js"></script>
+</body>
+</html>
