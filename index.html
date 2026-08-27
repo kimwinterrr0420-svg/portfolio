@@ -7,33 +7,42 @@
   <meta name="description" content="段雨萱 · AI 产品经理 · 武汉大学金融硕士在读（2025-2027）。前腾讯 PCG 视频 / 百度 MEG 搜索 / 美团点评 产品实习。" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Serif+SC:wght@500;700;800;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="page-rich">
 
-  <!-- ============== HEADER (sticky nav) ============== -->
+  <!-- ============== HEADER ============== -->
   <header class="site-header site-header--rich">
     <div class="container header-inner">
-      <a class="brand brand--rich" href="#hero">
-        <span class="brand-planet" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="32" height="32"><defs><linearGradient id="g1" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#C9B8F0"/><stop offset="1" stop-color="#A8C0F5"/></linearGradient></defs><circle cx="16" cy="16" r="11" fill="url(#g1)"/><path d="M4 16a12 12 0 0 0 24 0M4 16a12 12 0 0 1 24 0" stroke="#1F2937" stroke-width="1.2" fill="none" opacity=".7"/><circle cx="16" cy="16" r="1.4" fill="#1F2937"/></svg>
-        </span>
-        <span class="brand-name">PORTFOLIO</span>
-      </a>
+      <a class="brand brand--rich" href="#hero">winterduan</a>
 
       <nav class="nav nav--rich" aria-label="主导航">
-        <a href="#education" class="nav-pill">教育背景</a>
-        <a href="#experience" class="nav-pill">工作经历</a>
-        <a href="#works" class="nav-pill">个人作品</a>
-        <a href="#hobbies" class="nav-pill">技能与爱好</a>
+        <a href="#about" class="nav-pill">关于</a>
+        <a href="#internships" class="nav-pill">实习</a>
+        <a href="#works" class="nav-pill">项目</a>
         <a href="#contact" class="nav-pill">联系我</a>
       </nav>
 
-      <a class="resume-link" href="./assets/resume.pdf" download>
-        <span>简历.pdf</span>
-        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h4v12H3V4l6-2z"/><path d="M8 11l2 2 2-2M10 7v6"/></svg>
-      </a>
+      <div class="brand-tools">
+        <button class="tool-chip tool-chip--time" id="timeChip" type="button" title="本地时间">
+          <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6.5"/><path d="M8 4v4l2.5 1.5"/></svg>
+          <span id="liveTime">--:--</span>
+        </button>
+        <span class="tool-chip tool-chip--city">
+          <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 14s5-4.5 5-8a5 5 0 1 0-10 0c0 3.5 5 8 5 8z"/><circle cx="8" cy="6" r="1.6"/></svg>
+          Wuhan · 26°C
+        </span>
+        <span class="tool-chip tool-chip--lang lang-toggle">
+          <span class="lang-opt active" data-lang="zh">中</span>
+          <span class="sep">/</span>
+          <span class="lang-opt" data-lang="en">EN</span>
+        </span>
+        <button class="tool-chip tool-chip--mail" id="mailChip" type="button" title="点击复制邮箱">
+          <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3.5" width="12" height="9" rx="1.2"/><path d="M2.5 4l5.5 4 5.5-4"/></svg>
+          winterduan@whu.edu.cn
+        </button>
+      </div>
     </div>
   </header>
 
@@ -41,415 +50,266 @@
 
     <!-- ============== HERO ============== -->
     <section id="hero" class="hero-rich">
-      <div class="hero-bg" aria-hidden="true">
-        <span class="orb orb--pink"></span>
-        <span class="orb orb--yellow"></span>
-        <span class="orb orb--mint"></span>
-        <span class="ring ring--1"></span>
-        <span class="ring ring--2"></span>
-        <span class="ring ring--3"></span>
-        <span class="sparkle sparkle--1">✦</span>
-        <span class="sparkle sparkle--2">✦</span>
-        <span class="sparkle sparkle--3">✦</span>
-        <span class="sparkle sparkle--4">✧</span>
-      </div>
-
-      <div class="container hero-grid">
-        <div class="hero-left">
-          <span class="hero-pill"><i class="dot"></i> HELLO / 你好</span>
-
-          <h1 class="hero-title">
-            <span class="hero-hi">Hi,</span>
-            <span class="hero-name">我是<span class="hero-name-mark">段雨萱</span></span>
-          </h1>
-
-          <p class="hero-role">Product Manager / 产品经理</p>
-          <p class="hero-underline"></p>
-
-          <div class="hero-myscope">
-            <div class="myscope-head">
-              <span>MY SCOPE</span>
-              <em>我的关键词</em>
-            </div>
-            <div class="myscope-body">
-              AI 内容产品 · 搜索/推荐策略 · 用户洞察 · 数据驱动 · Vibe Coding · 内容生态理解
-            </div>
-          </div>
-
-          <div class="hero-skill-tags">
-            <span class="skill-tag">用户产品</span>
-            <span class="skill-tag">AI 产品</span>
-            <span class="skill-tag">策略产品</span>
-            <span class="skill-tag">数据分析</span>
-          </div>
-
-          <div class="hero-actions">
-            <a class="btn btn--primary" href="./assets/resume.pdf" download>
-              <span>下载简历</span>
-              <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 8l4 4 4-4M3 14h10"/></svg>
-            </a>
-            <a class="btn btn--ghost" href="#contact">联系我</a>
-          </div>
-        </div>
-
-        <div class="hero-right">
-          <div class="bubble bubble--1" aria-hidden="true"></div>
-          <div class="bubble bubble--2" aria-hidden="true"></div>
-          <div class="bubble bubble--3" aria-hidden="true"></div>
-          <div class="bubble bubble--4" aria-hidden="true"></div>
-          <div class="bubble bubble--5" aria-hidden="true"></div>
-          <div class="bubble bubble--6" aria-hidden="true"></div>
-          <div class="bubble bubble--7" aria-hidden="true"></div>
-
-          <div class="now-badge" aria-label="现状">
-            <span class="now-badge__tag">NOW</span>
-            <div class="now-badge__body">
-              <b>AI × 用户决策</b>
-              <small>正在解锁新故事</small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <a class="scroll-down" href="#education">
-        <span>继续下滑，探索更多</span>
-        <span class="scroll-down__dot"></span>
-      </a>
-    </section>
-
-    <!-- ============== EDUCATION ============== -->
-    <section id="education" class="education">
       <div class="container">
-        <div class="section-head section-head--left">
-          <span class="section-num">01 · EDUCATION</span>
-          <h2 class="section-title">教育背景</h2>
-          <p class="section-sub">金融学的训练，叠加产品经理的长期主义</p>
+
+        <div class="hero-greeting">
+          <span class="wave">👋</span>
+          <span>Hi, I'm winterduan, an aspiring</span>
         </div>
 
-        <div class="edu-grid">
+        <h1 class="hero-title">
+          <span class="line-solid">AI PRODUCT</span>
+          <span class="line-outline">MANAGER</span>
+        </h1>
 
-          <article class="edu-card edu-card--featured">
-            <div class="edu-card__head">
-              <span class="edu-card__period">2025 — 2027</span>
-              <span class="edu-card__badge">在读 · 硕士</span>
-            </div>
-            <h3>武汉大学</h3>
-            <p class="edu-card__major">金融学 · 硕士</p>
-            <ul class="edu-card__list">
-              <li><span>学院</span><b>经济与管理学院</b></li>
-              <li><span>GPA</span><b>3.85 / 4.0</b></li>
-              <li><span>综合排名</span><b>3 / 93</b></li>
-              <li><span>核心课程</span><b>计量经济学、公司金融、资产定价、机器学习导论</b></li>
-            </ul>
-          </article>
+        <div class="hero-stage">
+          <div class="stage-side">
+            <strong>CURRENTLY</strong>
+            <div class="desc">腾讯 PCG · 在线视频 BU<br/>融媒体项目中心 · 推荐组<br/>AI 产品化实践 · 答辩进行中</div>
+          </div>
 
-          <article class="edu-card">
-            <div class="edu-card__head">
-              <span class="edu-card__period">2021 — 2025</span>
-              <span class="edu-card__badge">学士</span>
-            </div>
-            <h3>武汉大学</h3>
-            <p class="edu-card__major">金融学 · 本科</p>
-            <ul class="edu-card__list">
-              <li><span>学院</span><b>经济与管理学院</b></li>
-              <li><span>学位</span><b>经济学学士（金融学）</b></li>
-              <li><span>核心课程</span><b>金融工程、风险管理、计量经济学、Python 数据分析</b></li>
-            </ul>
-          </article>
+          <div class="hero-illust">
+            <div class="signature">段雨萱</div>
+            <div class="signature-en">Winter · Duan</div>
+            <div class="signature-tag">Vibe Coding · PM</div>
+          </div>
 
-          <article class="edu-card edu-card--soft">
-            <h3>在校经历</h3>
-            <ul class="edu-card__list edu-card__list--plain">
-              <li><span>社团</span><b>校级金融协会 项目部部长</b></li>
-              <li><span>赛事</span><b>全国大学生数学建模竞赛 省级一等奖</b></li>
-              <li><span>实践</span><b>学院职业发展中心 校园大使</b></li>
-              <li><span>语言</span><b>CET-6 · 610</b></li>
-            </ul>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============== WORK EXPERIENCE TIMELINE ============== -->
-    <section id="experience" class="experience">
-      <div class="container">
-        <div class="section-head section-head--left">
-          <span class="section-num">02 · EXPERIENCE</span>
-          <h2 class="section-title">实习打怪之路</h2>
-          <p class="section-sub">从数据看板到 AI 产品，每段都在上一个台阶</p>
-        </div>
-
-        <ol class="timeline">
-          <li class="tl-item">
-            <div class="tl-marker">
-              <span class="tl-num">04</span>
-            </div>
-            <div class="tl-card">
-              <div class="tl-head">
-                <span class="tl-period">2026.06 — 至今</span>
-                <h3>腾讯 · PCG 在线视频 BU</h3>
-                <p class="tl-role">融媒体项目中心 · 推荐组 · 产品实习生</p>
-              </div>
-              <p class="tl-desc">负责「央视频搜推全链路」：从运动员搜索的语义召回，到摇一摇推剧的智能分发，到诗词小游戏的 AI 化生产，把 AI 当作一个"业务方"来管理。</p>
-              <div class="tl-skill-row">
-                <span class="tl-skill">AI 产品化</span>
-                <span class="tl-skill">搜索策略</span>
-                <span class="tl-skill">推荐分发</span>
-                <span class="tl-skill">Vibe Coding</span>
-                <span class="tl-skill">A/B 评测</span>
-              </div>
-              <a class="tl-project" href="./project-yangshipin.html">
-                <div class="tl-project__meta">
-                  <span class="tl-project__tag">PROJECT</span>
-                  <span class="tl-project__name">央视频搜推全链路 · AI 产品化实践</span>
-                </div>
-                <div class="tl-project__stats">
-                  <span><b>+66.7%</b> 搜索点击</span>
-                  <span><b>+106%</b> 播放量</span>
-                  <span><b>3.08 万</b> 摇剧 UV</span>
-                </div>
-                <span class="tl-project__go">查看项目 →</span>
+          <div class="stage-side stage-right">
+            <strong>PREVIOUSLY INTERNED AT</strong>
+            <div class="interned-grid">
+              <a class="interned-cell" href="#internships" data-id="jd" aria-label="京东实习">
+                <img src="./assets/logo-jd.png" alt="京东" />
+              </a>
+              <a class="interned-cell" href="#internships" data-id="baidu" aria-label="百度实习">
+                <img src="./assets/logo-baidu.png" alt="百度" />
+              </a>
+              <a class="interned-cell" href="#internships" data-id="meituan" aria-label="美团实习">
+                <img src="./assets/logo-meituan.png" alt="美团" />
+              </a>
+              <a class="interned-cell" href="#internships" data-id="tencent" aria-label="腾讯实习">
+                <img src="./assets/logo-tencent.png" alt="腾讯" />
               </a>
             </div>
-          </li>
+          </div>
+        </div>
 
-          <li class="tl-item">
-            <div class="tl-marker">
-              <span class="tl-num">03</span>
-            </div>
-            <div class="tl-card">
-              <div class="tl-head">
-                <span class="tl-period">2026.05 — 2026.06</span>
-                <h3>美团 · 点评事业部</h3>
-                <p class="tl-role">当地人推荐榜 · 产品实习生</p>
-              </div>
-              <p class="tl-desc">围绕"为什么这个商家值得被推荐"梳理推荐理由与榜单规则；为商家运营与 C 端体验搭建更清晰的信息分层。</p>
-              <div class="tl-skill-row">
-                <span class="tl-skill">UGC 内容运营</span>
-                <span class="tl-skill">推荐规则</span>
-                <span class="tl-skill">用户调研</span>
-              </div>
-            </div>
-          </li>
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="./assets/resume.pdf" download>
+            <span>View résumé</span>
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 8l4 4 4-4M3 14h10"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#contact">Contact me</a>
+        </div>
 
-          <li class="tl-item">
-            <div class="tl-marker">
-              <span class="tl-num">02</span>
-            </div>
-            <div class="tl-card">
-              <div class="tl-head">
-                <span class="tl-period">2026.01 — 2026.05</span>
-                <h3>百度 · MEG 搜索产品部</h3>
-                <p class="tl-role">Finscope 金融智能体 · 产品实习生</p>
-              </div>
-              <p class="tl-desc">把 FinChat 打造成能看懂行情、能选股、能复盘的金融 Agent：日均分发 1w → 5w+，AI 选股 PV +30%，完成"指标选股 → 自然语言选股 → 策略沉淀"三阶段演进。</p>
-              <div class="tl-skill-row">
-                <span class="tl-skill">AI Agent</span>
-                <span class="tl-skill">金融场景</span>
-                <span class="tl-skill">指标点选</span>
-                <span class="tl-skill">NL2Query</span>
-                <span class="tl-skill">Prompt 评测</span>
-              </div>
-              <a class="tl-project" href="./project-finscope.html">
-                <div class="tl-project__meta">
-                  <span class="tl-project__tag">PROJECT</span>
-                  <span class="tl-project__name">Finscope 金融智能体 · AI 选股</span>
-                </div>
-                <div class="tl-project__stats">
-                  <span><b>1w → 5w+</b> 日均分发</span>
-                  <span><b>+30%</b> AI 选股 PV</span>
-                  <span><b>3 阶段</b> 能力演进</span>
-                </div>
-                <span class="tl-project__go">查看项目 →</span>
-              </a>
-            </div>
-          </li>
-
-          <li class="tl-item">
-            <div class="tl-marker">
-              <span class="tl-num">01</span>
-            </div>
-            <div class="tl-card">
-              <div class="tl-head">
-                <span class="tl-period">2024.10 — 2024.12</span>
-                <h3>京东 · 平台产品与研发中心</h3>
-                <p class="tl-role">EasyBI 看板 · 产品运营实习生</p>
-              </div>
-              <p class="tl-desc">从工单与售后数据中提炼 Top 问题，反哺产品迭代；搭建指标看板与自动告警，沉淀"数据 → 假设 → 行动"的闭环。</p>
-              <div class="tl-skill-row">
-                <span class="tl-skill">数据分析</span>
-                <span class="tl-skill">工单挖掘</span>
-                <span class="tl-skill">指标看板</span>
-                <span class="tl-skill">跨团队协作</span>
-              </div>
-            </div>
-          </li>
-        </ol>
       </div>
     </section>
 
-    <!-- ============== VIBE CODING WORKS ============== -->
-    <section id="works" class="works">
+    <!-- ============== ABOUT ============== -->
+    <section id="about" class="section-block">
       <div class="container">
-        <div class="section-head section-head--left">
-          <span class="section-num">03 · VIBE CODING</span>
-          <h2 class="section-title">个人作品</h2>
-          <p class="section-sub">左图 · 右文 · 一键直达，独立完成的 Vibe Coding 作品</p>
+        <div class="section-head">
+          <span class="section-num">01 · ABOUT</span>
+          <h2 class="section-title">关于我 <em>About</em></h2>
+          <p class="section-sub">把背景、性格、关键词和教育经历一起讲清楚</p>
         </div>
 
-        <div class="works-stack">
+        <div class="about-grid">
 
-          <article class="work-row">
-            <a class="work-shot" href="./project-novel.html" aria-label="进入小说英语项目详情">
-              <div class="work-shot__tag">01 / Vibe Coding</div>
-              <div class="work-shot__frame">
-                <img src="./assets/novel-shelf.png" alt="小说英语学习" loading="lazy">
-              </div>
-              <div class="work-shot__cta">查看详情 →</div>
-            </a>
-            <div class="work-info">
-              <h3>小说英语学习 · 独立作品</h3>
-              <p class="work-info__meta">个人项目 · 全流程独立完成</p>
-              <p class="work-info__desc">从 0 到 1 独立完成的产品：自由导入英文小说文本、段落级双语互译、4 套分级词库、个人词本。完整跑通"立项 → 建模 → UI → 评测 → 部署"全部环节。</p>
-              <ul class="work-info__highlights">
-                <li><b>段落级</b><span>双语互译</span></li>
-                <li><b>4 套</b><span>分级词库</span></li>
-                <li><b>1 套</b><span>个人词本</span></li>
-              </ul>
-              <a class="work-info__link" href="./project-novel.html">打开项目页 →</a>
+          <aside class="idcard">
+            <div class="idcard__lanyard" aria-hidden="true"></div>
+            <div class="idcard__avatar">
+              <div class="signature">段</div>
             </div>
-          </article>
+            <h3 class="idcard__name">段雨萱</h3>
+            <div class="idcard__name-en">Xinran 'Winter' Duan</div>
+            <div class="idcard__tags">
+              <span class="idcard__tag">explorer</span>
+              <span class="idcard__tag">prototyper</span>
+              <span class="idcard__tag">storyteller</span>
+              <span class="idcard__tag">vibe coder</span>
+            </div>
+          </aside>
+
+          <div class="about-body">
+            <h3>产品、工程、研究，<br/><em>都是解决问题的方式。</em></h3>
+
+            <p>我喜欢做别人真正愿意用的产品。先后在京东做数据产品运营、在百度做 AI 产品（金融智能体 Finscope）、在美团做点评榜单、在腾讯做央视频搜推全链路——每一段都让我更理解好的软件是怎么长出来的。</p>
+
+            <p>我学的是金融，做的是产品，相信两件事可以叠加：金融学训练出的结构化思维 × 产品经理的判断力，能让我把模糊的需求变成可落地的方案。</p>
+
+            <p class="small">业余时间喜欢跑步、追剧、看 AI 论文、写公众号。目标是成为一个<strong>「用 AI 放大判断力」</strong>的产品经理。</p>
+
+            <div class="edu-line">
+              <h4>教育经历 · EDUCATION</h4>
+              <div class="edu-timeline">
+                <div class="edu-step">
+                  <div class="edu-step__logo">武大</div>
+                  <div class="edu-step__body">
+                    <span class="edu-step__name">武汉大学 · 金融学 本科</span>
+                    <span class="edu-step__meta">2021 — 2025 · 经管学院</span>
+                  </div>
+                </div>
+                <span class="edu-arrow">→</span>
+                <div class="edu-step">
+                  <div class="edu-step__logo">武大</div>
+                  <div class="edu-step__body">
+                    <span class="edu-step__name">武汉大学 · 金融学 硕士</span>
+                    <span class="edu-step__meta">2025 — 2027 · GPA 3.85 / 4.0</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ============== SKILLS & HOBBIES ============== -->
-    <section id="hobbies" class="hobbies">
+    <!-- ============== INTERNSHIPS MAP ============== -->
+    <section id="internships" class="internship-section section-block--soft" style="border-top: none;">
       <div class="container">
-        <div class="section-head section-head--left">
-          <span class="section-num">04 · SKILLS &amp; HOBBIES</span>
-          <h2 class="section-title">技能与爱好</h2>
-          <p class="section-sub">左滑抽卡 · 把「能干的事」和「喜欢的事」分开看</p>
+        <div class="section-head">
+          <span class="section-num">02 · INTERNSHIPS</span>
+          <h2 class="section-title">实习打怪地图 <em>Where I've been</em></h2>
+          <p class="section-sub">把每段实习标在它发生的城市——看完一遍就知道我去过哪些地方、做过哪些方向</p>
         </div>
 
-        <div class="hobby-grid">
-          <div class="hobby-block">
-            <header class="hobby-block__head">
-              <h3>技能卡 <span>SKILLS</span></h3>
-              <p>职业能力 / 工具栈 / 软技能</p>
-            </header>
-            <div class="card-pack" id="skill-pack">
-              <button class="pack-card" data-side="skill" data-i="0" type="button">
-                <div class="pack-card__face pack-card__back">点击抽卡</div>
-                <div class="pack-card__face pack-card__front">
-                  <span class="card-eyebrow">产品力</span>
-                  <h4>用户需求拆解</h4>
-                  <p>从用户调研到 PRD、到 A/B 验证的完整闭环。</p>
-                </div>
-              </button>
-              <button class="pack-card" data-side="skill" data-i="1" type="button">
-                <div class="pack-card__face pack-card__back">点击抽卡</div>
-                <div class="pack-card__face pack-card__front">
-                  <span class="card-eyebrow">AI 落地</span>
-                  <h4>Prompt 与评测</h4>
-                  <p>设计提示词 + 自动化评测集，量化 AI 能力边界。</p>
-                </div>
-              </button>
-              <button class="pack-card" data-side="skill" data-i="2" type="button">
-                <div class="pack-card__face pack-card__back">点击抽卡</div>
-                <div class="pack-card__face pack-card__front">
-                  <span class="card-eyebrow">数据</span>
-                  <h4>SQL &amp; 指标体系</h4>
-                  <p>能用 SQL 自助取数，搭指标看板，发现产品问题。</p>
-                </div>
-              </button>
-              <button class="pack-card" data-side="skill" data-i="3" type="button">
-                <div class="pack-card__face pack-card__back">点击抽卡</div>
-                <div class="pack-card__face pack-card__front">
-                  <span class="card-eyebrow">Vibe Coding</span>
-                  <h4>HTML / CSS / JS</h4>
-                  <p>会用代码把想法从 0 做成 1，已独立上线个人作品。</p>
-                </div>
-              </button>
-              <button class="pack-card" data-side="skill" data-i="4" type="button">
-                <div class="pack-card__face pack-card__back">点击抽卡</div>
-                <div class="pack-card__face pack-card__front">
-                  <span class="card-eyebrow">金融</span>
-                  <h4>金融学训练</h4>
-                  <p>财务建模、估值、量化因子，金融场景的产品更上手。</p>
-                </div>
-              </button>
-              <button class="pack-card" data-side="skill" data-i="5" type="button">
-                <div class="pack-card__face pack-card__back">点击抽卡</div>
-                <div class="pack-card__face pack-card__front">
-                  <span class="card-eyebrow">协作</span>
-                  <h4>跨团队沟通</h4>
-                  <p>研发 / 设计 / 算法 / 运营对齐，把项目推上日程。</p>
-                </div>
-              </button>
-            </div>
-            <p class="pack-hint">点击任意卡片抽卡 · 再点收起</p>
+        <div class="internship-layout">
+
+          <div class="internship-stage">
+            <div class="map-hint">点击 logo 查看该段实习</div>
+
+            <svg viewBox="0 0 1000 700" class="map-svg" xmlns="http://www.w3.org/2000/svg" aria-label="中国地图实习点位">
+
+              <!-- 背景点阵 pattern -->
+              <defs>
+                <pattern id="chinaDots" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+                  <circle cx="7" cy="7" r="1.3" fill="#0a0a0a" opacity="0.4" />
+                </pattern>
+              </defs>
+
+              <!-- 中国大陆真实省份轮廓（来自 ECharts china.json） -->
+              <path d="M 392,234 376,253 339,287 310,310 316,341 290,345 239,355 188,362 158,371 132,358 103,342 85,332 88,320 71,301 74,281 108,274 163,242 165,209 195,191 238,159 255,127 273,133 303,146 316,178 369,206 392,234 M 145,379 163,362 204,360 264,343 294,352 299,370 321,399 355,409 376,415 389,426 406,409 429,440 425,472 417,486 382,483 331,508 311,486 284,498 260,491 240,482 220,473 189,448 145,435 137,410 140,383 145,379 M 404,233 491,249 548,239 606,206 666,187 695,169 727,165 673,146 681,112 720,96 738,70 739,53 755,69 779,85 813,91 795,124 775,161 773,174 752,182 777,217 767,234 734,245 719,253 700,246 683,240 656,253 642,260 631,274 601,292 584,296 560,322 540,292 491,315 486,296 461,298 445,277 426,271 412,253 404,233 M 298,349 313,340 306,312 354,299 382,309 401,295 441,309 460,318 478,334 485,352 471,370 455,380 468,398 448,406 432,401 406,386 406,409 389,426 376,415 355,409 321,399 299,370 294,352 298,349 M 468,393 485,379 505,398 520,404 543,407 565,415 550,439 532,450 521,465 523,480 518,492 506,486 492,486 473,520 463,510 444,486 431,466 411,410 411,386 432,403 453,410 467,396 468,393 M 748,51 814,61 819,75 831,104 861,119 884,149 941,136 929,156 915,186 888,211 869,215 848,209 828,202 809,190 783,174 777,161 790,141 809,96 789,87 758,66 748,51 M 392,234 420,271 432,266 451,291 472,300 503,299 508,325 518,350 528,360 538,355 537,337 565,352 552,368 538,379 525,395 517,408 503,395 478,394 465,390 475,377 483,357 480,337 468,322 444,308 420,298 392,312 362,302 335,293 375,250 392,234 M 417,486 425,472 432,483 447,492 463,508 480,516 497,483 505,487 517,498 496,505 512,536 515,549 531,564 505,579 487,583 470,598 445,600 427,570 411,554 417,533 425,520 417,486 M 507,544 541,536 555,537 572,530 588,523 599,539 612,545 608,562 594,589 582,601 567,599 543,592 522,573 522,554 507,544 M 574,480 594,458 623,461 636,458 643,478 638,503 642,521 628,540 609,543 603,524 582,524 578,508 576,489 574,480 M 521,403 535,386 537,366 553,362 547,334 568,315 588,293 598,303 592,348 594,382 589,399 587,408 565,415 543,407 521,403 M 582,601 594,589 608,562 612,545 628,540 642,535 648,548 676,542 689,570 664,580 647,589 627,598 594,604 586,623 582,601 M 773,174 808,186 826,199 846,204 868,212 888,224 873,231 841,246 821,253 803,253 794,228 777,217 752,182 773,174 M 649,290 643,268 649,244 674,246 699,240 704,259 725,282 699,295 692,281 684,269 667,271 676,290 688,306 674,323 661,349 638,335 636,306 649,290 M 688,280 688,280 M 588,433 581,408 579,397 618,413 644,421 662,429 669,458 637,465 628,458 597,451 578,460 565,449 574,442 588,433 M 502,501 523,494 533,479 538,480 555,470 567,484 568,503 577,512 572,530 555,537 541,536 507,544 506,511 502,501 M 663,347 677,324 718,321 734,318 758,322 753,335 740,352 712,367 698,373 676,374 659,360 663,347 M 646,482 663,457 681,458 699,461 705,483 686,503 671,535 648,548 642,535 641,511 638,489 646,482 M 591,374 614,362 656,349 663,355 673,374 666,383 654,402 663,424 649,423 631,411 594,382 591,374 M 717,259 729,252 760,232 782,221 803,244 808,266 757,298 757,274 723,279 717,259 M 598,303 618,277 643,268 649,290 636,311 634,339 614,366 588,373 592,316 598,303 M 679,386 687,383 702,398 707,409 710,432 717,442 699,461 681,458 667,442 668,410 661,399 673,390 679,386 M 705,483 724,500 730,510 727,523 717,538 702,554 684,554 668,536 678,508 703,486 705,483 M 702,464 719,442 745,442 764,455 752,484 737,502 722,493 705,482 702,464 M 676,374 698,373 712,367 740,401 755,426 734,439 709,430 715,411 699,399 683,377 676,374 M 565,424 579,424 583,438 566,443 572,464 565,481 551,467 537,477 526,471 523,449 550,442 565,424 M 505,325 536,310 537,331 542,353 530,361 520,354 508,329 505,325 M 566,636 593,621 588,650 566,636 M 754,539 742,579 729,562 754,539 M 691,277 682,288 662,282 676,265 691,277 M 682,288 691,277 698,288 688,306 682,288 M 740,436 754,433 740,436 M 651,584 644,582 651,584 M 636,588" fill="url(#chinaDots)" stroke="#0a0a0a" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+
+              <!-- 海岛（台湾简化） -->
+              <path d="M 800,440 Q 810,470 805,500 Q 795,490 800,440 Z" fill="url(#chinaDots)" stroke="#0a0a0a" stroke-width="1.2"/>
+              <!-- 海南 -->
+              <ellipse cx="610" cy="615" rx="22" ry="10" fill="url(#chinaDots)" stroke="#0a0a0a" stroke-width="1.2"/>
+
+              <!-- 经纬度参考线 -->
+              <line x1="200" y1="80" x2="200" y2="640" stroke="#0a0a0a" stroke-width="0.4" stroke-dasharray="3,4" opacity="0.3"/>
+              <line x1="500" y1="80" x2="500" y2="640" stroke="#0a0a0a" stroke-width="0.4" stroke-dasharray="3,4" opacity="0.3"/>
+              <line x1="800" y1="80" x2="800" y2="640" stroke="#0a0a0a" stroke-width="0.4" stroke-dasharray="3,4" opacity="0.3"/>
+
+              <!-- 城市标签：副标 -->
+              <text x="80" y="105" class="map-city-name" font-size="12">Xinjiang</text>
+              <text x="80" y="640" class="map-city-name" font-size="12">Tibet</text>
+              <text x="870" y="200" class="map-city-name" font-size="12" text-anchor="end">Northeast</text>
+              <text x="870" y="540" class="map-city-name" font-size="12" text-anchor="end">South Coast</text>
+
+              <!-- =========== 城市 1：北京（百度 / 京东 / 美团 三家挨在一起） =========== -->
+
+              <!-- 北京圈脉冲 -->
+              <circle cx="616" cy="283" r="55" class="map-pulse" />
+
+              <!-- 百度（北京·西二旗） -->
+              <g class="map-logo" data-id="baidu" transform="translate(616, 283)">
+                <circle r="28" fill="#fff" stroke="#0a0a0a" stroke-width="2"/>
+                <clipPath id="clipBaidu"><circle r="26"/></clipPath>
+                <image href="./assets/logo-baidu.png" x="-24" y="-18" width="48" height="36" preserveAspectRatio="xMidYMid meet" clip-path="url(#clipBaidu)"/>
+              </g>
+
+              <!-- 京东（北京·亦庄） - 上 -->
+              <g class="map-logo" data-id="jd" transform="translate(556, 230)">
+                <circle r="22" fill="#fff" stroke="#0a0a0a" stroke-width="2"/>
+                <clipPath id="clipJd"><circle r="20"/></clipPath>
+                <image href="./assets/logo-jd.png" x="-18" y="-14" width="36" height="28" preserveAspectRatio="xMidYMid meet" clip-path="url(#clipJd)"/>
+              </g>
+
+              <!-- 美团（北京·望京） - 右 -->
+              <g class="map-logo" data-id="meituan" transform="translate(676, 230)">
+                <circle r="22" fill="#fff" stroke="#0a0a0a" stroke-width="2"/>
+                <clipPath id="clipMeituan"><circle r="20"/></clipPath>
+                <image href="./assets/logo-meituan.png" x="-18" y="-14" width="36" height="28" preserveAspectRatio="xMidYMid meet" clip-path="url(#clipMeituan)"/>
+              </g>
+
+              <!-- 城市名标签 -->
+              <text x="616" y="328" text-anchor="middle" class="map-city-name" font-size="13">BEIJING · 北京</text>
+              <text x="616" y="343" text-anchor="middle" class="map-city" font-size="9">百度 · 京东 · 美团</text>
+
+              <!-- =========== 城市 2：深圳（腾讯） =========== -->
+
+              <!-- 深圳圈脉冲 -->
+              <circle cx="583" cy="582" r="45" class="map-pulse" />
+
+              <g class="map-logo" data-id="tencent" transform="translate(583, 582)">
+                <circle r="30" fill="#fff" stroke="#0a0a0a" stroke-width="2"/>
+                <clipPath id="clipTencent"><circle r="28"/></clipPath>
+                <image href="./assets/logo-tencent.png" x="-26" y="-20" width="52" height="40" preserveAspectRatio="xMidYMid meet" clip-path="url(#clipTencent)"/>
+              </g>
+
+              <text x="583" y="627" text-anchor="middle" class="map-city-name" font-size="13">SHENZHEN · 深圳</text>
+              <text x="583" y="642" text-anchor="middle" class="map-city" font-size="9">腾讯 · PCG</text>
+
+              <!-- =========== 其他城市辅助标（学校所在地：武汉） =========== -->
+              <g transform="translate(584, 501)">
+                <circle r="6" fill="none" stroke="#0a0a0a" stroke-width="1.5" stroke-dasharray="2,2"/>
+                <text x="14" y="4" class="map-city" font-size="10">武汉 · 在读</text>
+              </g>
+
+              <!-- 连接线：北京 → 深圳 -->
+              <path d="M 616,313 Q 600,420 583,552" stroke="#0a0a0a" stroke-width="1" stroke-dasharray="3,5" fill="none" opacity="0.35"/>
+            </svg>
           </div>
 
-          <div class="hobby-block">
-            <header class="hobby-block__head">
-              <h3>兴趣卡 <span>HOBBIES</span></h3>
-              <p>业余时间 · 让产品更有"人味儿"</p>
-            </header>
-            <div class="card-pack" id="hobby-pack">
-              <button class="pack-card pack-card--alt" data-side="hobby" data-i="0" type="button">
-                <div class="pack-card__face pack-card__back">点击抽卡</div>
-                <div class="pack-card__face pack-card__front">
-                  <span class="card-eyebrow">追星</span>
-                  <h4>用户洞察的活水</h4>
-                  <p>蹲超话 / 做数据站妹，看「内容生态」是一种本能。</p>
-                </div>
-              </button>
-              <button class="pack-card pack-card--alt" data-side="hobby" data-i="1" type="button">
-                <div class="pack-card__face pack-card__back">点击抽卡</div>
-                <div class="pack-card__face pack-card__front">
-                  <span class="card-eyebrow">看剧</span>
-                  <h4>叙事结构敏感度</h4>
-                  <p>看见节奏点与情绪曲线，会下意识拆「为什么这里留人」。</p>
-                </div>
-              </button>
-              <button class="pack-card pack-card--alt" data-side="hobby" data-i="2" type="button">
-                <div class="pack-card__face pack-card__back">点击抽卡</div>
-                <div class="pack-card__face pack-card__front">
-                  <span class="card-eyebrow">写作</span>
-                  <h4>PRD 的另一半</h4>
-                  <p>写公众号 / 小红书，把观点组织成别人能读懂的结构。</p>
-                </div>
-              </button>
-              <button class="pack-card pack-card--alt" data-side="hobby" data-i="3" type="button">
-                <div class="pack-card__face pack-card__back">点击抽卡</div>
-                <div class="pack-card__face pack-card__front">
-                  <span class="card-eyebrow">跑步</span>
-                  <h4>身体是产品的本钱</h4>
-                  <p>周末 5km，跑的过程就是和自我对线、做小步迭代。</p>
-                </div>
-              </button>
-              <button class="pack-card pack-card--alt" data-side="hobby" data-i="4" type="button">
-                <div class="pack-card__face pack-card__back">点击抽卡</div>
-                <div class="pack-card__face pack-card__front">
-                  <span class="card-eyebrow">摄影</span>
-                  <h4>构图即取舍</h4>
-                  <p>出门带一台胶片机，练「在一堆信息里留下最对的那一帧」。</p>
-                </div>
-              </button>
-              <button class="pack-card pack-card--alt" data-side="hobby" data-i="5" type="button">
-                <div class="pack-card__face pack-card__back">点击抽卡</div>
-                <div class="pack-card__face pack-card__front">
-                  <span class="card-eyebrow">钢琴</span>
-                  <h4>和声音打交道</h4>
-                  <p>练琴像做体验设计，每一段旋律都要找到让人记住的那一拍。</p>
-                </div>
-              </button>
+          <aside class="internship-panel" id="internshipPanel">
+            <div class="internship-panel__empty">
+              ← 点击地图上的<br/>公司 logo 查看详情
             </div>
-            <p class="pack-hint">点击任意卡片抽卡 · 再点收起</p>
-          </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== WORKS ============== -->
+    <section id="works" class="works-rich">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">03 · WORKS</span>
+          <h2 class="section-title">个人作品 <em>Projects</em></h2>
+          <p class="section-sub">独立完成的 Vibe Coding 作品 + 实习期间沉淀的项目</p>
+        </div>
+
+        <div class="works-grid">
+
+          <a class="work-tile" href="./project-novel.html">
+            <div class="work-tile__img">
+              <img src="./assets/novel-shelf.png" alt="小说英语学习" loading="lazy" />
+            </div>
+            <span class="work-tile__tag">VIBE CODING · 独立作品</span>
+            <h3 class="work-tile__title">小说英语学习</h3>
+            <p class="work-tile__desc">自由导入英文小说、段落级双语互译、4 套分级词库、个人词本。完整跑通「立项 → 建模 → UI → 评测 → 部署」全部环节。</p>
+          </a>
+
+          <a class="work-tile" href="./project-finscope.html">
+            <div class="work-tile__img">
+              <img src="./assets/finscope-home.png" alt="Finscope 金融智能体" loading="lazy" />
+            </div>
+            <span class="work-tile__tag">实习项目 · 百度</span>
+            <h3 class="work-tile__title">Finscope 金融智能体</h3>
+            <p class="work-tile__desc">看懂行情、能选股、能复盘的金融 Agent。日均分发 1w → 5w+，AI 选股 PV +30%。</p>
+          </a>
+
+          <a class="work-tile" href="./project-yangshipin.html">
+            <div class="work-tile__img">
+              <img src="./assets/tx-shake-home.png" alt="央视频搜推全链路" loading="lazy" />
+            </div>
+            <span class="work-tile__tag">实习项目 · 腾讯</span>
+            <h3 class="work-tile__title">央视频搜推全链路</h3>
+            <p class="work-tile__desc">从运动员搜索的语义召回，到摇一摇推剧，到诗词小游戏 AI 化生产，把 AI 当一个业务方来管理。</p>
+          </a>
+
         </div>
       </div>
     </section>
@@ -457,27 +317,27 @@
     <!-- ============== CONTACT ============== -->
     <section id="contact" class="contact-rich">
       <div class="container">
-        <div class="section-head section-head--center">
-          <span class="section-num">05 · CONTACT</span>
-          <h2 class="section-title">联系我</h2>
+        <div class="section-head" style="text-align: center; align-items: center; max-width: 100%;">
+          <span class="section-num">04 · CONTACT</span>
+          <h2 class="section-title">联系我 <em>Get in touch</em></h2>
           <p class="section-sub">欢迎约面试 / 聊产品 / 约咖啡</p>
         </div>
 
         <div class="contact-grid">
           <a class="contact-card" href="mailto:2017336834@qq.com">
-            <div class="contact-label">邮箱</div>
+            <div class="contact-label">邮箱 · EMAIL</div>
             <div class="contact-val">2017336834@qq.com</div>
           </a>
           <a class="contact-card" href="tel:18107278963">
-            <div class="contact-label">电话</div>
+            <div class="contact-label">电话 · TEL</div>
             <div class="contact-val">18107278963</div>
           </a>
           <div class="contact-card">
-            <div class="contact-label">微信</div>
+            <div class="contact-label">��信 · WECHAT</div>
             <div class="contact-val">K-Rain11</div>
           </div>
           <div class="contact-card">
-            <div class="contact-label">学校</div>
+            <div class="contact-label">学校 · SCHOOL</div>
             <div class="contact-val">武汉大学 · 金融硕士</div>
           </div>
         </div>
@@ -500,22 +360,154 @@
     </div>
   </footer>
 
+  <!-- ============== 屏幕右下角像素小动物 ============== -->
+  <a class="pixel-dog" href="#hero" aria-label="回到顶部">
+    <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="56" height="56" fill="#fff" stroke="#0a0a0a" stroke-width="1.5"/>
+      <g fill="#0a0a0a">
+        <rect x="12" y="14" width="6" height="6"/>
+        <rect x="38" y="14" width="6" height="6"/>
+        <rect x="6" y="22" width="6" height="6"/>
+        <rect x="44" y="22" width="6" height="6"/>
+        <rect x="14" y="22" width="28" height="20"/>
+        <rect x="20" y="26" width="4" height="4" fill="#fff"/>
+        <rect x="32" y="26" width="4" height="4" fill="#fff"/>
+        <rect x="26" y="34" width="4" height="2"/>
+      </g>
+    </svg>
+  </a>
+
   <script>
-    // 抽卡翻转
-    document.querySelectorAll('.pack-card').forEach(function (card) {
-      card.addEventListener('click', function () {
-        card.classList.toggle('is-flipped');
+    // ===== 实时时间 =====
+    function updateTime() {
+      const now = new Date();
+      const hh = String(now.getHours()).padStart(2, '0');
+      const mm = String(now.getMinutes()).padStart(2, '0');
+      const el = document.getElementById('liveTime');
+      if (el) el.textContent = `${hh}:${mm}`;
+    }
+    updateTime();
+    setInterval(updateTime, 30000);
+
+    // ===== 邮箱点击复制 =====
+    const mailChip = document.getElementById('mailChip');
+    if (mailChip) {
+      const email = 'winterduan@whu.edu.cn';
+      mailChip.addEventListener('click', () => {
+        navigator.clipboard?.writeText(email);
+        const orig = mailChip.innerHTML;
+        mailChip.innerHTML = '✓ 已复制';
+        setTimeout(() => { mailChip.innerHTML = orig; }, 1500);
+      });
+    }
+
+    // ===== 语言切换（占位） =====
+    document.querySelectorAll('.lang-opt').forEach(el => {
+      el.addEventListener('click', () => {
+        document.querySelectorAll('.lang-opt').forEach(x => x.classList.remove('active'));
+        el.classList.add('active');
       });
     });
 
-    // 滚动时高亮当前导航
+    // ===== 实习地图：点击 logo 切换右侧面板 =====
+    const panel = document.getElementById('internshipPanel');
+    const data = {
+      jd: {
+        tag: 'INTERNSHIP · 01',
+        city: 'BEIJING · 北京',
+        title: '京东 · 平台产品与研发中心',
+        role: 'EasyBI 看板 · 产品运营实习生',
+        period: '2024.10 — 2024.12',
+        desc: '从工单与售后数据中提炼 Top 问题，反哺产品迭代；搭建指标看板与自动告警，沉淀「数据 → 假设 → 行动」的闭环。',
+        metrics: [
+          { v: 'Top', l: '高频工单聚类' },
+          { v: '7', l: '核心指标看板' },
+        ],
+        link: null
+      },
+      baidu: {
+        tag: 'INTERNSHIP · 02',
+        city: 'BEIJING · 北京',
+        title: '百度 · MEG 搜索产品部',
+        role: 'Finscope 金融智能体 · 产品实习生',
+        period: '2026.01 — 2026.05',
+        desc: '把 FinChat 打造成能看懂行情、能选股、能复盘的金融 Agent：日均分发 1w → 5w+，AI 选股 PV +30%，完成「指标选股 → 自然语言选股 → 策略沉淀」三阶段演进。',
+        metrics: [
+          { v: '1w→5w+', l: '日均分发' },
+          { v: '+30%', l: 'AI 选股 PV' },
+          { v: '3 阶段', l: '能力演进' }
+        ],
+        link: { href: './project-finscope.html', label: '打开项目详情' }
+      },
+      meituan: {
+        tag: 'INTERNSHIP · 03',
+        city: 'BEIJING · 北京',
+        title: '美团 · 点评事业部',
+        role: '当地人推荐榜 · 产品实习生',
+        period: '2026.05 — 2026.06',
+        desc: '围绕「为什么这个商家值得被推荐」梳理推荐理由与榜单规则；为商家运营与 C 端体验搭建更清晰的信息分层。',
+        metrics: [
+          { v: 'UGC', l: '推荐规则' },
+          { v: '2C/2B', l: '信息分层' }
+        ],
+        link: null
+      },
+      tencent: {
+        tag: 'INTERNSHIP · 04 · CURRENT',
+        city: 'SHENZHEN · 深圳',
+        title: '腾讯 · PCG 在线视频 BU',
+        role: '融媒体项目中心 · 推荐组 · 产品实习生',
+        period: '2026.06 — 至今',
+        desc: '负责「央视频搜推全链路」：从运动员搜索的语义召回，到摇一摇推剧的智能分发，到诗词小游戏的 AI 化生产，把 AI 当一个业务方来管理。',
+        metrics: [
+          { v: '+66.7%', l: '搜索日均点击' },
+          { v: '+106%', l: '日均播放' },
+          { v: '3.08 万', l: '摇剧 UV' }
+        ],
+        link: { href: './project-yangshipin.html', label: '打开项目详情' }
+      }
+    };
+
+    function renderPanel(id) {
+      const d = data[id];
+      if (!d) return;
+      panel.innerHTML = `
+        <span class="internship-panel__tag">${d.tag}</span>
+        <div class="internship-panel__city">📍 ${d.city}</div>
+        <h3 class="internship-panel__title">${d.title}</h3>
+        <div class="internship-panel__role">${d.role}</div>
+        <div class="internship-panel__period">${d.period}</div>
+        <p class="internship-panel__desc">${d.desc}</p>
+        <div class="internship-panel__metrics">
+          ${d.metrics.map(m => `<div class="internship-panel__metric"><b>${m.v}</b><span>${m.l}</span></div>`).join('')}
+        </div>
+        ${d.link ? `<a class="internship-panel__link" href="${d.link.href}">${d.link.label}</a>` : ''}
+      `;
+    }
+
+    document.querySelectorAll('[data-id]').forEach(el => {
+      el.addEventListener('click', (e) => {
+        const id = el.dataset.id;
+        if (!data[id]) return;
+        e.preventDefault();
+        document.querySelectorAll('.map-logo').forEach(x => x.classList.remove('is-active'));
+        el.classList.add('is-active');
+        renderPanel(id);
+        // 滚动到地图区右上方面板
+        if (window.innerWidth <= 980) {
+          panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    });
+
+    // ===== 滚动时高亮当前导航 =====
     const navLinks = document.querySelectorAll('.nav--rich a');
-    const sections = ['#education', '#experience', '#works', '#hobbies', '#contact']
+    const sections = ['#about', '#internships', '#works', '#contact']
       .map(id => document.querySelector(id))
       .filter(Boolean);
 
     function setActive() {
-      const scrollY = window.scrollY + 120;
+      const scrollY = window.scrollY + 140;
       let current = sections[0]?.id;
       sections.forEach(sec => {
         if (sec.offsetTop <= scrollY) current = sec.id;
