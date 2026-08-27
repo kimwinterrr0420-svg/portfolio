@@ -118,14 +118,14 @@ tailwind.config = {
     </details>
   </section>
 
-  <!-- ============ 第三步：产品 Demo × 效果验证（形态/入口/交互 + 能力演示/指标） ============ -->
+  <!-- ============ 第三步：产品 Demo × 效果验证（形态/入口/交互 + 屏内可交互 + 验证指标） ============ -->
   <section id="step-demo" class="step-panel hidden space-y-5">
     <div class="rounded-2xl bg-white border border-slate-200 shadow-soft p-6">
       <div class="flex flex-col lg:flex-row lg:items-end gap-4">
         <div class="min-w-0">
           <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 text-brand-600 text-[11px] font-extrabold tracking-widest mb-3">STEP 3 · 产品 Demo × 效果验证</span>
-          <h2 class="text-lg lg:text-2xl font-extrabold leading-tight">三个产品，形态 / 入口 / 交互 + 效果验证</h2>
-          <p class="text-xs text-slate-500 mt-2 max-w-4xl leading-relaxed">切换产品，看它<strong class="text-slate-700">是什么形态</strong>、<strong class="text-slate-700">入口在 App 哪里</strong>、<strong class="text-slate-700">用户怎么交互</strong>；同屏下方直接给出<strong class="text-slate-700">能力演示与验证指标</strong>。播放页类入口还单独说明了「怎么调起、怎么隐藏」的不打扰机制。</p>
+          <h2 class="text-lg lg:text-2xl font-extrabold leading-tight">点手机屏幕换 query，看不同结果</h2>
+          <p class="text-xs text-slate-500 mt-2 max-w-4xl leading-relaxed">三个产品，<strong class="text-slate-700">能力演示直接做进手机界面里</strong>——点击屏幕内的 query 标签切换，屏内答案与结果联动。旁边再看<strong class="text-slate-700">形态 / 入口 / 交互</strong>，以及播放页「怎么调起、怎么隐藏」的不打扰机制。</p>
         </div>
         <div class="flex flex-wrap items-center gap-2 lg:ml-auto" id="demoTabs"></div>
       </div>
@@ -144,27 +144,7 @@ tailwind.config = {
       <div class="lg:col-span-7 xl:col-span-8 space-y-4" id="demoDetail"></div>
     </div>
 
-    <!-- 能力演示 + 底座能力（原效果验证，并入本步） -->
-    <div class="grid grid-cols-1 xl:grid-cols-5 gap-5">
-      <div class="xl:col-span-3 rounded-2xl bg-white border border-slate-200 shadow-soft overflow-hidden">
-        <div class="px-5 py-3.5 border-b border-slate-100 flex items-center gap-2">
-          <span class="h-8 w-8 rounded-lg bg-brand-50 text-brand-600 grid place-items-center"><i class="ri-chat-search-line"></i></span>
-          <div class="min-w-0">
-            <h3 class="text-sm font-bold leading-tight" id="demoTitle">能力演示</h3>
-            <p class="text-[11px] text-slate-500 leading-snug mt-0.5" id="demoHint"></p>
-          </div>
-        </div>
-        <div class="p-5 flex flex-wrap gap-2" id="demoQuestions"></div>
-        <div class="px-5 pb-5"><div id="demoAnswer" class="rounded-xl bg-slate-50 border border-slate-200 p-4 min-h-[190px]"></div></div>
-      </div>
-      <div class="xl:col-span-2 rounded-2xl bg-white border border-slate-200 shadow-soft p-5">
-        <h3 class="text-sm font-bold mb-3"><i class="ri-database-2-line text-brand-500 mr-1"></i>本次回答调用的底座能力</h3>
-        <div class="flex flex-wrap gap-2" id="usedBases"></div>
-        <p class="text-[11px] text-slate-500 mt-3 leading-relaxed">每个答案都由底座的结构化数据支撑，可反向追溯到具体的内容理解维度——这就是底座价值的直接证明。</p>
-      </div>
-    </div>
-
-    <!-- 验证指标 -->
+    <!-- 验证指标（能力演示已嵌入上面手机屏内，点 query 切换） -->
     <div class="rounded-2xl bg-white border border-slate-200 shadow-soft p-5">
       <h3 class="text-sm font-bold mb-1"><i class="ri-focus-2-line text-brand-500 mr-1"></i>当前产品的验证指标</h3>
       <p class="text-xs text-slate-500 mb-3">每个指标都给出「现在什么样」与「AI 化之后什么样」，可直接拿去做实验设计。</p>

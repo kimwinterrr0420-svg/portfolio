@@ -11,8 +11,45 @@ let curStep = 'pain';
 let curSol = solutions[0];
 let curDemo = productDemo[0];
 let curScreen = productDemo[0].screens[0].key;
+let curQuery = 0;
 let fitMode = true;
 let painOpen = false;
+
+/* curQuery 是 curDemo.queryList 数组里的索引；
+   切换屏幕时如果当前 query 不属于新屏，则重置为 0 */
+function setCurDemo(d) {
+  curDemo = d;
+  curScreen = d.screens[0].key;
+  curQuery = 0;
+}
+function setCurScreen(key) {
+  if (curScreen === key) return;
+  curScreen = key;
+  // 如果当前 query 不属于新屏，选第一个属于新屏的 query；都没有就保留 0
+  const cur = curDemo.queryList[curQuery];
+  if (!cur || (cur.screen && cur.screen !== key)) {
+    const idx = curDemo.queryList.findIndex(q => q.screen === key);
+    curQuery = idx >= 0 ? idx : 0;
+  }
+}
+function curQueryDemo() {
+  const ql = curDemo.queryList;
+  if (!ql || ql.length === 0) return null;
+  return demoCases[ql[curQuery].idx];
+}
+function queryBarHtml() {
+  const d = curDemo;
+  if (!d.queryList || d.queryList.length === 0) return '';
+  return `<div class="app-qbar" role="tablist" aria-label="切换 query">
+    ${d.queryList.map((q, i) => `
+      <button class="app-qtag ${i === curQuery ? 'is-active' : ''}" data-q="${i}" title="${q.short}">
+        <span class="app-qtag-type">${q.type}</span>
+        <span class="app-qtag-q">${q.short}</span>
+      </button>
+    `).join('')}
+    <span class="app-qbar-tip">点不同 query 看不同结果 ›</span>
+  </div>`;
+}
 
 /* ================= STEP 1 痛点 ================= */
 const rootCauses = [
@@ -206,7 +243,35 @@ function renderDemoTabs() {
 
 function screenHtml(d, key) {
   const status = `<div class="app-status"><span>9:41</span><span class="app-status-right"><i class="ri-signal-wifi-line"></i><i class="ri-battery-2-fill"></i></span></div>`;
-  if (key === 'search') {
+  const q = curQueryDemo();
+  const qBar = queryBarHtml();
+
+  /* ------ 结果迷你列表（屏内紧凑展示） ------ */
+  const rMini = (q ? q.results : []).map(r => `
+    <div class="app-rmini ${r.jump ? 'has-jump' : ''}">
+      <div class="app-rmini-main">
+        <div class="app-rmini-t">${r.title}</div>
+        <div class="app-rmini-r">${r.reason}</div>
+      </div>
+      <div class="app-rmini-s">
+        <span class="app-rmini-snum" style="color:${d.accent}">${r.sim}</span>
+        <span class="app-rmini-slabel">${d.id === 'sol-gen' ? '完成度' : '匹配度'}</span>
+        ${r.jump ? '<i class="ri-play-circle-fill app-rmini-jump" title="可跳转"></i>' : ''}
+      </div>
+    </div>
+  `).join('');
+  const baseRow = (q ? q.bases : []).map(b => `<span class="app-base"><i class="ri-database-2-line mr-1"></i>${b}</span>`).join('');
+  const answerBubble = q ? `
+    <div class="app-answer-mini">
+      <span class="app-ai-badge" style="background:${d.accent}">AI</span>
+      <div class="app-answer-mini-body">
+        <div class="app-answer-q">${q.q}</div>
+        <div class="app-answer-hint">${q.answer}</div>
+      </div>
+    </div>` : '';
+
+  if (key === 'home' || key === 'search') {
+    // AI 搜索：搜索页 + 屏内 5 类 query 切换
     return `
       <div class="app-screen">
         ${status}
@@ -214,24 +279,47 @@ function screenHtml(d, key) {
           <span class="app-logo">优酷</span>
           <div class="app-searchbar spot" data-spot="1">
             <i class="ri-search-line"></i>
-            <span class="app-search-ph">问任何剧情 / 人物 / 看点问题</span>
+            <span class="app-search-ph">${q ? q.q : '问任何剧情 / 人物 / 看点问题'}</span>
             <span class="app-ai-badge">AI</span>
           </div>
         </div>
-        <div class="app-chips">
-          <span class="app-chip is-on">推荐</span><span class="app-chip">电视剧</span><span class="app-chip">电影</span><span class="app-chip">综艺</span>
+        ${qBar}
+        <div class="app-result-area">
+          ${answerBubble}
+          <div class="app-rmini-list">${rMini}</div>
+          <div class="app-bases-row">${baseRow}</div>
         </div>
-        <div class="app-answer">
-          <div class="app-answer-head"><span class="app-ai-badge">AI</span> 搜索结果</div>
-          <div class="app-answer-q">类似《隐秘的角落》的悬疑剧</div>
-          <div class="app-answer-item"><span class="ari-title">《漫长的季节》</span><span class="ari-reason">悬疑+生活质感</span><span class="ari-jump"><i class="ri-play-circle-line"></i>92%</span></div>
-          <div class="app-answer-item"><span class="ari-title">《沉默的真相》</span><span class="ari-reason">紫金陈原著 · 多线叙事</span><span class="ari-jump"><i class="ri-play-circle-line"></i>89%</span></div>
-          <div class="app-answer-item"><span class="ari-title">《八角亭谜雾》</span><span class="ari-reason">家庭伦理裹挟悬疑</span><span class="ari-jump"><i class="ri-play-circle-line"></i>81%</span></div>
-          <div class="app-answer-foot"><i class="ri-focus-3-line"></i> 点击卡片直达对应剧集分钟</div>
+      </div>`;
+  }
+  if (key === 'player') {
+    // AI 互动：播放页（暂停态）+ AI 胶囊 + 角色气泡 + 屏内 query 切换 + 边看边问
+    const isPlayQA = q && q.id === 5;
+    return `
+      <div class="app-screen">
+        ${status}
+        <div class="app-video">
+          <span class="app-video-tag">《琅琊榜》 第 18 集</span>
+          <span class="app-paused"><i class="ri-pause-circle-fill"></i> 已暂停</span>
+          <div class="app-video-center"><i class="ri-play-fill"></i></div>
+          <div class="app-ai-capsule spot" data-spot="1"><i class="ri-sparkling-2-line"></i>AI</div>
+          <div class="app-role">
+            <span class="role-avatar">苏</span>
+            <span class="role-msg">${isPlayQA ? '你刚才那段我记着呢…' : '想聊点什么？'}</span>
+          </div>
+        </div>
+        <div class="app-ctrl">
+          <i class="ri-play-circle-line"></i><i class="ri-speed-up-line"></i><i class="ri-chat-1-line"></i><i class="ri-fullscreen-line"></i>
+        </div>
+        ${qBar}
+        <div class="app-result-area app-result-compact">
+          ${answerBubble}
+          <div class="app-rmini-list">${rMini}</div>
+          <div class="app-bases-row">${baseRow}</div>
         </div>
       </div>`;
   }
   if (key === 'community') {
+    // AI 互动社区：角色朋友圈 + 屏内 query 切换（关系运营）
     return `
       <div class="app-screen">
         ${status}
@@ -239,6 +327,7 @@ function screenHtml(d, key) {
           <div class="app-community-title">社区</div>
           <div class="app-community-sub">角色朋友圈 · 你的追剧同好圈</div>
         </div>
+        ${qBar}
         <div class="app-feed">
           <div class="app-feed-card">
             <div class="app-feed-role">
@@ -285,6 +374,7 @@ function screenHtml(d, key) {
       </div>`;
   }
   if (key === 'mine') {
+    // AI 生视频：我的页 + 屏内 2 类 query 切换（轻创作 / 决策前置）
     return `
       <div class="app-screen">
         ${status}
@@ -303,35 +393,16 @@ function screenHtml(d, key) {
           </div>
           <i class="ri-arrow-right-s-line"></i>
         </div>
-        <div class="app-create-grid">
-          <div class="cg-item"><i class="ri-scissors-2-line"></i><span>一键二创</span></div>
-          <div class="cg-item"><i class="ri-folder-5-line"></i><span>我的作品</span></div>
-          <div class="cg-item"><i class="ri-flag-line"></i><span>官方活动</span></div>
-          <div class="cg-item"><i class="ri-shield-star-line"></i><span>正版素材</span></div>
+        ${qBar}
+        <div class="app-result-area app-result-compact">
+          ${answerBubble}
+          <div class="app-rmini-list">${rMini}</div>
+          <div class="app-bases-row">${baseRow}</div>
         </div>
       </div>`;
   }
-  // player：播放页（暂停态，展示调起后的 AI 浮层）
-  return `
-    <div class="app-screen">
-      ${status}
-      <div class="app-video">
-        <span class="app-video-tag">《琅琊榜》 第 18 集</span>
-        <span class="app-paused"><i class="ri-pause-circle-fill"></i> 已暂停</span>
-        <div class="app-video-center"><i class="ri-play-fill"></i></div>
-        <div class="app-ai-capsule spot" data-spot="1"><i class="ri-sparkling-2-line"></i>AI</div>
-        <div class="app-role">
-          <span class="role-avatar">苏</span>
-          <span class="role-msg">想聊聊刚才这段吗？</span>
-        </div>
-      </div>
-      <div class="app-progress"><span class="app-progress-bar"></span></div>
-      <div class="app-ctrl">
-        <i class="ri-play-circle-line"></i><i class="ri-speed-up-line"></i><i class="ri-chat-1-line"></i><i class="ri-fullscreen-line"></i>
-      </div>
-      <div class="app-ask"><i class="ri-search-eye-line"></i><span>边看边问 · 这个角色是谁？</span></div>
-      <div class="app-gen"><i class="ri-magic-line"></i><span>一键二创</span></div>
-    </div>`;
+  // 兜底：fallback 到 home
+  return '';
 }
 
 function renderScreenTabs() {
@@ -429,73 +500,11 @@ function renderProductDemo() {
 
     ${overlayHtml}`;
 
-  // 效果验证（能力演示 + 验证指标）已并入本步，随当前产品联动
-  renderDemoQuestions();
-  renderDemoAnswer();
+  // 效果验证：能力演示已并入手机屏内（点 query 切换即可），此处只渲染验证指标
   renderProofMetrics();
 }
 
-/* ================= 效果验证（能力演示 + 指标，已并入 STEP 3 产品 Demo） ================= */
-let demoIdx = 0;
-let typeTimer = null;
-
-const demoList = () => demoCases.filter(d => d.sol === curDemo.id);
-
-function renderDemoQuestions() {
-  const list = demoList();
-  const cur = proofBySolution.find(p => p.sol === curDemo.id);
-  $('demoTitle').textContent = `${cur ? cur.name : ''} 能力演示`;
-  $('demoHint').textContent = cur ? cur.verify : '';
-  $('demoQuestions').innerHTML = list.map((d, i) => `
-    <button class="demo-chip ${i === demoIdx ? 'is-active' : ''}" data-demo="${i}">
-      <span class="opacity-60 mr-1">[${d.type}]</span>${d.q}
-    </button>`).join('');
-}
-
-function renderDemoAnswer() {
-  const d = demoList()[demoIdx];
-  if (!d) return;
-  const box = $('demoAnswer');
-  clearTimeout(typeTimer);
-
-  box.innerHTML = `
-    <div class="flex items-start gap-2 mb-3">
-      <span class="h-7 w-7 shrink-0 rounded-lg bg-brand-600 text-white grid place-items-center text-xs"><i class="ri-sparkling-2-line"></i></span>
-      <div class="flex-1">
-        <p id="typeTarget" class="text-xs text-slate-700 leading-relaxed typing"></p>
-      </div>
-    </div>
-    <div id="demoResults" class="space-y-2 opacity-0 transition-opacity duration-500"></div>`;
-
-  const target = box.querySelector('#typeTarget');
-  const full = d.answer;
-  let i = 0;
-  const tick = () => {
-    target.textContent = full.slice(0, i);
-    if (i < full.length) { i += 1; typeTimer = setTimeout(tick, 22); }
-    else {
-      target.classList.remove('typing');
-      const rw = box.querySelector('#demoResults');
-      rw.innerHTML = d.results.map(r => `
-        <div class="rounded-xl bg-white border border-slate-200 p-3 flex items-center gap-3">
-          <div class="min-w-0 flex-1">
-            <div class="text-[12.5px] font-bold text-slate-800">${r.title}${r.jump ? ' <span class="text-[10px] font-semibold text-brand-600 ml-1"><i class="ri-play-circle-line"></i> 可跳转</span>' : ''}</div>
-            <div class="text-[11px] text-slate-500 mt-0.5 leading-relaxed">${r.reason}</div>
-          </div>
-          <div class="shrink-0 text-right">
-            <div class="text-sm font-extrabold text-brand-600">${r.sim}</div>
-            <div class="text-[10px] text-slate-400">匹配度</div>
-          </div>
-        </div>`).join('');
-      rw.classList.remove('opacity-0');
-    }
-  };
-  tick();
-
-  $('usedBases').innerHTML = d.bases.map(b => `
-    <span class="text-[11px] font-bold px-3 py-1.5 rounded-lg bg-brand-50 text-brand-600 border border-brand-100"><i class="ri-database-2-line mr-1"></i>${b}</span>`).join('');
-}
-
+/* ================= 效果验证（指标；能力演示已嵌入手机屏内） ================= */
 function renderProofMetrics() {
   const p = proofBySolution.find(x => x.sol === curDemo.id);
   if (!p) return;
@@ -648,7 +657,7 @@ function goStep(step) {
   $('btnPrev').style.opacity = i === 0 ? '.4' : '1';
   $('btnNext').style.opacity = i === STEPS.length - 1 ? '.4' : '1';
 
-  if (step === 'demo') renderDemoAnswer();
+  if (step === 'demo') renderProductDemo();
   if (step === 'solution') applyFit();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -729,13 +738,23 @@ function bind() {
     const demoTab = e.target.closest('[data-demo-sol]');
     if (demoTab) {
       const d = productDemo.find(x => x.id === demoTab.dataset.demoSol);
-      if (d && d.id !== curDemo.id) { curDemo = d; curScreen = d.screens[0].key; demoIdx = 0; renderProductDemo(); }
+      if (d && d.id !== curDemo.id) { setCurDemo(d); renderProductDemo(); }
       return;
     }
 
     const screenTab = e.target.closest('[data-screen]');
     if (screenTab) {
-      if (screenTab.dataset.screen !== curScreen) { curScreen = screenTab.dataset.screen; renderProductDemo(); }
+      if (screenTab.dataset.screen !== curScreen) { setCurScreen(screenTab.dataset.screen); renderProductDemo(); }
+      return;
+    }
+
+    const qtag = e.target.closest('[data-q]');
+    if (qtag) {
+      const i = Number(qtag.dataset.q);
+      if (Number.isInteger(i) && i >= 0 && i < (curDemo.queryList || []).length && i !== curQuery) {
+        curQuery = i;
+        renderProductDemo();
+      }
       return;
     }
 
@@ -771,13 +790,6 @@ function bind() {
     if (row && row.dataset.layer) {
       focusLayer($('stackScene'), row.dataset.layer);
       renderLayerDetail(row.dataset.layer);
-      return;
-    }
-    const demo = e.target.closest('[data-demo]');
-    if (demo) {
-      demoIdx = Number(demo.dataset.demo);
-      renderDemoQuestions();
-      renderDemoAnswer();
       return;
     }
   });

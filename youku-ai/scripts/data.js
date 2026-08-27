@@ -611,6 +611,13 @@ export const productDemo = [
       desc: '产品形态不是一个新的 App 或独立页，而是对优酷现有搜索入口的「能力升级」：用户输入的不再是剧名关键词，而是场景化、剧情化、情绪化的问题；返回的不再是剧集列表，而是一张「带来源、可跳转」的答案卡——告诉你哪部剧、哪一集、第几分钟，点一下直接跳过去看。',
       points: ['入口复用，零学习成本', '答案直达，一步到片', '问题即意图，沉淀需求数据']
     },
+    queryList: [
+      { idx: 0, type: '推荐类', short: '类似《隐秘的角落》', screen: 'home' },
+      { idx: 1, type: '定位类', short: '甄嬛回宫哪一集', screen: 'home' },
+      { idx: 2, type: '口碑类', short: '这剧烂尾了吗', screen: 'home' },
+      { idx: 3, type: '模糊描述', short: '主角智商在线的剧', screen: 'home' },
+      { idx: 4, type: '播放页问答', short: '这个角色是谁', screen: 'home' }
+    ],
     entries: [
       { name: '首页顶部搜索框', where: 'App 首页 · 顶部', note: '主入口，替换原关键词搜索框，升级为自然语言问答', primary: true },
       { name: '播放页「边看边问」浮条', where: '播放页 · 底部（暂停浮现）', note: '次入口，承接观看中的即时疑问，播放中隐藏、暂停才出现', primary: false }
@@ -647,6 +654,10 @@ export const productDemo = [
       desc: '产品形态是把「剧中角色」做成可持续对话的 AI 分身，叠加角色每天更新的动态圈，让观看从一次性的内容消费变成一段可累积的关系。角色记得你的观看进度、聊过的话题，形成专属感；动态圈让非追剧期也有事可做。',
       points: ['角色人格一致，不出戏', '进度感知，自动防剧透', '动态圈让非追剧期也有事可做']
     },
+    queryList: [
+      { idx: 5, type: '角色对话', short: '和苏先生聊聊剧情', screen: 'player' },
+      { idx: 6, type: '关系运营', short: '今天角色动态圈', screen: 'community' }
+    ],
     entries: [
       { name: '播放页「角色」气泡', where: '播放页 · 右侧悬浮（暂停浮现）', note: '主入口：默认折叠为 AI 胶囊，暂停或点击才展开，边看边聊当前剧情', primary: true },
       { name: '社区 Tab「角色朋友圈」', where: '底部导航 · 社区页', note: '日常入口：角色动态流 + 二创分发 + 粉丝互动，非追剧期也有事可做', primary: false }
@@ -681,6 +692,10 @@ export const productDemo = [
       desc: '产品形态是官方创作工具矩阵：面向追剧用户的「一键角色 cut」，面向有剪辑基础创作者的「混剪 / AI 番外」，素材全部来自官方正版库。把「用户想二创但无路可走」变成「一键生成、安全分发」，产出回流平台成为新供给。',
       points: ['一键角色 cut，零门槛', '正版素材，零侵权风险', '产出回流平台，成为新供给']
     },
+    queryList: [
+      { idx: 7, type: '轻创作', short: '角色高光剪一条', screen: 'mine' },
+      { idx: 8, type: '决策前置', short: '这 IP 值得投吗', screen: 'mine' }
+    ],
     entries: [
       { name: '播放页「一键二创」按钮', where: '播放页 · 底部控制条', note: '主入口，收进控制条不占画面，点开进入全屏创作面板', primary: true },
       { name: '「我的」创作中心', where: '我的页 · 创作中心卡片', note: '创作入口，管理作品、参与官方二创活动', primary: false }

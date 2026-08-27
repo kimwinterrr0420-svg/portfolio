@@ -607,3 +607,116 @@ body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft
   color: #fff; font-size: 12px; font-weight: 800;
   display: grid; place-items: center;
 }
+
+/* ============ 屏内 query 切换 + 紧凑结果（能力演示嵌入手机屏） ============ */
+.app-qbar {
+  display: flex; align-items: center; gap: 5px;
+  padding: 7px 12px 8px;
+  overflow-x: auto; white-space: nowrap;
+  scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.18) transparent;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.app-qbar::-webkit-scrollbar { height: 3px; }
+.app-qbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,.18); border-radius: 999px; }
+.app-qtag {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 4px 9px; border-radius: 999px;
+  background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16);
+  color: #dbe4f0; font-size: 10.5px; font-weight: 700;
+  transition: all .18s ease; cursor: pointer; flex: 0 0 auto;
+}
+.app-qtag:hover { background: rgba(255,255,255,.16); border-color: rgba(255,255,255,.28); }
+.app-qtag.is-active {
+  background: linear-gradient(135deg, #6a5cff, #2a52d4);
+  border-color: transparent; color: #fff;
+  box-shadow: 0 4px 12px rgba(42, 82, 212, .35);
+}
+.app-qtag-type {
+  font-size: 9px; font-weight: 800; opacity: .85; letter-spacing: .04em;
+  padding: 1px 5px; border-radius: 4px; background: rgba(0,0,0,.18);
+}
+.app-qtag.is-active .app-qtag-type { background: rgba(255,255,255,.25); }
+.app-qbar-tip {
+  margin-left: auto; flex: 0 0 auto;
+  font-size: 9px; color: rgba(219,228,240,.6);
+  padding-left: 8px;
+}
+
+/* 屏内结果区 */
+.app-result-area {
+  flex: 1; min-height: 0;
+  overflow-y: auto; padding: 12px 14px 16px;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,.06));
+  scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.15) transparent;
+}
+.app-result-area::-webkit-scrollbar { width: 3px; }
+.app-result-area::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 999px; }
+.app-result-area.app-result-compact { padding: 8px 12px 10px; }
+
+/* AI 答案气泡 */
+.app-answer-mini {
+  display: flex; align-items: flex-start; gap: 7px;
+  padding: 8px 10px; border-radius: 11px;
+  background: rgba(106,92,255,.10); border: 1px solid rgba(106,92,255,.25);
+  margin-bottom: 9px;
+}
+.app-answer-mini .app-ai-badge {
+  flex: 0 0 auto;
+  padding: 2px 7px; border-radius: 5px;
+  color: #fff; font-size: 9px; font-weight: 800;
+  letter-spacing: .04em; height: 18px; line-height: 14px;
+}
+.app-answer-mini-body { flex: 1; min-width: 0; }
+.app-answer-q {
+  font-size: 11.5px; font-weight: 800; color: #fff; line-height: 1.4;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.app-answer-hint {
+  font-size: 10px; color: #8fa3c0; line-height: 1.5; margin-top: 2px;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 紧凑结果卡列表 */
+.app-rmini-list { display: flex; flex-direction: column; gap: 6px; }
+.app-rmini {
+  display: flex; align-items: center; gap: 9px;
+  padding: 7px 10px; border-radius: 10px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+  transition: background .18s ease;
+}
+.app-rmini:hover { background: rgba(255,255,255,.10); }
+.app-rmini.has-jump { border-color: rgba(42, 82, 212, .35); }
+.app-rmini-main { flex: 1; min-width: 0; }
+.app-rmini-t {
+  font-size: 11px; font-weight: 700; color: #fff; line-height: 1.35;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+.app-rmini-r {
+  font-size: 9.5px; color: #8fa3c0; line-height: 1.5; margin-top: 1px;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
+.app-rmini-s {
+  flex: 0 0 auto; text-align: right; line-height: 1.05;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 2px;
+}
+.app-rmini-snum { font-size: 14px; font-weight: 900; letter-spacing: -.01em; }
+.app-rmini-slabel { font-size: 8px; color: #8fa3c0; letter-spacing: .05em; }
+.app-rmini-jump { color: #6a5cff; font-size: 12px; margin-top: 2px; }
+
+/* 底座能力 row（屏内紧凑） */
+.app-bases-row {
+  display: flex; flex-wrap: wrap; gap: 4px;
+  margin-top: 10px; padding-top: 9px;
+  border-top: 1px dashed rgba(255,255,255,.12);
+}
+.app-base {
+  font-size: 9.5px; font-weight: 700;
+  padding: 2px 7px; border-radius: 999px;
+  background: rgba(42,82,212,.18); border: 1px solid rgba(42,82,212,.32);
+  color: #bcd0ff;
+  display: inline-flex; align-items: center;
+}
+.app-base i { font-size: 9px; }
