@@ -41,7 +41,7 @@
         </span>
         <button class="tool-chip tool-chip--mail" id="mailChip" type="button" title="点击复制邮箱">
           <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3.5" width="12" height="9" rx="1.2"/><path d="M2.5 4l5.5 4 5.5-4"/></svg>
-          winterduan@whu.edu.cn
+          2017336834@qq.com
         </button>
       </div>
     </div>
@@ -69,14 +69,7 @@
           <span>前腾讯 / 百度 / 美团 / 京东 实习</span>
         </div>
 
-        <div class="hero-stage hero-stage--two">
-          <div class="hero-illust">
-            <div class="hero-portrait" id="hero-portrait">
-              <span class="hero-portrait__hint">证件照占位</span>
-            </div>
-            <div class="hero-portrait__tag">Vibe Coding · PM</div>
-          </div>
-
+        <div class="hero-stage hero-stage--right">
           <div class="stage-side stage-right">
             <strong>PREVIOUSLY INTERNED AT</strong>
             <div class="interned-grid">
@@ -121,7 +114,7 @@
           <aside class="idcard">
             <div class="idcard__lanyard" aria-hidden="true"></div>
             <div class="idcard__avatar">
-              <div class="signature">段</div>
+              <img class="idcard__avatar-img" src="./assets/me-portrait.png" alt="段雨萱 证件照" loading="lazy" />
             </div>
             <h3 class="idcard__name">段雨萱</h3>
             <div class="idcard__name-en">Xinran 'Winter' Duan</div>
@@ -769,7 +762,7 @@
     // ===== 邮箱点击复制 =====
     const mailChip = document.getElementById('mailChip');
     if (mailChip) {
-      const email = 'winterduan@whu.edu.cn';
+      const email = '2017336834@qq.com';
       mailChip.addEventListener('click', () => {
         navigator.clipboard?.writeText(email);
         const orig = mailChip.innerHTML;
