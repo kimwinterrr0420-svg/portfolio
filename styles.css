@@ -3030,6 +3030,119 @@ button {
   font-style: normal;
 }
 
+/* 搜索优化 · 三阶段规模化 */
+.scaling-path {
+  margin-top: 42px;
+  padding: 28px 28px 24px;
+  background: var(--color-soft, #f6f5f1);
+  border: 1px solid var(--color-line, #e5e3dc);
+  border-radius: 18px;
+}
+.scaling-path__steps {
+  display: grid;
+  grid-template-columns: 1fr 24px 1fr 24px 1fr;
+  gap: 18px;
+  align-items: stretch;
+  margin-top: 18px;
+}
+.scaling-path__steps article {
+  background: #fff;
+  border: 1px solid var(--color-line, #e5e3dc);
+  border-radius: 14px;
+  padding: 18px 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.scaling-path__steps article > span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-text-3, #6b6b66);
+  text-transform: uppercase;
+}
+.scaling-path__steps article > b {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--color-text, #0a0a0a);
+  line-height: 1.35;
+}
+.scaling-path__steps article ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.scaling-path__steps article ul li {
+  font-size: 13px;
+  color: var(--color-text-2, #3a3a36);
+  line-height: 1.55;
+}
+.scaling-path__steps article ul li strong {
+  color: var(--color-text, #0a0a0a);
+  font-weight: 800;
+}
+.scaling-path__steps i {
+  color: var(--color-text-3, #b3b1a8);
+  font-style: normal;
+  align-self: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+.scaling-path .framework-conclusion {
+  margin-top: 18px;
+}
+
+/* 小游戏 · 两大挑战 */
+.game-challenges {
+  margin-top: 42px;
+  padding: 28px;
+  background: var(--color-soft, #f6f5f1);
+  border: 1px solid var(--color-line, #e5e3dc);
+  border-radius: 18px;
+}
+.game-challenges__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+.game-challenges__grid article {
+  background: #fff;
+  border: 1px solid var(--color-line, #e5e3dc);
+  border-radius: 14px;
+  padding: 22px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.game-challenges__grid article > span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-text-3, #6b6b66);
+  text-transform: uppercase;
+}
+.game-challenges__grid article > b {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--color-text, #0a0a0a);
+  line-height: 1.35;
+}
+.game-challenges__grid article > p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--color-text-2, #3a3a36);
+  margin: 0;
+}
+@media (max-width: 880px) {
+  .scaling-path__steps { grid-template-columns: 1fr; }
+  .scaling-path__steps i { transform: rotate(90deg); justify-self: center; }
+  .game-challenges__grid { grid-template-columns: 1fr; }
+}
+
 .change-governance {
   display: grid;
   grid-template-columns: minmax(260px, 0.75fr) 1.25fr;
@@ -3917,15 +4030,11 @@ button {
 .edu-step__logo {
   width: 38px;
   height: 38px;
-  background: #0a0a0a;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  font-weight: 800;
-  border-radius: 6px;
+  border-radius: 50%;
+  object-fit: cover;
   flex-shrink: 0;
+  background: #fff;
+  display: block;
 }
 .edu-step__body { display: flex; flex-direction: column; gap: 2px; }
 .edu-step__name { font-size: 13.5px; font-weight: 700; color: #0a0a0a; }
