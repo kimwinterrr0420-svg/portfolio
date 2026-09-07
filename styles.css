@@ -4681,8 +4681,8 @@ button {
   object-position: 50% 25%;
   background: #f5f5f4;
 }
-/* 抖音图右移露出点赞量 */
-.hobby-doublephones a:nth-child(2) img { object-position: 100% 25%; }
+/* 抖音图左移露出左侧内容 */
+.hobby-doublephones a:nth-child(2) img { object-position: 0% 25%; }
 .hobby-phone__caption {
   padding: 7px 10px;
   font-size: 11px;
