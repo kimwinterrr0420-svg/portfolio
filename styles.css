@@ -4313,6 +4313,418 @@ button {
 }
 
 /* ============================================================
+   About Me · Hobbies × Thoughts
+   ============================================================ */
+.aboutme-rich {
+  padding: clamp(80px, 10vw, 128px) 0;
+  border-top: 1px solid #0a0a0a;
+  background: #f4f3ee;
+}
+
+.aboutme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+/* ============== hobby card 公共 ============== */
+.hobby-card {
+  position: relative;
+  border: 1.5px solid #0a0a0a;
+  border-radius: 20px;
+  background: #fff;
+  padding: 28px 30px 26px;
+  overflow: hidden;
+  transition: transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease;
+}
+.hobby-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 50px -28px rgba(0,0,0,0.35);
+}
+
+.hobby-card__num {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-family: 'Inter', sans-serif;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: transparent;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #0a0a0a;
+  opacity: 0.18;
+  user-select: none;
+  pointer-events: none;
+}
+
+.hobby-card__head {
+  margin-bottom: 18px;
+  padding-right: 80px;
+}
+.hobby-card__cat {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  background: #0a0a0a;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-family: 'Inter', sans-serif;
+}
+.hobby-card__title {
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0 0 4px;
+  color: #0a0a0a;
+  letter-spacing: -0.02em;
+  font-family: 'Noto Serif SC', serif;
+  line-height: 1.1;
+}
+.hobby-card__title span {
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: #525252;
+  margin-left: 6px;
+  text-transform: uppercase;
+}
+.hobby-card__tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  border: 1px solid #0a0a0a;
+  padding: 2px 8px;
+  border-radius: 12px;
+  color: #525252;
+  background: #fafafa;
+}
+
+.hobby-card__body { font-size: 13px; color: #0a0a0a; }
+
+.hobby-card__thought {
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 14px 0 0;
+  color: #0a0a0a;
+}
+.hobby-card__thought strong {
+  background: #fff7d6;
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 800;
+}
+.hobby-card__thought em {
+  background: #fafafa;
+  font-style: normal;
+  border-bottom: 1px dashed #0a0a0a;
+  padding: 0 2px;
+}
+.hobby-card__quote {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 6px 10px;
+  border-left: 3px solid #0a0a0a;
+  background: #fafafa;
+  font-style: italic;
+  color: #525252;
+  font-size: 12.5px;
+}
+
+.hobby-card__metrics {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 10px 12px;
+  border: 1.5px dashed #0a0a0a;
+  border-radius: 12px;
+  flex-wrap: wrap;
+  background: #fafafa;
+}
+.hobby-card__metrics span {
+  font-size: 11.5px;
+  color: #525252;
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+}
+.hobby-card__metrics b {
+  font-family: 'Inter', monospace;
+  font-size: 14px;
+  font-weight: 800;
+  color: #0a0a0a;
+  letter-spacing: -0.02em;
+}
+
+/* ============== hobby 01 · 双手机截图 ============== */
+.hobby-doublephones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+.hobby-phone {
+  display: block;
+  border: 1px solid #0a0a0a;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform .2s ease;
+  position: relative;
+}
+.hobby-phone:hover { transform: translateY(-2px); }
+.hobby-phone img {
+  width: 100%;
+  display: block;
+  height: 220px;
+  object-fit: cover;
+  object-position: top;
+}
+.hobby-phone__caption {
+  padding: 8px 10px;
+  font-size: 11px;
+  color: #525252;
+  border-top: 1px solid #0a0a0a;
+  background: #fafafa;
+}
+.hobby-phone__caption b {
+  color: #0a0a0a;
+  font-weight: 800;
+  font-family: 'Inter', monospace;
+}
+
+/* ============== hobby 02 · 思考盒 + 跳转卡 ============== */
+.hobby-thoughtbox {
+  background: #fafafa;
+  border: 1.5px solid #0a0a0a;
+  border-radius: 12px;
+  padding: 14px 16px 12px;
+  position: relative;
+}
+.hobby-thoughtbox h4 {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  margin: 0 0 10px;
+  color: #525252;
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+}
+.hobby-thoughtbox__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: t;
+}
+.hobby-thoughtbox__list li {
+  counter-increment: t;
+  position: relative;
+  padding: 6px 0 6px 28px;
+  font-size: 12px;
+  line-height: 1.55;
+  border-top: 1px dashed rgba(0,0,0,0.15);
+  color: #0a0a0a;
+}
+.hobby-thoughtbox__list li:first-child { border-top: none; padding-top: 2px; }
+.hobby-thoughtbox__list li::before {
+  content: "0" counter(t);
+  position: absolute;
+  left: 0;
+  top: 6px;
+  font-family: 'Inter', monospace;
+  font-weight: 800;
+  font-size: 11px;
+  background: #0a0a0a;
+  color: #fff;
+  padding: 1px 5px;
+  border-radius: 3px;
+  letter-spacing: 0.04em;
+}
+.hobby-thoughtbox__list b {
+  font-weight: 800;
+  background: #fff7d6;
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.hobby-card__linkcard {
+  margin-top: 16px;
+  display: block;
+  border: 1.5px solid #0a0a0a;
+  border-radius: 14px;
+  background: #0a0a0a;
+  color: #fff;
+  padding: 16px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: transform .2s ease;
+}
+.hobby-card__linkcard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent 0 12px,
+    rgba(255,255,255,0.06) 12px 14px
+  );
+  pointer-events: none;
+}
+.hobby-card__linkcard:hover { transform: translateX(4px); }
+.hobby-card__linkcard-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  background: #fff;
+  color: #0a0a0a;
+  padding: 2px 8px;
+  border-radius: 3px;
+  margin-bottom: 6px;
+  font-family: 'Inter', sans-serif;
+}
+.hobby-card__linkcard-title {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  font-family: 'Noto Serif SC', serif;
+}
+.hobby-card__linkcard-desc {
+  font-size: 12px;
+  opacity: 0.7;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.hobby-card__linkcard-cta {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* ============== hobby 03 · AVG 大截图 + 角标 ============== */
+.hobby-screenshot {
+  display: block;
+  position: relative;
+  border: 1px solid #0a0a0a;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+.hobby-screenshot img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: opacity .2s ease;
+}
+.hobby-screenshot__overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 12px 14px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: #fff;
+  font-size: 12px;
+  font-family: 'Inter', monospace;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* ============== hobby 04 · 书法作品 ============== */
+.hobby-illust {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 14px;
+  align-items: stretch;
+}
+.hobby-calligraphy {
+  display: block;
+  position: relative;
+  border: 1px solid #0a0a0a;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #d9c5a0;
+  padding: 16px;
+}
+.hobby-calligraphy img {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  max-height: 240px;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+.hobby-calligraphy__seal {
+  position: absolute;
+  bottom: 26px;
+  right: 28px;
+  background: #b1232b;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  font-family: 'Noto Serif SC', serif;
+  padding: 4px 6px;
+  border-radius: 3px;
+  letter-spacing: 0.18em;
+  transform: rotate(-3deg);
+  border: 1px solid #fff;
+}
+.hobby-illust__caption {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #525252;
+  border-left: 3px solid #0a0a0a;
+  padding: 6px 0 6px 14px;
+  background: #fafafa;
+  border-radius: 0 8px 8px 0;
+}
+
+/* ============== aboutme footer ============== */
+.aboutme-footer {
+  margin-top: 36px;
+  text-align: center;
+  position: relative;
+}
+.aboutme-footer__rule {
+  display: block;
+  width: 80px;
+  height: 1.5px;
+  background: #0a0a0a;
+  margin: 0 auto 18px;
+}
+.aboutme-footer p {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #525252;
+  margin: 0;
+}
+
+/* ============== About Me · 移动端 ============== */
+@media (max-width: 720px) {
+  .aboutme-grid { grid-template-columns: 1fr; }
+  .hobby-card { padding: 22px 22px 20px; }
+  .hobby-card__num { font-size: 44px; right: 18px; top: 16px; }
+  .hobby-card__title { font-size: 22px; }
+  .hobby-card__head { padding-right: 60px; }
+  .hobby-phone img { height: 180px; }
+  .hobby-screenshot img { height: 180px; }
+  .hobby-illust { grid-template-columns: 1fr; }
+  .hobby-thoughtbox__list li { font-size: 11.5px; }
+}
+
+/* ============================================================
    Footer
    ============================================================ */
 .site-footer--rich {
