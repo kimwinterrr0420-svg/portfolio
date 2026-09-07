@@ -1080,6 +1080,67 @@ button {
   counter-reset: loop-stage;
 }
 
+/* ================================================================
+   MEITUAN PRODUCT SHOTS — 现场截图网格（截图网格用在 hero 后）
+   ================================================================ */
+.meituan-shots {
+  padding: clamp(56px, 7vw, 96px) 0 clamp(40px, 5vw, 72px);
+  background: #faf9f5;
+  border-bottom: 1.5px dashed #0a0a0a;
+}
+.meituan-shots .section-head {
+  margin-bottom: clamp(28px, 4vw, 44px);
+}
+.meituan-shots__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+}
+.meituan-shots__grid figure {
+  margin: 0;
+  background: #fff;
+  border: 1.5px solid #0a0a0a;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.meituan-shots__grid figure:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(10,10,10,.12);
+}
+.meituan-shots__grid img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  border-bottom: 1.5px solid #0a0a0a;
+}
+.meituan-shots__grid figcaption {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.meituan-shots__grid figcaption b {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: #0a0a0a;
+  letter-spacing: 0.02em;
+}
+.meituan-shots__grid figcaption span {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #525252;
+}
+@media (max-width: 880px) {
+  .meituan-shots__grid { grid-template-columns: 1fr; gap: 14px; }
+  .meituan-shots__grid img { height: 240px; }
+}
+
 /* -------- 工具条：项目总数据摘要 -------- */
 .loop-summary {
   padding: 56px 0 48px;
@@ -1173,6 +1234,11 @@ button {
   grid-template-columns: 1fr 1fr;
   gap: 48px;
   align-items: start;
+}
+.loop-stage--text .loop-stage__body {
+  grid-template-columns: 1fr;
+  max-width: 880px;
+  margin: 0 auto;
 }
 
 /* 截图区 */
@@ -1899,6 +1965,83 @@ button {
   margin-top: 8px;
   color: var(--color-text-3);
   font-size: 12px;
+}
+
+/* 标题后扩展状态条 · 摇一摇 / 诗词等 */
+.answer-case__status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+  margin: 24px 0 36px;
+  padding: 18px 22px;
+  background: linear-gradient(135deg, #fafaf5 0%, #f4f3ee 100%);
+  border: 1px dashed #0a0a0a55;
+  border-radius: 14px;
+}
+.answer-case__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex: 1 1 auto;
+}
+.answer-case__chips span {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  padding: 8px 14px;
+  background: #fff;
+  border: 1px solid #0a0a0a30;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #525252;
+  transition: background .2s ease, transform .2s ease;
+}
+.answer-case__chips span b {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: #0a0a0a;
+}
+.answer-case__chips span i {
+  font-style: normal;
+  font-size: 11.5px;
+  color: #525252;
+  letter-spacing: 0.02em;
+}
+.answer-case__chips span:hover {
+  background: #fff7c2;
+  transform: translateY(-1px);
+}
+.answer-case__status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  background: #0a0a0a;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.answer-case__status-tag b {
+  font-weight: 700;
+  font-family: 'Noto Serif SC', serif;
+}
+.answer-case__status-tag .status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6ee7b7;
+  box-shadow: 0 0 0 3px #6ee7b750;
+  animation: dot-pulse 1.6s ease-in-out infinite;
+}
+@keyframes dot-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(0.85); }
 }
 
 .answer-brief {
@@ -3958,6 +4101,24 @@ button {
   .hero-status__logos { justify-content: flex-start; }
 }
 
+/* 单列状态条（无 CURRENTLY 时） */
+.hero-statusbar--single {
+  grid-template-columns: 1fr;
+  justify-items: end;
+  margin-top: clamp(36px, 4.5vw, 56px);
+}
+.hero-statusbar--single .hero-status--solo {
+  align-items: flex-end;
+  text-align: right;
+}
+.hero-statusbar--single .hero-status--solo .hero-status__logos { justify-content: flex-end; }
+
+@media (max-width: 720px) {
+  .hero-statusbar--single { justify-items: start; }
+  .hero-statusbar--single .hero-status--solo { align-items: flex-start; }
+  .hero-statusbar--single .hero-status--solo .hero-status__logos { justify-content: flex-start; }
+}
+
 /* 通用按钮 */
 .btn {
   display: inline-flex;
@@ -5753,6 +5914,42 @@ button {
   line-height: 1.55;
   color: #525252;
   margin: 0;
+}
+/* 美团卡专用 · description + chips */
+.intern-project-card__desc {
+  margin: 12px 0 14px !important;
+  padding: 12px 14px;
+  background: #fafaf7;
+  border-left: 3px solid #0a0a0a;
+  border-radius: 0 8px 8px 0;
+  font-size: 12.5px !important;
+  line-height: 1.65 !important;
+  color: #1a1a1a !important;
+}
+.intern-project-card__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+.intern-project-card__chips span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background: #fff7c2;
+  border: 1px solid #0a0a0a30;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #0a0a0a;
+  letter-spacing: 0.02em;
+}
+.intern-project-card__chips span b {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  color: #0a0a0a;
 }
 .intern-project-card__headline {
   text-align: right;

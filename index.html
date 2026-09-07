@@ -14,10 +14,10 @@
 
   <!-- ============== HEADER ============== -->
   <header class="site-header site-header--rich">
-    <div class="container header-inner">
-      <a class="brand brand--rich" href="#hero">winterduan</a>
+<div class="container header-inner">
+          <a class="brand brand--rich" href="#hero">winterduan</a>
 
-      <nav class="nav nav--rich" aria-label="主导航">
+          <nav class="nav nav--rich" aria-label="主导航">
         <a href="#about" class="nav-pill">关于</a>
         <a href="#internships" class="nav-pill">实习</a>
         <a href="#works" class="nav-pill">项目</a>
@@ -80,13 +80,9 @@
           <a class="btn btn--ghost btn--lg" href="#contact">联系我</a>
         </div>
 
-        <!-- 底部状态条：Bingo 风格 CURRENTLY + PREVIOUSLY -->
-        <div class="hero-statusbar">
-          <div class="hero-status">
-            <strong>CURRENTLY</strong>
-            <span>腾讯 PCG · 在线视频 BU · 答辩进行中</span>
-          </div>
-          <div class="hero-status hero-status--end">
+        <!-- 底部状态条：Bingo 风格 PREVIOUSLY INTERNED AT -->
+        <div class="hero-statusbar hero-statusbar--single">
+          <div class="hero-status hero-status--end hero-status--solo">
             <strong>PREVIOUSLY INTERNED AT</strong>
             <div class="hero-status__logos">
               <a href="#internships" data-id="jd" aria-label="京东"><img src="./assets/logo-jd.png" alt="京东" /></a>
@@ -112,18 +108,11 @@
         <div class="about-grid">
 
           <aside class="idcard">
-            <div class="idcard__lanyard" aria-hidden="true"></div>
             <div class="idcard__avatar">
               <img class="idcard__avatar-img" src="./assets/me-portrait.png" alt="段雨萱 证件照" loading="lazy" />
             </div>
             <h3 class="idcard__name">段雨萱</h3>
             <div class="idcard__name-en">Xinran 'Winter' Duan</div>
-            <div class="idcard__tags">
-              <span class="idcard__tag">explorer</span>
-              <span class="idcard__tag">prototyper</span>
-              <span class="idcard__tag">storyteller</span>
-              <span class="idcard__tag">vibe coder</span>
-            </div>
           </aside>
 
           <div class="about-body">
@@ -396,8 +385,8 @@
                 <p>从意图识别、多模态升级到 AI 选股三阶段，把 Agent 从能力优化推到核心场景。</p>
               </div>
               <div class="intern-project-card__headline">
-                <b>+30%</b>
-                <span>AI 选股 PV</span>
+                <b>1w→2w+</b>
+                <span>Agent 日均分发</span>
               </div>
             </div>
             <div class="intern-project-card__cta">
@@ -418,12 +407,19 @@
                   <span style="font-size:11px;color:#737373;letter-spacing:0.04em;">美团 · 点评事业部</span>
                 </div>
                 <h3>当地人推荐榜</h3>
-                <p>以「本地人真实口碑」为差异化定位，为榜单城市覆盖度与本地化真实度负责。</p>
               </div>
               <div class="intern-project-card__headline">
-                <b>>85%</b>
-                <span>本地好评中位值</span>
+                <b>2</b>
+                <span>主线交付</span>
               </div>
+            </div>
+            <p class="intern-project-card__desc">
+              以<b>「本地人真实口碑」</b>为差异化定位打造榜单，两条主线齐头并进——<b>榜单策略</b>（容量测算 / 准入策略 / 反向验证）打基础，<b>内部提效工具</b>（异动商家 Skill + 智能客服 Agent）做杠杆。
+            </p>
+            <div class="intern-project-card__chips">
+              <span><b>+35%</b> 排查效率</span>
+              <span><b>80%</b> 工单自动处理</span>
+              <span><b>100+</b> 知识库沉淀</span>
             </div>
             <div class="intern-project-card__cta">
               打开项目详情
@@ -586,8 +582,8 @@
                   <p class="work-tile__desc">Agent 基础能力 → 多模态升级 → AI 选股三阶段演进。</p>
                 </div>
                 <div class="work-tile__headline">
-                  <b>1w→5w+</b>
-                  <span>日均分发跃升</span>
+                  <b>1w→2w+</b>
+                  <span>Agent 日均分发</span>
                 </div>
               </div>
               <div class="work-tile__foot">
@@ -595,7 +591,7 @@
               </div>
             </a>
 
-            <a class="work-tile work-tile--rail work-tile--shots" href="./project-meituan.html">
+            <a class="work-tile work-tile--rail" href="./project-meituan.html">
               <div class="work-tile__eyebrow">
                 <span class="work-tile__num">07</span>
                 <span class="work-tile__cat">实习项目 · 美团点评</span>
@@ -603,26 +599,12 @@
               <div class="work-tile__title-row">
                 <div class="work-tile__title-block">
                   <h3 class="work-tile__title">大众点评·当地人推荐榜</h3>
-                  <p class="work-tile__desc">用「本地人真实口碑」做差异化定位，榜单策略+提效工具双线交付。</p>
+                  <p class="work-tile__desc">用「本地人真实口碑」做差异化定位，榜单策略 + 内部提效工具双线交付。</p>
                 </div>
                 <div class="work-tile__headline">
-                  <b>&gt;85%</b>
-                  <span>新入榜本地好评</span>
+                  <b>+35%</b>
+                  <span>排查效率</span>
                 </div>
-              </div>
-              <div class="work-tile__shots">
-                <figure>
-                  <img src="./assets/mt-dianping-home.png" alt="大众点评首页·当地人推荐入口" loading="lazy" />
-                  <figcaption>首页入口</figcaption>
-                </figure>
-                <figure>
-                  <img src="./assets/mt-localrank-top.png" alt="当地人推荐榜头部·广州酒家等" loading="lazy" />
-                  <figcaption>榜单头部</figcaption>
-                </figure>
-                <figure>
-                  <img src="./assets/mt-localrank-list.png" alt="当地人推荐榜长列表·泮溪酒家等" loading="lazy" />
-                  <figcaption>榜单长列表</figcaption>
-                </figure>
               </div>
               <div class="work-tile__foot">
                 <span>打开项目</span><i>↗</i>
@@ -935,10 +917,10 @@
         title: '百度 · MEG 搜索产品部',
         role: 'Finscope 金融智能体 · 产品实习生',
         period: '2026.01 — 2026.05 · BEIJING',
-        desc: '把 FinChat 打造成能看懂行情、能选股、能复盘的金融 Agent：日均分发 1w → 5w+，AI 选股 PV +30%，完成「指标选股 → 自然语言选股 → 策略沉淀」三阶段演进。',
+        desc: '把 FinChat 打造成能看懂行情、能选股、能复盘的金融 Agent：通过评测与 Badcase 拆解驱动基础能力，三阶段（基础选股器 → 自然语言选股 → 策略沉淀）让 AI 选股场景新增 PV 8%+。',
         metrics: [
-          { v: '1w→5w+', l: '日均分发' },
-          { v: '+30%', l: 'AI 选股 PV' },
+          { v: '1w→2w+', l: 'Agent 日均分发' },
+          { v: '+3% / +5%', l: 'PV / UV 提升' },
           { v: '3 阶段', l: '能力演进' }
         ],
         link: { href: './project-finscope.html', label: '打开项目详情' }
@@ -948,11 +930,11 @@
         title: '美团 · 点评事业部',
         role: '当地人推荐榜 · 产品实习生',
         period: '2026.05 — 2026.07 · SHANGHAI',
-        desc: '以「本地人真实口碑」为差异化定位打造榜单，为榜单城市覆盖度与本地化真实度负责。',
+        desc: '以「本地人真实口碑」为差异化定位打造榜单，为榜单城市覆盖度与本地化真实度负责：一条线做榜单策略（容量测算 / 准入策略 / 反向验证），一条线做内部提效工具（异动商家 Skill + 智能客服 Agent）。',
         metrics: [
-          { v: '>85%', l: '本地好评中位值' },
-          { v: '+35%', l: '商家排查效率' },
-          { v: '80%', l: '工单自动处理率' }
+          { v: '+35%', l: '排查效率' },
+          { v: '80%', l: '工单自动处理' },
+          { v: '100+', l: '知识库沉淀' }
         ],
         link: { href: './project-meituan.html', label: '打开项目详情' }
       },
