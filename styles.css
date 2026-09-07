@@ -4437,24 +4437,25 @@ button {
 
 .hobby-card__metrics {
   display: flex;
-  gap: 12px;
-  margin-top: 14px;
-  padding: 10px 12px;
-  border: 1.5px dashed #0a0a0a;
-  border-radius: 12px;
   flex-wrap: wrap;
-  background: #fafafa;
+  gap: 8px;
+  margin-top: 14px;
+  flex-wrap: wrap;
 }
 .hobby-card__metrics span {
   font-size: 11.5px;
   color: #525252;
-  display: flex;
+  display: inline-flex;
   align-items: baseline;
-  gap: 3px;
+  gap: 4px;
+  padding: 4px 10px;
+  border: 1px solid #0a0a0a;
+  border-radius: 20px;
+  background: #fafafa;
 }
 .hobby-card__metrics b {
   font-family: 'Inter', monospace;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
   color: #0a0a0a;
   letter-spacing: -0.02em;
@@ -4480,16 +4481,20 @@ button {
 .hobby-phone img {
   width: 100%;
   display: block;
-  height: 220px;
+  aspect-ratio: 1 / 1.05;
   object-fit: cover;
-  object-position: top;
+  object-position: 50% 25%;
+  background: #f5f5f4;
 }
 .hobby-phone__caption {
-  padding: 8px 10px;
+  padding: 7px 10px;
   font-size: 11px;
   color: #525252;
   border-top: 1px solid #0a0a0a;
   background: #fafafa;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 .hobby-phone__caption b {
   color: #0a0a0a;
@@ -4620,9 +4625,9 @@ button {
 }
 .hobby-screenshot img {
   width: 100%;
-  height: 220px;
+  aspect-ratio: 16 / 7;
   object-fit: cover;
-  object-position: top;
+  object-position: 50% 35%;
   display: block;
   transition: opacity .2s ease;
 }
@@ -4652,21 +4657,19 @@ button {
   border-radius: 12px;
   overflow: hidden;
   background: #d9c5a0;
-  padding: 16px;
+  padding: 0;
 }
 .hobby-calligraphy img {
   width: 100%;
-  height: 100%;
-  min-height: 220px;
-  max-height: 240px;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
+  object-position: 50% 30%;
   display: block;
-  border-radius: 4px;
 }
 .hobby-calligraphy__seal {
   position: absolute;
-  bottom: 26px;
-  right: 28px;
+  bottom: 18px;
+  right: 14px;
   background: #b1232b;
   color: #fff;
   font-size: 10px;
@@ -4677,6 +4680,7 @@ button {
   letter-spacing: 0.18em;
   transform: rotate(-3deg);
   border: 1px solid #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 .hobby-illust__caption {
   display: flex;
