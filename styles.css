@@ -1150,27 +1150,31 @@ button {
 .loop-summary-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 48px 72px;
+  gap: 28px 32px;
+  justify-content: space-between;
 }
 .loop-summary-item {
   display: flex;
   gap: 12px;
   align-items: flex-start;
+  flex: 1 1 0;
+  min-width: 0;
 }
 .loop-summary-num {
   font-family: "Inter", "SF Mono", "JetBrains Mono", "Cascadia Code", "PingFang SC", "Microsoft YaHei", "Noto Sans Mono CJK SC", monospace;
-  font-size: clamp(28px, 3.2vw, 40px);
+  font-size: clamp(24px, 2.6vw, 34px);
   font-weight: 700;
   color: var(--color-text);
   line-height: 1;
   letter-spacing: -0.03em;
+  white-space: nowrap;
 }
 .loop-summary-label {
-  font-size: 13px;
+  font-size: 12.5px;
   color: #a8a29e;
   line-height: 1.4;
-  max-width: 120px;
-  padding-top: 6px;
+  max-width: 140px;
+  padding-top: 4px;
 }
 
 /* -------- 阶段卡片 -------- */
@@ -1536,7 +1540,7 @@ button {
     gap: 32px;
   }
   .loop-summary-row {
-    gap: 32px 40px;
+    gap: 18px 20px;
   }
   .loop-screens {
     grid-template-columns: 1fr;
@@ -4503,9 +4507,12 @@ button {
    实习 · 蛇形路径（trail mode）
    ============================================================ */
 .internship-section {
-  padding: clamp(80px, 10vw, 128px) 0;
+  padding: clamp(40px, 5vw, 64px) 0 clamp(28px, 3.5vw, 40px);
   border-top: 1px solid #0a0a0a;
   background: #fafafa;
+}
+.internship-section .section-head {
+  margin-bottom: clamp(20px, 2.5vw, 28px);
 }
 
 /* 仿 macOS 窗口 */
@@ -4549,6 +4556,8 @@ button {
 }
 .trail-svg {
   width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
   height: auto;
   display: block;
 }
@@ -4750,7 +4759,7 @@ button {
   font-size: 11.5px;
   color: #525252;
   letter-spacing: 0.06em;
-  padding: 14px 16px;
+  padding: 10px 16px;
   border-top: 1px dashed #0a0a0a;
   background: #f4f3ee;
 }
@@ -5412,6 +5421,33 @@ button {
   }
 }
 
+/* 三大痛点矩阵下方的可视化入口链接 */
+.hobby-matrix__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 12px 18px;
+  background: #0a0a0a;
+  color: #fafafa;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.hobby-matrix__link:hover {
+  background: #262626;
+  transform: translateX(2px);
+}
+.hobby-matrix__link svg {
+  transition: transform 0.2s ease;
+}
+.hobby-matrix__link:hover svg {
+  transform: translateX(2px);
+}
+
 /* ============== hobby 03 · AVG 大截图 + 角标 ============== */
 .hobby-screenshot {
   display: block;
@@ -5958,10 +5994,13 @@ button {
 
 /* ============== 实习路线图下项目入口卡 ============== */
 .intern-project-entries {
-  padding: clamp(32px, 5vw, 56px) 0;
+  padding: clamp(20px, 3vw, 36px) 0 clamp(32px, 5vw, 56px);
   background: var(--color-soft, #f6f5f1);
   border-top: 1.5px dashed #0a0a0a;
   border-bottom: 1.5px dashed #0a0a0a;
+}
+.intern-project-entries .section-head {
+  margin-bottom: clamp(20px, 2.5vw, 28px);
 }
 .intern-project-grid {
   display: grid;
