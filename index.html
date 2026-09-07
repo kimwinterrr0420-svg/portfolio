@@ -61,40 +61,40 @@
         <h1 class="hero-name">段雨萱</h1>
         <div class="hero-name-en">Xinran 'Winter' Duan</div>
 
-        <div class="hero-subtitle">
-          <span class="hero-tag">AI 产品经理</span>
-          <i>·</i>
-          <span>武汉大学 · 金融硕士在读</span>
-          <i>·</i>
-          <span>前腾讯 / 百度 / 美团 / 京东 实习</span>
+        <div class="hero-headline">
+          <span class="hero-headline__solid">AI 产品经理</span>
+          <span class="hero-headline__outline">用 AI 放大判断力</span>
         </div>
 
-        <div class="hero-stage hero-stage--right">
-          <div class="stage-side stage-right">
-            <strong>PREVIOUSLY INTERNED AT</strong>
-            <div class="interned-grid">
-              <a class="interned-cell" href="#internships" data-id="jd" aria-label="京东实习">
-                <img src="./assets/logo-jd.png" alt="京东" />
-              </a>
-              <a class="interned-cell" href="#internships" data-id="baidu" aria-label="百度实习">
-                <img src="./assets/logo-baidu.png" alt="百度" />
-              </a>
-              <a class="interned-cell" href="#internships" data-id="meituan" aria-label="美团实习">
-                <img src="./assets/logo-meituan.png" alt="美团" />
-              </a>
-              <a class="interned-cell" href="#internships" data-id="tencent" aria-label="腾讯实习">
-                <img src="./assets/logo-tencent.png" alt="腾讯" />
-              </a>
-            </div>
-          </div>
-        </div>
+        <p class="hero-summary">
+          武汉大学 · 金融硕士在读 · 4 段产品实习里把 AI 当「业务方」管理 ——
+          在央视频做搜推全链路，在百度 Finscope 做金融智能体，在美团做榜单，在京东做数据看板。
+          相信「金融学的结构化思维 × AI 时代的判断力」是产品经理的下一种工作方式。
+        </p>
 
         <div class="hero-actions">
-          <a class="btn btn--primary" href="./assets/resume.pdf" download>
+          <a class="btn btn--primary btn--lg" href="./assets/resume.pdf" download>
             <span>查看简历</span>
             <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 8l4 4 4-4M3 14h10"/></svg>
           </a>
-          <a class="btn btn--ghost" href="#contact">联系我</a>
+          <a class="btn btn--ghost btn--lg" href="#contact">联系我</a>
+        </div>
+
+        <!-- 底部状态条：Bingo 风格 CURRENTLY + PREVIOUSLY -->
+        <div class="hero-statusbar">
+          <div class="hero-status">
+            <strong>CURRENTLY</strong>
+            <span>腾讯 PCG · 在线视频 BU · 答辩进行中</span>
+          </div>
+          <div class="hero-status hero-status--end">
+            <strong>PREVIOUSLY INTERNED AT</strong>
+            <div class="hero-status__logos">
+              <a href="#internships" data-id="jd" aria-label="京东"><img src="./assets/logo-jd.png" alt="京东" /></a>
+              <a href="#internships" data-id="baidu" aria-label="百度"><img src="./assets/logo-baidu.png" alt="百度" /></a>
+              <a href="#internships" data-id="meituan" aria-label="美团"><img src="./assets/logo-meituan.png" alt="美团" /></a>
+              <a href="#internships" data-id="tencent" aria-label="腾讯"><img src="./assets/logo-tencent.png" alt="腾讯" /></a>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -872,7 +872,7 @@
       document.querySelectorAll('.trail-node').forEach(x => x.classList.remove('is-active'));
       const node = document.querySelector('.trail-node[data-id="' + id + '"]');
       if (node) node.classList.add('is-active');
-      document.querySelectorAll('.interned-cell').forEach(x => {
+      document.querySelectorAll('.hero-status__logos a').forEach(x => {
         x.classList.toggle('is-active', x.dataset.id === id);
       });
       renderFloatcard(id);
@@ -882,7 +882,7 @@
       el.addEventListener('click', () => activateTrail(el.dataset.id));
     });
     // Hero 区 logo 点击：联动地图 + 滚动到地图
-    document.querySelectorAll('.interned-cell[data-id]').forEach(el => {
+    document.querySelectorAll('.hero-status__logos a[data-id]').forEach(el => {
       el.addEventListener('click', (e) => {
         const id = el.dataset.id;
         if (!trailData[id]) return;

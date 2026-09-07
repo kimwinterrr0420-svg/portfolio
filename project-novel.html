@@ -41,7 +41,7 @@
           核心命题：<b>市面英语学习工具都是固定教材，用户想用自己喜欢的小说学英语怎么办？</b>挖掘「自由导入小说」这一竞品空白，用 Vibe-Coding 全流程独立完成——从需求洞察、功能架构、到部署上线。
         </p>
         <div class="project-links">
-          <a class="link-btn" href="http://86f818d23bcb4528a7c377dd43583434.ap-singapore.myide.io/" target="_blank" rel="noopener">
+          <a class="link-btn" href="http://3454db8de78b467d97b9af5236a2ff0b.ap-singapore.myide.io/" target="_blank" rel="noopener">
             体验小说英语学习 ↗
           </a>
         </div>
@@ -223,13 +223,88 @@
     <!-- 结果总览（深色） -->
     <div class="loop-outcome">
       <div class="container">
-        <div class="section-head">
-          <span class="section-num">OUTCOME</span>
-          <h2 class="section-title">项目闭环：从「发现空白」到「自己造轮子」</h2>
+        <div class="loop-outcome-grid">
+
+          <div class="loop-outcome__text">
+            <div class="section-head">
+              <span class="section-num">OUTCOME</span>
+              <h2 class="section-title">项目闭环：从「发现空白」到「自己造轮子」</h2>
+            </div>
+            <p style="font-size:15px;color:rgba(255,255,255,0.55);max-width:560px;line-height:1.75;margin-top:8px;">
+              这个项目验证了两个假设：一是<b style="color:#fde68a;font-weight:600;">「自由导入小说」确实是一个被忽略的需求</b>；二是<b style="color:#fde68a;font-weight:600;">AI-Native 工作流让产品经理不再受制于工程资源</b>——不需要等前端排期、不需要说服工程师，自己能快速验证想法。
+            </p>
+
+            <!-- 三段闭环：读 → 标 → 复习 -->
+            <div class="loop-outcome__chips">
+              <span class="loop-outcome__chip"><b>1</b><i>读</i><span>自由导入 · 分级高亮</span></span>
+              <span class="loop-outcome__arrow">→</span>
+              <span class="loop-outcome__chip"><b>2</b><i>标</i><span>点击生词 · 释义弹窗</span></span>
+              <span class="loop-outcome__arrow">→</span>
+              <span class="loop-outcome__chip"><b>3</b><i>复习</i><span>个人词本 · 跨章去重</span></span>
+            </div>
+          </div>
+
+          <!-- 右侧：项目闭环飞轮示意图 -->
+          <div class="loop-outcome__visual">
+            <svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="项目闭环飞轮示意图">
+              <!-- 外圈虚线飞轮 -->
+              <circle cx="240" cy="190" r="160" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1.5" stroke-dasharray="3 6"/>
+              <!-- 4 个阶段节点 + 连线箭头 -->
+              <g font-family="Inter, PingFang SC, Microsoft YaHei" fill="#fff">
+                <!-- 1 竞品扫描 → 2 发现空白 -->
+                <path d="M 122,118 Q 160,72 220,60" fill="none" stroke="#B9A5F5" stroke-width="1.6" stroke-linecap="round"/>
+                <polygon points="218,56 230,60 220,68" fill="#B9A5F5"/>
+
+                <!-- 2 发现空白 → 3 产品设计 -->
+                <path d="M 360,118 Q 396,160 408,222" fill="none" stroke="#B9A5F5" stroke-width="1.6" stroke-linecap="round"/>
+                <polygon points="404,220 412,232 408,222" fill="#B9A5F5"/>
+
+                <!-- 3 产品设计 → 4 Vibe-Coding -->
+                <path d="M 358,300 Q 320,348 240,358" fill="none" stroke="#B9A5F5" stroke-width="1.6" stroke-linecap="round"/>
+                <polygon points="246,360 236,354 244,352" fill="#B9A5F5"/>
+
+                <!-- 4 Vibe-Coding → 1 竞品扫描（回环） -->
+                <path d="M 122,300 Q 84,256 72,196" fill="none" stroke="#fde68a" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="4 4"/>
+                <polygon points="76,200 66,194 72,186" fill="#fde68a"/>
+
+                <!-- 节点 1：竞品扫描 -->
+                <g>
+                  <circle cx="110" cy="118" r="34" fill="#1f1d1c" stroke="#B9A5F5" stroke-width="1.5"/>
+                  <text x="110" y="111" text-anchor="middle" font-size="11" letter-spacing="0.18em" fill="rgba(255,255,255,0.45)">01</text>
+                  <text x="110" y="130" text-anchor="middle" font-size="14" font-weight="700">竞品扫描</text>
+                </g>
+                <!-- 节点 2：发现空白 -->
+                <g>
+                  <circle cx="358" cy="108" r="34" fill="#1f1d1c" stroke="#B9A5F5" stroke-width="1.5"/>
+                  <text x="358" y="101" text-anchor="middle" font-size="11" letter-spacing="0.18em" fill="rgba(255,255,255,0.45)">02</text>
+                  <text x="358" y="120" text-anchor="middle" font-size="14" font-weight="700">发现空白</text>
+                </g>
+                <!-- 节点 3：产品设计 -->
+                <g>
+                  <circle cx="392" cy="240" r="34" fill="#1f1d1c" stroke="#B9A5F5" stroke-width="1.5"/>
+                  <text x="392" y="233" text-anchor="middle" font-size="11" letter-spacing="0.18em" fill="rgba(255,255,255,0.45)">03</text>
+                  <text x="392" y="252" text-anchor="middle" font-size="14" font-weight="700">产品设计</text>
+                </g>
+                <!-- 节点 4：Vibe-Coding -->
+                <g>
+                  <circle cx="240" cy="338" r="34" fill="#1f1d1c" stroke="#fde68a" stroke-width="1.8"/>
+                  <text x="240" y="331" text-anchor="middle" font-size="11" letter-spacing="0.18em" fill="rgba(255,255,255,0.45)">04</text>
+                  <text x="240" y="350" text-anchor="middle" font-size="14" font-weight="700">Vibe-Coding</text>
+                </g>
+              </g>
+              <!-- 中央：闭环核心 -->
+              <g>
+                <circle cx="240" cy="190" r="56" fill="#0a0a0a" stroke="#fde68a" stroke-width="1.5"/>
+                <text x="240" y="184" text-anchor="middle" font-family="Noto Serif SC, serif" font-size="15" font-weight="800" fill="#fde68a">PM × AI</text>
+                <text x="240" y="206" text-anchor="middle" font-family="Inter" font-size="11" letter-spacing="0.16em" fill="rgba(255,255,255,0.55)">FLYWHEEL</text>
+              </g>
+            </svg>
+            <div class="loop-outcome__visual-caption">
+              <span>↺</span> 每一次上线都会回到下一轮竞品扫描，形成飞轮
+            </div>
+          </div>
+
         </div>
-        <p style="font-size:15px;color:rgba(255,255,255,0.55);max-width:640px;line-height:1.7;margin-top:8px;">
-          这个项目验证了两个假设：一是<b style="color:#fde68a;font-weight:600;">「自由导入小说」确实是一个被忽略的需求</b>；二是<b style="color:#fde68a;font-weight:600;">AI-Native 工作流让产品经理不再受制于工程资源</b>——不需要等前端排期、不需要说服工程师，自己能快速验证想法。
-        </p>
       </div>
     </div>
 
