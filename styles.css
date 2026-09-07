@@ -2107,6 +2107,72 @@ button {
   50% { opacity: 0.55; transform: scale(0.85); }
 }
 
+/* 体验截图块 · 项目内 Demo 实拍图 */
+.case-experience {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 0;
+  margin: 28px 0 48px;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 0 #00000005;
+}
+.case-experience figcaption {
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(180deg, #fafaf7, #fff);
+}
+.case-experience figcaption > span {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-2);
+}
+.case-experience figcaption > b {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: var(--color-text);
+}
+.case-experience figcaption > p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--color-text-2);
+}
+.case-experience__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 22px;
+  background: #fff;
+}
+.case-experience__media img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background: #fafafa;
+}
+@media (max-width: 760px) {
+  .case-experience {
+    grid-template-columns: 1fr;
+  }
+  .case-experience figcaption,
+  .case-experience__media {
+    padding: 22px 20px;
+  }
+}
+
 .answer-brief {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
