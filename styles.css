@@ -1227,6 +1227,17 @@ button {
   margin-bottom: 6px;
   flex: 1;
 }
+.loop-stage__title em {
+  font-style: normal;
+  font-weight: 700;
+  color: #5B3FCF;
+  margin-right: 0.5em;
+}
+.loop-stage__title .loop-stage__sep {
+  color: #a8a29e;
+  font-weight: 400;
+  margin: 0 0.5em;
+}
 
 /* -------- 阶段体内：截图 + 数据 + 贡献 融合 -------- */
 .loop-stage__body {
@@ -1890,6 +1901,58 @@ button {
   color: var(--color-text);
   font-family: "Inter", "PingFang SC", sans-serif;
   font-size: 18px;
+}
+
+/* 故事线章节标题：把单个项目内部串成「背景 → 洞察 → 方案 → 验证 → 沉淀」 */
+.story-chapter {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin: 44px 0 22px;
+  padding: 14px 18px;
+  border-left: 3px solid #0a0a0a;
+  background: #f6f5f1;
+  border-radius: 0 10px 10px 0;
+}
+.story-chapter:first-of-type {
+  margin-top: 28px;
+}
+.story-chapter__num {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0a0a0a;
+  color: #B9A5F5;
+  font-family: "Inter", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.story-chapter__body h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0a0a0a;
+  letter-spacing: -0.01em;
+}
+.story-chapter__body h3 em {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #a8a29e;
+  margin-left: 10px;
+}
+.story-chapter__body p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--color-text-2);
 }
 
 .answer-case {
@@ -3973,45 +4036,13 @@ button {
   -webkit-text-stroke-color: #0a0a0a;
 }
 
-/* 名字优先：中文巨字 + 英文小字 + 多 tag 副标题 */
-.hero-name {
-  font-family: 'Noto Serif SC', 'STSong', serif;
-  font-size: clamp(72px, 14vw, 200px);
-  line-height: 0.95;
-  letter-spacing: -0.04em;
-  font-weight: 900;
-  margin: 4px 0 0;
-  color: #0a0a0a;
-}
-.hero-name-en {
-  font-size: 13px;
-  letter-spacing: 0.36em;
-  font-weight: 600;
+/* 名字小字：英文名 + 身份标签，配合 AI PRODUCT MANAGER 巨字 */
+.hero-name-sub {
+  margin: clamp(16px, 2vw, 24px) 0 0;
+  font-size: clamp(13px, 1.3vw, 15px);
+  letter-spacing: 0.05em;
+  font-weight: 500;
   color: #525252;
-  text-transform: uppercase;
-  margin-top: 6px;
-}
-
-/* Hero 巨型双行头：Bingo 风格 — 上行实心，下行空心 */
-.hero-headline {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-top: clamp(20px, 3vw, 36px);
-  font-family: 'Noto Serif SC', 'STSong', serif;
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -0.02em;
-}
-.hero-headline__solid {
-  font-size: clamp(28px, 4.2vw, 64px);
-  color: #0a0a0a;
-}
-.hero-headline__outline {
-  font-size: clamp(28px, 4.2vw, 64px);
-  color: transparent;
-  -webkit-text-stroke-width: 1.4px;
-  -webkit-text-stroke-color: #0a0a0a;
 }
 
 /* Hero 摘要段 */
