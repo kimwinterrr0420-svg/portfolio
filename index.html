@@ -279,20 +279,29 @@
                 </g>
               </g>
 
-              <!-- ============ 站点 3：美团 北京·望京 ============ -->
+              <!-- ============ 站点 3：美团 上海·互联宝地 ============ -->
               <g class="trail-node" data-id="meituan">
                 <ellipse cx="720" cy="250" rx="120" ry="42" class="trail-island"/>
-                <!-- 建筑剪影：望京 SOHO 三联蛋形 -->
-                <g transform="translate(720,230)">
-                  <ellipse cx="0" cy="6" rx="22" ry="38" fill="none" stroke="#0a0a0a" stroke-width="2"/>
-                  <ellipse cx="-26" cy="10" rx="16" ry="28" fill="none" stroke="#0a0a0a" stroke-width="2"/>
-                  <ellipse cx="28" cy="12" rx="14" ry="24" fill="none" stroke="#0a0a0a" stroke-width="2"/>
-                  <line x1="-46" y1="50" x2="46" y2="50" stroke="#0a0a0a" stroke-width="2"/>
-                  <line x1="0" y1="-32" x2="0" y2="44" stroke="#0a0a0a" stroke-width="1" opacity="0.4"/>
+                <!-- 建筑剪影：互联宝地 1929 创意园区改造写字楼（横向线条+玻璃幕墙） -->
+                <g transform="translate(720,230)" stroke="#0a0a0a" stroke-width="2" fill="none">
+                  <!-- 主体方块楼群：左高右低错落 -->
+                  <rect x="-46" y="-34" width="40" height="72"/>
+                  <rect x="-2" y="-20" width="32" height="58"/>
+                  <rect x="34" y="-44" width="18" height="82"/>
+                  <!-- 横向楼板线条 -->
+                  <line x1="-46" y1="-12" x2="-6" y2="-12" stroke-width="1" opacity="0.6"/>
+                  <line x1="-46" y1="6"  x2="-6" y2="6"  stroke-width="1" opacity="0.6"/>
+                  <line x1="-46" y1="24" x2="-6" y2="24" stroke-width="1" opacity="0.6"/>
+                  <line x1="34" y1="-22" x2="52" y2="-22" stroke-width="1" opacity="0.6"/>
+                  <line x1="34" y1="-2"  x2="52" y2="-2"  stroke-width="1" opacity="0.6"/>
+                  <line x1="34" y1="18"  x2="52" y2="18"  stroke-width="1" opacity="0.6"/>
+                  <!-- 顶部屋顶细节 -->
+                  <line x1="-26" y1="-34" x2="-26" y2="-40" stroke-width="1" opacity="0.4"/>
+                  <line x1="43" y1="-44" x2="43" y2="-52" stroke-width="1" opacity="0.4"/>
                 </g>
                 <rect x="780" y="150" width="100" height="50" rx="6" class="trail-nameplate"/>
                 <text x="830" y="170" class="trail-name">美团</text>
-                <text x="830" y="188" class="trail-city">北京·望京</text>
+                <text x="830" y="188" class="trail-city">上海·互联宝地</text>
                 <g transform="translate(630,140)">
                   <circle r="24" class="trail-logo-ring"/>
                   <clipPath id="trailClipMeituan"><circle r="22"/></clipPath>
@@ -304,22 +313,31 @@
                 </g>
               </g>
 
-              <!-- ============ 站点 4：腾讯 深圳·科技园（当前） ============ -->
+              <!-- ============ 站点 4：腾讯 北京·朝阳（当前） ============ -->
               <g class="trail-node is-active" data-id="tencent">
                 <ellipse cx="800" cy="600" rx="120" ry="42" class="trail-island"/>
-                <!-- 建筑剪影：腾讯滨海双塔 -->
-                <g transform="translate(800,580)">
-                  <rect x="-32" y="-50" width="20" height="78" fill="none" stroke="#0a0a0a" stroke-width="2"/>
-                  <line x1="-22" y1="-40" x2="-22" y2="22" stroke="#0a0a0a" stroke-width="1" opacity="0.4"/>
-                  <rect x="12" y="-50" width="20" height="78" fill="none" stroke="#0a0a0a" stroke-width="2"/>
-                  <line x1="22" y1="-40" x2="22" y2="22" stroke="#0a0a0a" stroke-width="1" opacity="0.4"/>
-                  <rect x="-12" y="-20" width="24" height="14" fill="none" stroke="#0a0a0a" stroke-width="2"/>
-                  <line x1="-22" y1="-54" x2="-22" y2="-50" stroke="#0a0a0a" stroke-width="2"/>
-                  <line x1="22" y1="-54" x2="22" y2="-50" stroke="#0a0a0a" stroke-width="2"/>
+                <!-- 建筑剪影：朝阳商务区双子楼（国贸/中国尊风格高塔+横向连桥） -->
+                <g transform="translate(800,580)" fill="none" stroke="#0a0a0a" stroke-width="2">
+                  <!-- 主楼（左）：高耸流线塔，顶部收口 -->
+                  <path d="M -46,-10 L -46,-78 L -42,-78 L -42,-90 L -34,-90 L -34,-78 L -30,-78 L -30,-10 Z"/>
+                  <!-- 主楼顶部冠顶 -->
+                  <line x1="-38" y1="-94" x2="-38" y2="-100" stroke-width="1.5"/>
+                  <!-- 次楼（右）：方正塔楼 -->
+                  <rect x="6" y="-14" width="22" height="62"/>
+                  <!-- 横向连桥 -->
+                  <rect x="-30" y="-22" width="58" height="6"/>
+                  <!-- 主楼横向楼层线条 -->
+                  <line x1="-46" y1="-2"  x2="-30" y2="-2"  stroke-width="1" opacity="0.5"/>
+                  <line x1="-46" y1="-26" x2="-30" y2="-26" stroke-width="1" opacity="0.5"/>
+                  <line x1="-46" y1="-50" x2="-30" y2="-50" stroke-width="1" opacity="0.5"/>
+                  <!-- 次楼横向楼层线条 -->
+                  <line x1="6" y1="2"  x2="28" y2="2"  stroke-width="1" opacity="0.5"/>
+                  <line x1="6" y1="18" x2="28" y2="18" stroke-width="1" opacity="0.5"/>
+                  <line x1="6" y1="34" x2="28" y2="34" stroke-width="1" opacity="0.5"/>
                 </g>
                 <rect x="840" y="610" width="110" height="50" rx="6" class="trail-nameplate"/>
                 <text x="895" y="630" class="trail-name">腾讯</text>
-                <text x="895" y="648" class="trail-city">深圳·科技园</text>
+                <text x="895" y="648" class="trail-city">北京·朝阳</text>
                 <g transform="translate(720,540)">
                   <circle r="24" class="trail-logo-ring"/>
                   <clipPath id="trailClipTencent"><circle r="22"/></clipPath>
@@ -431,9 +449,8 @@
               </div>
 
               <div class="hobby-card__metrics">
-                <span><b>160</b> 粉丝</span>
-                <span><b>43</b> 关注</span>
-                <span><b>1.4万 + 26.3万</b> 总获赞</span>
+                <span class="hobby-card__metric--big"><b>1.4万</b> + <b>26.3万</b> 双平台总获赞</span>
+                <span><b>N</b> 组标题封面 A/B 模板</span>
               </div>
 
               <p class="hobby-card__thought">
@@ -450,7 +467,7 @@
             <header class="hobby-card__head">
               <span class="hobby-card__cat">LONG VIDEO × THINKING</span>
               <h3 class="hobby-card__title">追剧 <span>Drama-watching</span></h3>
-              <span class="hobby-card__tag">思考 · 链接到作品</span>
+              <span class="hobby-card__tag">思考 · 3 痛点 × 3 解法</span>
             </header>
 
             <div class="hobby-card__body">
@@ -466,12 +483,32 @@
                 </ol>
               </div>
 
-              <a class="hobby-card__linkcard" href="./youku-ai/" target="_blank" rel="noopener">
-                <div class="hobby-card__linkcard-tag">CASE STUDY</div>
-                <div class="hobby-card__linkcard-title">优酷 · AI 搜 / 互动 / 生视频</div>
-                <div class="hobby-card__linkcard-desc">我做的优酷子站——把上面 5 个看法做成可点可看的 demo。</div>
-                <div class="hobby-card__linkcard-cta">打开作品 →</div>
-              </a>
+              <div class="hobby-matrix">
+                <div class="hobby-matrix__head">
+                  <span class="hobby-matrix__eyebrow">THINKING · 03 × 03</span>
+                  <h4 class="hobby-matrix__title">长视频平台的<span>三大痛点域</span> × <span>三大 AI 产品解法</span></h4>
+                </div>
+                <div class="hobby-matrix__grid">
+                  <div class="hobby-matrix__row">
+                    <span class="hobby-matrix__pain">P1</span>
+                    <div class="hobby-matrix__painText"><b>找片难</b><span>长内容选片决策成本高，主动探索需求未被承接</span></div>
+                    <span class="hobby-matrix__cross">×</span>
+                    <div class="hobby-matrix__solText"><b>AI 搜</b><span>语义召回 · 找下一部 · 适当时机召回</span></div>
+                  </div>
+                  <div class="hobby-matrix__row">
+                    <span class="hobby-matrix__pain">P2</span>
+                    <div class="hobby-matrix__painText"><b>消费浅</b><span>单屏单向消费，停留浅、回流弱、互动缺位</span></div>
+                    <span class="hobby-matrix__cross">×</span>
+                    <div class="hobby-matrix__solText"><b>AI 互动</b><span>边看边问 · 角色陪伴 · 社区动态</span></div>
+                  </div>
+                  <div class="hobby-matrix__row">
+                    <span class="hobby-matrix__pain">P3</span>
+                    <div class="hobby-matrix__painText"><b>生产慢</b><span>UGC 门槛高、AI 生视频缺质量与版权边界</span></div>
+                    <span class="hobby-matrix__cross">×</span>
+                    <div class="hobby-matrix__solText"><b>AI 生视频</b><span>一句话定制 · 模板化 · 版权可控</span></div>
+                  </div>
+                </div>
+              </div>
 
             </div>
           </article>
@@ -687,7 +724,7 @@
         tag: 'INTERNSHIP · 03',
         title: '美团 · 点评事业部',
         role: '当地人推荐榜 · 产品实习生',
-        period: '2026.05 — 2026.06 · BEIJING',
+        period: '2026.05 — 2026.06 · SHANGHAI',
         desc: '围绕「为什么这个商家值得被推荐」梳理推荐理由与榜单规则；为商家运营与 C 端体验搭建更清晰的信息分层。',
         metrics: [
           { v: 'UGC', l: '推荐规则' },
@@ -699,12 +736,12 @@
         tag: 'INTERNSHIP · 04 · CURRENT',
         title: '腾讯 · PCG 在线视频 BU',
         role: '融媒体项目中心 · 推荐组 · 产品实习生',
-        period: '2026.06 — 至今 · SHENZHEN',
-        desc: '负责「央视频搜推全链路」：从运动员搜索的语义召回，到摇一摇推剧的智能分发，到诗词小游戏的 AI 化生产，把 AI 当一个业务方来管理。',
+        period: '2026.06 — 至今 · BEIJING',
+        desc: '负责「央视频搜推全链路」：从运动员搜索的主题化看点聚合，到摇一摇推剧的长尾分发，再到诗词小游戏的 AI 全链路生产。',
         metrics: [
-          { v: '+66.7%', l: '搜索点击' },
-          { v: '+106%', l: '日均播放' },
-          { v: '3.08 万', l: '摇剧 UV' }
+          { v: '+27%', l: '搜索 UV' },
+          { v: '22%', l: '推剧转化率' },
+          { v: '+50.8%', l: '聚合卡点击占比' }
         ],
         link: { href: './project-yangshipin.html', label: '打开项目详情' }
       }

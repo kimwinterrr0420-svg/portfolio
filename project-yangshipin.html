@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>央视频 · AI 产品化实践 · 段雨萱</title>
-  <meta name="description" content="腾讯 PCG 央视频产品实践：围绕搜索优化、长尾分发、小游戏生态三大方向，落地 3 个项目。展示从算法产品化、AI 全链路生产到长尾分发的完整方法论与验证数据。" />
+  <meta name="description" content="腾讯 PCG 央视频产品实践：聚焦运动员搜索优化、摇一摇推剧、诗词小游戏三大项目，把 AI 当业务方管理——可承接、可验证、可治理。展示从业务理解、AI 全链路生产到长尾分发的完整方法。" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -21,13 +21,15 @@
       <nav class="nav">
         <a href="./index.html">首页</a>
         <a href="#ai-thinking">AI 思考</a>
-        <a href="#work">项目闭环</a>
-        <a href="#growth-foundation">业务愿景</a>
+        <a href="#framework">业务理解</a>
+        <a href="#work">三个项目</a>
+        <a href="#growth-foundation">增长底座</a>
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- ============================== HERO ============================== -->
     <section class="project-hero answer-hero">
       <div class="container">
         <a class="back-link" href="./index.html">← 返回首页</a>
@@ -36,52 +38,23 @@
           <span class="tag-text">腾讯 PCG · 在线视频BU · 央视频</span>
         </div>
         <h1 class="project-title">央视频 · AI 产品化实践</h1>
-        <p class="project-meta">2026.06 - 2026.08 · 产品策划实习生 · 推荐组</p>
+        <p class="project-meta">2026.06 - 2026.08 · 产品策划实习生 · 北京·朝阳</p>
         <p class="project-desc">
-          聚焦<b>搜索优化、长尾分发、小游戏生态</b>三大方向，落地 3 个项目。贯穿全程的核心命题是：<b>什么问题值得用 AI、AI 应该做到哪一步、产品如何定义边界并验证结果</b>。我把 AI 分别用作规模化生产工具、长尾分发的可验证机制，以及独立交付杠杆——而不是把 AI 当作功能标签。
+          我所在 <b>融媒体项目中心</b> 深度对接<b>央视频 APP</b>。央视频覆盖直播、长短视频等资源，其中<b>体育资源占比超 70%</b>。
+          围绕平台三类非常鲜明的内容优势——<b>体育赛事·人物</b>、<b>剧集纪录片等长内容</b>、<b>各类文化 IP 栏目</b>——
+          我探索了<b>三个新场景</b>，落地了<b>三个项目</b>：<b>运动员搜索优化</b>、<b>摇一摇推剧</b>、<b>AI 文化小游戏</b>。
+          所有项目都在回答同一个问题：<b>如何借助 AI，让央视频存量优质内容更好地被组织、发现和消费</b>。
         </p>
-        <div class="answer-hero__tags" aria-label="AI 使用思考">
-          <span>先判断是否该用 AI</span>
-          <span>产品定义质量底线</span>
-          <span>人机协同而非全自动</span>
-          <span>评测驱动规则迭代</span>
+        <div class="answer-hero__tags" aria-label="核心命题">
+          <span>央视频资源结构 · 70% 体育</span>
+          <span>三类内容资产</span>
+          <span>三个 AI 产品化场景</span>
+          <span>一个共同问题</span>
         </div>
       </div>
     </section>
 
-    <section class="answer-map" aria-labelledby="answer-map-title">
-      <div class="container">
-        <div class="section-head answer-map__head">
-          <span class="section-num">OVERVIEW</span>
-          <h2 class="section-title" id="answer-map-title">三条业务线，一套产品判断</h2>
-          <p class="section-sub">先识别供给与用户决策中的结构性问题，再选择合适的 AI 杠杆。</p>
-        </div>
-        <div class="answer-map__grid">
-          <a class="answer-map__card" href="#search-case">
-            <span class="answer-map__num">01</span>
-            <span class="answer-map__type">搜索体验改造</span>
-            <h3>运动员搜索优化</h3>
-            <p>把「非赛时人物兴趣」承接为可连续消费入口，沉淀从 10+ Query 试点到全站规模化的三阶段模板。</p>
-            <strong>全站 QV 4.62% → 25-30%</strong>
-          </a>
-          <a class="answer-map__card" href="#shake-case">
-            <span class="answer-map__num">02</span>
-            <span class="answer-map__type">长尾分发提效</span>
-            <h3>摇一摇推剧小应用</h3>
-            <p>用主动探索+盲盒互动为长内容创造新发现入口，22.64% 播放转化率稳居央视频小应用 TOP1。</p>
-            <strong>2w+ 用户 / 100+ 付费会员</strong>
-          </a>
-          <a class="answer-map__card" href="#game-case">
-            <span class="answer-map__num">03</span>
-            <span class="answer-map__type">小游戏生态补全</span>
-            <h3>诗词小游戏开发</h3>
-            <p>用诗词资产创造"边玩边消费"游戏新场景，AI 全链路生产 + 人工审核治理连续变更。</p>
-            <strong>零占研发排期</strong>
-          </a>
-        </div>
-      </div>
-    </section>
-
+    <!-- ============================== AI THINKING ============================== -->
     <section class="ai-thinking" id="ai-thinking" aria-labelledby="ai-thinking-title">
       <div class="container">
         <div class="section-head">
@@ -93,7 +66,7 @@
           <article>
             <span>01 · WHY</span>
             <h3>为什么要用 AI？</h3>
-            <p>优先用于高频、规模化、规则可描述，但人工生产成本高的任务；如果规则机制本身更关键，就先解决产品问题。</p>
+            <p>优先用于高频、规模化、规则可描述、但人工生产成本高的任务；如果规则机制本身更关键，就先解决产品问题。</p>
           </article>
           <i>→</i>
           <article>
@@ -121,17 +94,52 @@
       </div>
     </section>
 
+    <!-- ============================== 业务理解 · 框架图 ============================== -->
+    <section class="business-framework" id="framework">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">FRAMEWORK</span>
+          <h2 class="section-title">先把央视频供给看透，再选 AI 杠杆</h2>
+          <p class="section-sub">三类需求 · 一套判断框架（核心资源 → 用户状态 → 现有机制能力边界 → 项目为何立）</p>
+        </div>
+
+        <div class="business-framework__poster">
+          <img src="assets/tx-fw-platform.png" alt="央视频三类核心资源与三个项目对应关系框架图" loading="lazy" />
+          <div class="business-framework__caption">
+            <span>BUSINESS FRAMEWORK · 我的业务理解地图</span>
+            <p>左：央视频 APP 的资源结构（移动直播、长短内容、泛文体/资讯/知识）。中：三类核心资源（优质长内容库存 / 体育赛事·人物 / 文化 IP·栏目）。
+               右：现有机制下的能力边界，以及三个项目对应的"为什么立"。结论：同一套业务主线——「承接明确需求 → 降低促成成本 → 延展 IP 消费」。</p>
+          </div>
+        </div>
+
+        <div class="business-framework__channels">
+          <article>
+            <span>核心赛道</span>
+            <b>体育内容生态</b>
+            <p>站体育相关资源占比超 70%——这一切入点决定了<b>运动员搜索优化</b>是回报最高的方向。</p>
+          </article>
+          <article>
+            <span>业务定位</span>
+            <b>融媒体项目中心</b>
+            <p>聚焦央视频<b>搜索 / 内容分发 / 小游戏</b>三大方向，3 个项目 AI 全程贯穿。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <div class="answer-work" id="work">
+
+      <!-- ============================== PROJECT 01 · 运动员搜索优化 ============================== -->
       <section class="answer-case" id="search-case">
         <div class="container">
           <div class="answer-case__eyebrow">
             <span class="answer-case__index">01</span>
-            <span>搜索体验改造 · 算法产品化</span>
+            <span>搜索体验改造 · 从用户意图最明确的场景切入</span>
           </div>
           <div class="answer-case__title-row">
             <div>
               <h2>运动员搜索优化</h2>
-              <p>如何在非赛时期间承接人物兴趣？把零散搜索结果组织为可连续消费的答案。</p>
+              <p>从搜索场景切入——让赛期之外的"人物兴趣"被组织、被看见、被消费。</p>
             </div>
             <div class="answer-case__headline">
               <b>+36% / +27%</b>
@@ -141,115 +149,159 @@
 
           <div class="answer-brief">
             <div class="answer-brief__item">
-              <span>问题</span>
-              <p>运动员 query 下首屏覆盖 <30%、重复率 42%，非赛时期间人物兴趣被零散视频淹没，长尾需求没有被承接。</p>
+              <span>从哪里切入</span>
+              <p>赛期央视频体育搜索可以很好承接赛程赛事；但<b>赛事结束后</b>，用户对运动员的兴趣仍在，搜索结果却内容零散、缺少结构化整理。</p>
             </div>
             <div class="answer-brief__item">
-              <span>判断</span>
-              <p>问题不只在排序，而在供给组织：把赛事回放、央视频 vid、新热视频组织成"可连续消费"的答案，承接无比赛低谷期的人物兴趣。</p>
+              <span>我的方案</span>
+              <p>用 AI 做<b>主题化看点聚合</b>，在搜索首屏直接呈现人物核心内容。生产侧 AI 完成召回、组装、评测与持续更新；运营侧通过<b>看板审核、调整、发布</b>。形成一套「AI 生产 + 人工可控 + 可持续迭代」的完整工作流。</p>
             </div>
             <div class="answer-brief__item">
-              <span>目标</span>
-              <p>短期提升点击/播放验证聚合卡形态；长期沉淀模板，规模化扩展到运动员、球队、热点事件与赛程节目单。</p>
+              <span>试点结果</span>
+              <p>覆盖十余个乒乓球运动员 Query，<b>点击 +36%</b>、<b>UV +27%</b>。规模化推广后，预计覆盖全站 25% 搜索 QV，带来全站 5-9% 的点击增益。</p>
             </div>
           </div>
 
+          <!-- 改造前 vs 改造后 -->
+          <div class="search-before-after">
+            <div class="framework-head">
+              <span>BEFORE / AFTER</span>
+              <h3>同一份搜索结果，从"信息散落"到"主题化看点"</h3>
+              <p>聚合卡同时承担搜索答案与连续消费入口——承接无比赛低谷期的人物兴趣。</p>
+            </div>
+            <div class="search-before-after__grid">
+              <figure>
+                <img src="assets/tx-search-before.png" alt="运动员搜索改造前：基础信息卡 + 零散视频" loading="lazy" />
+                <figcaption><b>改造前</b> · 仅基础信息卡（人物简介、热度数据），比赛结束后内容散落分布。</figcaption>
+              </figure>
+              <figure class="search-before-after__after">
+                <img src="assets/tx-search-after.jpg" alt="运动员搜索改造后：相关合集聚合卡" loading="lazy" />
+                <figcaption><b>改造后</b> · 「相关合集」聚合卡首屏直达，按主题组织（全部/采访/热点速递/成就/日常花絮/神仙球）。</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- WHY AI · 选型对比 -->
           <div class="ai-choice">
             <div class="ai-choice__title">
               <span>WHY AI</span>
-              <h3>为什么不是人工，也不是传统推荐算法？</h3>
+              <h3>为什么是 AI，而不是人工或传统推荐算法？</h3>
             </div>
             <div class="ai-choice__grid">
               <article>
-                <span>人工生产</span>
-                <b>准确但不可规模化</b>
-                <p>热点期间几十个相关视频需要逐条查找、核对和排序；从 1 个运动员扩到 50 个时，人力线性增长。</p>
+                <span>人工</span>
+                <b>准确，但不可规模化</b>
+                <p>世界杯要按时间线整理梅西的进球合集——人工要筛选上百条视频，核对时间、排序去重，人力成本巨大。</p>
               </article>
               <article>
-                <span>传统推荐</span>
-                <b>擅长预测，不擅长组织</b>
-                <p>可以预测用户可能点击什么，但无法保证专题合集的完整性、事件顺序和信息覆盖。</p>
+                <span>传统推荐算法</span>
+                <b>擅长预估点击率，<br/>无法保证内容完整+时序准确</b>
+                <p>可预估用户可能点哪个，但不保证专题的完整性、事件顺序。</p>
               </article>
               <article class="ai-choice__selected">
                 <span>AI 内容生产</span>
-                <b>完整、实时、可规模化</b>
+                <b>完整性 + 实时性 + 规模化</b>
                 <p>语义理解和批量处理补足完整性；热点触发增量更新保证实时性；模板化工作流降低边际成本。</p>
               </article>
             </div>
-          </div>
-
-          <div class="answer-split answer-split--search">
-            <div class="answer-visual">
-              <div class="answer-visual__title">产品方案 · 搜索首屏"主题化核心看点"</div>
-              <div class="search-mockup" aria-label="运动员搜索聚合卡示意">
-                <div class="search-mockup__query">搜索：孙颖莎</div>
-                <div class="search-mockup__card">
-                  <div class="search-mockup__cover">
-                    <span>主题化核心看点</span>
-                    <b>首屏直达</b>
-                  </div>
-                  <div class="search-mockup__list">
-                    <div><i>01</i><span>核心赛事回放</span></div>
-                    <div><i>02</i><span>央视频优质内容</span></div>
-                    <div><i>03</i><span>站内新热视频</span></div>
-                  </div>
-                </div>
-                <div class="search-mockup__footer">聚合卡同时承担搜索答案与连续消费入口</div>
-              </div>
-            </div>
-
-            <div class="answer-process">
-              <div class="answer-process__step">
-                <b>01 数据定位</b>
-                <p>识别运动员 query 点击率低、首屏缺少集中入口，定位为供给组织问题。</p>
-              </div>
-              <div class="answer-process__step">
-                <b>02 形态设计</b>
-                <p>聚合赛事回放、央视频 vid 与新热视频，首屏直达核心看点。</p>
-              </div>
-              <div class="answer-process__step">
-                <b>03 AI 上线</b>
-                <p>搭建 AI-Native 工作流自动生成，运营看板支持审核、修改与发布。</p>
-              </div>
-              <div class="answer-process__step">
-                <b>04 复盘规模化</b>
-                <p>试点有效后抽象模板，以双轨策略承接比赛期与流量低谷期。</p>
-              </div>
+            <div class="ai-choice__note">
+              落地链路：<b>4 类 AI 角色 + 人工控制面</b>。其中我的产品价值，是把 AI 能力转化成一套<b>业务可以长期运转的内容生产机制</b>。
             </div>
           </div>
 
+          <!-- 数据看板 · 试点结果 -->
+          <div class="answer-contribution answer-contribution--ai answer-contribution--stacked">
+            <div>
+              <span class="answer-contribution__label">DATA · 试点数据</span>
+              <p>覆盖乒乓运动员十余个 query 的一周 A/B 数据。聚合卡不仅是 UI 变化，而是<b>搜索首屏的一种新回答方式</b>。</p>
+            </div>
+          </div>
+
+          <div class="search-dashboard">
+            <div class="search-dashboard__block">
+              <div class="framework-head"><h4>全量变化 · 整个搜索结果页</h4><p>聚合卡为核心回答方式，带来整页全面提升。</p></div>
+              <div class="search-dashboard__grid">
+                <div><b>+82.5%</b><span>曝光</span><small>28,998 → 52,933</small></div>
+                <div><b>+36.0%</b><span>点击</span><small>296 → 403</small></div>
+                <div><b>+27.0%</b><span>点击 UV</span><small>275 → 349</small></div>
+                <div><b>+98.3%</b><span>播放</span><small>1,101 → 2,183</small></div>
+              </div>
+            </div>
+            <div class="search-dashboard__block">
+              <div class="framework-head"><h4>短视频变化 · 原有短视频 + 聚合卡</h4><p>承接原本分散的短视频 + 提供入口。</p></div>
+              <div class="search-dashboard__grid">
+                <div><b>+137.6%</b><span>曝光</span><small>18,262 → 43,387</small></div>
+                <div><b>+66.8%</b><span>点击</span><small>183 → 305</small></div>
+                <div><b>+51.3%</b><span>点击 UV</span><small>176 → 266</small></div>
+                <div><b>+106.5%</b><span>播放</span><small>1,014 → 2,094</small></div>
+              </div>
+            </div>
+            <div class="search-dashboard__block search-dashboard__block--strong">
+              <div class="framework-head"><h4>聚合卡贡献度 · 占上线后短视频整体</h4><p>聚合卡成为主要流量入口，承担一半以上贡献。</p></div>
+              <div class="search-dashboard__grid">
+                <div><b>85.9%</b><span>曝光</span><small>主要流量入口</small></div>
+                <div><b>50.8%</b><span>点击</span><small>贡献过半</small></div>
+                <div><b>51.7%</b><span>点击 UV</span><small>贡献过半</small></div>
+                <div><b>6.4%</b><span>播放</span><small>转化待提升</small></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 试点结果截图 -->
+          <figure class="search-dashboard__figure">
+            <img src="assets/tx-search-dashboard.png" alt="运动员搜索试点结果数据看板截图" loading="lazy" />
+            <figcaption><b>试点结果</b> · 覆盖乒乓球运动员十余个 Query 的一周 A/B 数据：搜索首屏整体点击 +36%、点击 UV +27%，聚合卡点击贡献占比 50.8%。</figcaption>
+          </figure>
+
+          <!-- 4 角色工作流 -->
           <div class="ai-role-system">
             <div class="ai-role-system__head">
-              <span>AI-NATIVE WORKFLOW</span>
-              <h3>用户/生产/运营 · 三侧协同</h3>
-              <p>不是把一个大模型接进流程，而是按职责拆解生产链，让每一步都有明确输入、输出和验收标准。</p>
+              <span>AI WORKFLOW · 四类角色 + 人工控制面</span>
+              <h3>把"AI 直接决定结果"转成"AI 生产 + 人工控制面"</h3>
+              <p>研究员 → 编辑 → 质检员 → 更新器，四类角色明确输入/输出/验收标准；运营通过看板审核、修改、发布。</p>
             </div>
             <div class="ai-role-system__flow">
-              <article>
-                <span>用户侧</span>
-                <h4>首屏主题化</h4>
-                <p>搜索首屏看到主题化核心看点，承接无比赛低谷期人物兴趣。</p>
-              </article>
+              <article><span>用户侧</span><h4>首屏主题化</h4><p>搜索首屏直接给出主题化核心看点。</p></article>
               <i>→</i>
-              <article>
-                <span>生产侧</span>
-                <h4>AI 自动闭环</h4>
-                <p>AI 召回、组装、评测、持续更新；4 条准入规则 + 自助审核工具兜底。</p>
-              </article>
+              <article><span>生产侧</span><h4>四角色自动闭环</h4><p>研究员召回 · 编辑组装 · 质检员评测 · 更新器增量。</p></article>
               <i>→</i>
-              <article>
-                <span>运营侧</span>
-                <h4>看板可审可改</h4>
-                <p>运营通过看板审核、调整、发布上线；算法结果可干预。</p>
-              </article>
+              <article><span>运营侧</span><h4>看板可审可改可发</h4><p>规则可干预，效果数据反向迭代规则。</p></article>
             </div>
           </div>
 
+          <!-- 后台 · 4 张关键页 -->
+          <div class="admin-screens">
+            <div class="framework-head">
+              <span>OPS DASHBOARD · 4 张关键后台页</span>
+              <h3>AI 生产的合集，可被运营持续运营</h3>
+              <p>从「合集库浏览」到「单个合集详情」再到「触发规则配置」，每一步都有可介入的人工控制面。</p>
+            </div>
+            <div class="admin-screens__grid">
+              <figure>
+                <img src="assets/tx-collection-browse.png" alt="内容合集库浏览页" loading="lazy" />
+                <figcaption><b>合集库浏览</b><br/>按品类/领域/主体类型筛选，可浏览所有可管理合集。</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/tx-collection-edit.png" alt="合集编辑管理页" loading="lazy" />
+                <figcaption><b>编辑后台</b><br/>已上架合集管理、下架控制、顺序调整。</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/tx-collection-detail.png" alt="单个合集详情与内容审核" loading="lazy" />
+                <figcaption><b>合集详情</b><br/>组织每条收录视频，支持人工排序与编辑。</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/tx-collection-trigger.png" alt="合集触发配置抽屉" loading="lazy" />
+                <figcaption><b>触发配置</b><br/>entity + theme_tag 双触发模式，决定合集何时被召回。</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- 三阶段规模化 -->
           <div class="scaling-path">
             <div class="framework-head">
               <span>SCALING · 三阶段规模化</span>
               <h3>从 10+ Query 试点到全站承接</h3>
-              <p>不靠追加研发资源，靠模板与工作流把"一个有效点"放大到整个供给池。</p>
+              <p>复用成本 = 0 新增研发；AI-Native 工作流自动闭环，比赛期 / 低谷期双轨承接。</p>
             </div>
             <div class="scaling-path__steps">
               <article>
@@ -279,36 +331,26 @@
                 </ul>
               </article>
             </div>
-            <p class="framework-conclusion">复用成本 = 0 新增研发；AI-Native 工作流自动闭环，比赛期 / 低谷期双轨承接。</p>
           </div>
 
-          <div class="answer-contribution answer-contribution--ai">
-            <div>
-              <span class="answer-contribution__label">为什么这里需要 AI</span>
-              <p>运动员看点数量大、热点变化快，靠运营逐条找内容无法规模化；但模型直接上线又会带来错配和质量波动。因此我没有让 AI 直接"决定结果"，而是让它承担高成本的生产环节。</p>
-            </div>
-            <div class="answer-contribution__principle">
-              <span>我设计的人机分工</span>
-              <b>AI 自动识别、召回和组装；产品定义核心看点与准入规则；运营通过看板审核、修改、发布；效果数据再反向迭代规则。</b>
-            </div>
-          </div>
           <div class="ai-case-note">
             <span>AI 使用思考</span>
-            <p><b>真正被产品化的不是一次模型输出，而是"生产—审核—发布—评测—迭代"的反馈闭环。</b>这让搜索聚合能力既能守住质量底线，也能以零新增研发成本扩展到更多 query。</p>
+            <p><b>真正被产品化的不是一次模型输出，而是"生产—审核—发布—评测—迭代"的反馈闭环。</b>这件事为什么要用 AI——完整性、实时性、规模化三个痛点同时被解决；而 AI 不能解决的部分是规则、机制、可干预——所以才有了 4 角色 + 人工控制面。</p>
           </div>
         </div>
       </section>
 
+      <!-- ============================== PROJECT 02 · 摇一摇推剧 ============================== -->
       <section class="answer-case" id="shake-case">
         <div class="container">
           <div class="answer-case__eyebrow">
             <span class="answer-case__index">02</span>
-            <span>长尾分发提效 · Vibe Coding Demo</span>
+            <span>长尾分发提效 · 影视推荐场景探索</span>
           </div>
           <div class="answer-case__title-row">
             <div>
               <h2>摇一摇推剧小应用</h2>
-              <p>从"被动曝光"到"主动选择"，用轻互动为长内容创造新的发现入口。</p>
+              <p>为长内容创造"主动选择 + 趣味互动"的新发现入口。</p>
             </div>
             <div class="answer-case__headline">
               <b>22.64%</b>
@@ -319,32 +361,32 @@
           <div class="answer-brief">
             <div class="answer-brief__item">
               <span>供给矛盾</span>
-              <p>长剧需求用户覆盖不足 1%；央视频 1w+ 档节目中日播放超 100 仅 500 档（3.93%），长尾优质内容缺少被看见的机会。</p>
+              <p>央视频拥有大量优质剧集、纪录片等资源，但<b>长内容用户覆盖不足 1%</b>；<b>万余档节目中，日播放超过 100 的只有约 500 档</b>。这里既有业务分发约束，也有用户选择问题。</p>
             </div>
             <div class="answer-brief__item">
               <span>分发困境</span>
-              <p>分发以单视频为主，长内容与短视频在同一流中竞争；完整专辑承接弱，缺少承接瞬时模糊观看诉求的场景。</p>
+              <p>主推荐以单视频分发为主，长内容与短视频在同一流中竞争，<b>完整专辑的承接相对较弱</b>；历史行为只能体现用户长期偏好，<b>很难捕捉当下瞬时模糊的观看诉求</b>。</p>
             </div>
             <div class="answer-brief__item">
-              <span>产品假设</span>
-              <p>长尾整体转化低不代表没有价值，可能是适配人群窄；先创造主动探索机会，再用真实消费数据验证。</p>
+              <span>我的方案</span>
+              <p>作为主推荐补充的探索场景——<b>承接主动发起的即时探索</b>，也可自选题材、心情、场景，解决"不知道看什么"的模糊需求；<b>盲盒式趣味互动，降低决策负担</b>；<b>采集收藏等深度行为信号，回流给推荐系统</b>。</p>
             </div>
           </div>
 
           <div class="longtail-deadlock">
             <div class="longtail-deadlock__title">
               <span>双重矛盾</span>
-              <h3>长内容与短视频在同一流中竞争，专辑承接弱</h3>
+              <h3>传统主推荐的马太效应，让长尾越来越难被看见</h3>
             </div>
             <div class="longtail-deadlock__loop">
               <div>长剧用户不足 1%</div><i>·</i><div>1w+ 档日播超 100 仅 500 档</div><i>·</i><div>单视频分发为主</div><i>·</i><div>瞬时模糊需求无承接</div>
             </div>
-            <p>我的判断：不能只优化主排序，而要为"长内容专辑"建立独立的主动探索通道，让用户替内容做"一次选择"。</p>
+            <p>我的判断：不能只优化主排序，而要为"长内容专辑"建立<b>独立的主动探索通道</b>，让用户替内容做"一次选择"。同时支持 Banner、运营位灵活部署，<b>内容池与入口完全独立管控</b>，可以触达算法链路覆盖不到的更多用户。</p>
           </div>
 
           <div class="answer-mechanism">
             <div class="answer-mechanism__intro">
-              <span>产品价值</span>
+              <span>产品价值 · 三层</span>
               <h3>三件事，对应长尾分发的核心机制</h3>
               <p>不是堆功能，而是把"长内容被看见"拆成可验证的三段链路。</p>
             </div>
@@ -355,6 +397,10 @@
               <i>·</i>
               <div><b>回流</b><span>采集深度行为信号</span></div>
             </div>
+            <p class="framework-conclusion" style="margin-top:12px;">
+              <b>短期</b> 随机盲盒 + 分层内容池 + 特征抽取 完成场景验证。
+              <b>长期</b> 结合内容特征、用户画像与大模型，探索<b>千人千盒</b>的差异化匹配。
+            </p>
           </div>
 
           <div class="longtail-actions">
@@ -402,7 +448,7 @@
               <div class="answer-evidence__item">
                 <b>16.3%</b>
                 <span>次日留存</span>
-                <p>当前主要瓶颈；"千人千盒"阶段预计上升。</p>
+                <p>"千人千盒"阶段预计上升。</p>
               </div>
               <div class="answer-evidence__item">
                 <b>58.2%</b>
@@ -410,14 +456,14 @@
                 <p>真实使用数据验证"轻决策"并非噱头。</p>
               </div>
               <div class="answer-evidence__item">
-                <b>3k+ / 100+</b>
-                <span>归因播放 · 购买会员</span>
+                <b>100+ / 3k+</b>
+                <span>付费会员 · 归因播放</span>
                 <p>从发现到消费的完整链路被验证。</p>
               </div>
               <div class="answer-contribution answer-contribution--stacked answer-contribution--ai">
                 <div>
                   <span class="answer-contribution__label">AI 使用思考</span>
-                  <p><b>这个项目的核心不是让 AI 推荐，而是先把"主动探索"做成可控的产品机制。</b>AI 的价值在于 Vibe Coding：把机制迅速做成可体验 Demo，提前验证标签是否易懂、开盒路径是否顺畅，避免在需求文档阶段反复空转。</p>
+                  <p><b>这个项目的核心不是让 AI 推荐，而是先把"主动探索"做成可控的产品机制。</b>AI 的真正价值在 Vibe Coding——把机制迅速做成可体验 Demo，提前验证标签是否易懂、开盒路径是否顺畅，避免在需求文档阶段反复空转。</p>
                 </div>
               </div>
               <div class="ai-case-mini">
@@ -442,55 +488,99 @@
                 <i>→</i>
                 <div><b>回流主推荐</b><span>优质样本回到主推荐参与个性化匹配，形成协同</span></div>
               </div>
-              <p class="framework-conclusion">把"内容有没有价值"从"有没有历史数据"中解放出来，可迁移到老内容盘活、新内容冷启动、小众垂类供给与会员承接。</p>
+              <p class="framework-conclusion"><b>关键洞察</b>：传统主推荐优先保障大盘效率，容易形成马太效应飞轮——头部内容持续获得曝光，大量沉睡长尾内容因缺少用户行为证据，陷入冷启动困境，难以进入主排序。我们的解法是搭建<b>独立旁路探索通道</b>：零反馈长尾内容先在此场景获取真实用户行为信号，完成校验后再回流主推荐参与排序。</p>
             </div>
 
             <div class="source-stage">
               <div class="framework-head">
                 <span>流量三层拆解</span>
-                <h3>区分主动流量 / 投放流量 / 深度用户</h3>
-                <p>不笼统地说"转化不好"，而是判断哪类用户在消费链路的哪一段流失。</p>
+                <h3>主动流量 / 投放流量 / 深度用户 · 分层评估</h3>
+                <p>不同来源用户在不同消费阶段的损耗不同，不能笼统说"转化不好"。</p>
               </div>
               <div class="source-stage__grid">
                 <article><span>主动流量</span><b>判价值</b><p>关注首搜次索、命中、连续消费、时长</p><small>22.1% 千UV播放用户</small></article>
                 <article><span>投放流量</span><b>筛兴趣</b><p>关注来源承接、播放增量与场景匹配</p><small>6% 千UV播放用户·播放增量</small></article>
                 <article><span>深度用户</span><b>做承接</b><p>关注命中率、消费深度与会员续费</p><small>专辑续播 / 会员连续消费</small></article>
               </div>
-              <p class="framework-conclusion">通过"流量来源 × 消费阶段"拆解损耗位置，再决定是调内容池、匹配策略、承接页面还是会员链路。</p>
+              <p class="framework-conclusion">可迁移场景：<b>老内容盘活 · 新内容冷启动 · 小众垂类供给 · 专辑续播 · 会员链路承接</b>。</p>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- ============================== PROJECT 03 · 诗词小游戏 ============================== -->
       <section class="answer-case" id="game-case">
         <div class="container">
           <div class="answer-case__eyebrow">
             <span class="answer-case__index">03</span>
-            <span>小游戏生态补全 · Vibe Coding 全流程</span>
+            <span>文化消费新形式探索 · AI 全链路生产</span>
           </div>
           <div class="answer-case__title-row">
             <div>
               <h2>诗词小游戏开发</h2>
-              <p>用诗词资产创造"边玩边消费"的游戏新场景，让文化内容转译为可博弈、可收集、可循环的长线玩法。</p>
+              <p>把单纯视频观看拓展为互动式 IP 消费——让文化真正融入玩法、关卡规则。</p>
             </div>
             <div class="answer-case__headline">
-              <b>开发完成</b>
-              <span>待上线验证</span>
+              <b>AI 全链路</b>
+              <span>素材 · 动画 · 代码 · 治理</span>
             </div>
           </div>
 
           <div class="answer-brief">
             <div class="answer-brief__item">
               <span>业务基础</span>
-              <p>央视频已有小游戏 100+，但大多复制商业小游戏，需要持续补充有平台辨识度的新玩法。</p>
+              <p>央视频已有成熟小游戏生态，站内<b>100+ 小游戏</b>；但大多复制商业小游戏，缺少有平台辨识度的新玩法。</p>
             </div>
             <div class="answer-brief__item">
               <span>用户窗口</span>
-              <p>暑期儿童/家庭用户活跃大，热赛事供给不足，小游戏消费进入阶段性峰谷，正是补全长线玩法的窗口。</p>
+              <p>暑期儿童/家庭活跃，热赛事供给不足阶段，正是补充长线互动内容的窗口期。</p>
             </div>
             <div class="answer-brief__item">
               <span>资源机会</span>
-              <p>诗词大会等传统文化内容已有大量用户基础，可承接"边玩边消费内容"的互动场景。</p>
+              <p>同时拥有<b>《中国诗词大会》</b>这类头部文化 IP，可承接"边玩边消费内容"的互动场景。</p>
+            </div>
+          </div>
+
+          <!-- 8 张游戏截图 · 2x4 grid -->
+          <div class="game-screens-8">
+            <div class="framework-head">
+              <span>PRODUCT SCREENS · 8 张关键截图</span>
+              <h3>从卷·李白到诗词山河：从"内容被看见"到"内容被游玩"</h3>
+              <p>核心玩法循环：选字兵 → 章节路径 → 守护关 → 通关奖励 → 诗人详情 → 星空图 → 真实地名地图。</p>
+            </div>
+            <div class="game-screens-8__grid">
+              <figure>
+                <img src="assets/tx-poetry-poets.jpg" alt="山河行 · 6 卷诗人" loading="lazy" />
+                <figcaption><b>01 山河行</b> · 6 卷诗人入口<br/>短按选卷</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/tx-poetry-chapter.png" alt="卷·李白 章节路径" loading="lazy" />
+                <figcaption><b>02 卷·李白</b> · 章节路径<br/>1-6 关可挑战关卡</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/tx-poetry-deploy.png" alt="第8关选字兵阵" loading="lazy" />
+                <figcaption><b>03 选字兵</b> · 战前布阵<br/>砚/引/盾/雷/弩/压/追/电</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/tx-poetry-battle.jpg" alt="第2关第2波战斗" loading="lazy" />
+                <figcaption><b>04 战斗</b> · 实机回合<br/>李白《峨眉山月歌》第2/4波</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/tx-poetry-success.png" alt="保护成功通关页" loading="lazy" />
+                <figcaption><b>05 通关</b> · 三星达成<br/>习诗词 + 下一关</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/tx-poetry-zodiac.png" alt="诗星阁星座图" loading="lazy" />
+                <figcaption><b>06 诗星阁</b> · 星座视角<br/>朱砂红/天青/东方既白/秋春色/暮山紫</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/tx-poetry-poet-card.jpg" alt="陆游诗人详情卡" loading="lazy" />
+                <figcaption><b>07 诗人详情</b> · 陆游<br/>六维能力雷达 + 代表作</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/tx-poetry-map.jpg" alt="诗词山河真实地图" loading="lazy" />
+                <figcaption><b>08 诗词山河</b> · 真实地名<br/>白帝城 / 峨眉山 / 襄阳 / 长安</figcaption>
+              </figure>
             </div>
           </div>
 
@@ -504,7 +594,7 @@
               <article>
                 <span>挑战 01</span>
                 <b>避免玩法贴皮</b>
-                <p>需要真正做到符合平台调性，让文化内容与玩法双向驱动，而不是把诗词塞进通用框架。</p>
+                <p>100+ 小游戏里大多是商业玩法套壳——需要做到符合平台调性，<b>让文化内容与玩法双向驱动</b>，而不是把诗词塞进通用框架。</p>
               </article>
               <article>
                 <span>挑战 02</span>
@@ -529,94 +619,60 @@
               <i>·</i>
               <div><span>校验迭代</span><b>AI 出素材/代码/动画 + 人工审核</b></div>
             </div>
+            <p class="framework-conclusion">项目全链路由我推进，AI 辅助素材、动画与开发，<b>让文化真正融入玩法、关卡规则</b>，跑通从创意到可玩 Demo 的完整流程。</p>
           </div>
 
-          <div class="answer-loop-diagram" aria-label="诗魂对弈核心玩法循环">
-            <div><span>1</span><b>策略对弈</b><small>诗句组合出招</small></div>
+          <div class="answer-loop-diagram" aria-label="诗词游戏核心循环">
+            <div><span>1</span><b>选字布阵</b><small>8 字兵可选</small></div>
             <i>→</i>
-            <div><span>2</span><b>抽卡获得</b><small>双卡池控制供给</small></div>
+            <div><span>2</span><b>守护回合</b><small>字兵自动攻击</small></div>
             <i>→</i>
-            <div><span>3</span><b>收藏成就</b><small>177 首 + 30 项成就</small></div>
+            <div><span>3</span><b>通关领奖</b><small>三星成就</small></div>
             <i>→</i>
-            <div><span>4</span><b>分解养成</b><small>资源自给自足</small></div>
+            <div><span>4</span><b>诗人/山河</b><small>长期探索</small></div>
           </div>
 
-          <div class="answer-split">
-            <div class="answer-poetry-grid">
-              <figure>
-                <img src="assets/tx-poetry-battle.png" alt="诗魂对弈卡牌战斗" loading="lazy" />
-                <figcaption>核心玩法 · 卡牌策略对弈</figcaption>
-              </figure>
-              <figure>
-                <img src="assets/tx-poetry-map.png" alt="诗词山河收藏馆" loading="lazy" />
-                <figcaption>留存体系 · 诗词收藏馆</figcaption>
-              </figure>
-              <figure>
-                <img src="assets/tx-poetry-wordgame.png" alt="诗魂对弈寻花令" loading="lazy" />
-                <figcaption>玩法拓展 · 寻花令</figcaption>
-              </figure>
+          <div class="answer-contribution answer-contribution--ai answer-contribution--stacked">
+            <div>
+              <span class="answer-contribution__label">DATA · 资源占用</span>
+              <p>从玩法设计到可玩产品，由我独立闭环。<b>零占研发排期</b>。+20% 是上线后验证目标——目前待上线，未作为已实现留存。</p>
             </div>
-            <div class="answer-evidence">
-              <div class="answer-evidence__item">
-                <b>177 首</b>
-                <span>诗词收藏馆</span>
-                <p>把内容资产变成持续收集目标。</p>
-              </div>
-              <div class="answer-evidence__item">
-                <b>30 项</b>
-                <span>成就体系</span>
-                <p>为长期目标提供阶段性反馈。</p>
-              </div>
-              <div class="answer-evidence__item">
-                <b>零占用</b>
-                <span>研发排期</span>
-                <p>从玩法设计到可玩产品由我独立闭环。</p>
-              </div>
-              <div class="answer-evidence__item answer-evidence__item--target">
-                <b>+20%</b>
-                <span>上线后验证目标</span>
-                <p>留存较休闲游戏提升目标，明确标注为目标。</p>
-              </div>
-              <div class="answer-contribution answer-contribution--stacked answer-contribution--ai">
-                <div>
-                  <span class="answer-contribution__label">AI 使用思考</span>
-                  <p><b>AI 能显著降低开发门槛，但不能替代玩法与经济系统判断。</b>我先定义卡牌循环、留存目标、资源产消和内容边界，再用 AI 完成代码实现与快速调试，最终把抽象玩法文档变成可直接验收的产品。</p>
-                </div>
-              </div>
-              <div class="ai-case-mini">
-                <div><span>产品负责</span><b>品类判断、玩法循环、经济系统、文化内容准确性</b></div>
-                <div><span>AI 负责</span><b>代码搭建、界面实现、快速调试与低成本试错</b></div>
-              </div>
-              <a class="link-btn" href="https://aibox.yangshipin.cn/tx/1212/" target="_blank" rel="noopener">体验诗词小游戏 ↗</a>
+            <div class="answer-contribution__principle">
+              <span>我设计的人机分工</span>
+              <b>AI 生成视觉素材、代码实现、动画调试；我负责卡牌循环、关卡难度、字兵数值与文化准确性验收。</b>
             </div>
           </div>
 
+          <a class="link-btn link-btn--center" href="https://aibox.yangshipin.cn/tx/1212/" target="_blank" rel="noopener">体验诗词小游戏 ↗</a>
+
+          <!-- 沉淀 · AI 连续变更治理 -->
           <div class="change-governance">
             <div class="change-governance__intro">
               <span>DEEP DIVE · 沉淀成长 03</span>
-              <h3>从会调用 AI，到治理 AI 的连续变更</h3>
-              <p>局部完成 ≠ 整体成立。连续迭代中最危险的不是代码报错，而是规则冲突、状态遗漏和"完成度幻觉"——代码能运行，产品状态却不闭环。根因是 AI 只对本轮指令负责，不会主动持有全局规则。</p>
+              <h3>小游戏开发也让我更具体地看到了 AI 的能力边界</h3>
+              <p>AI 单轮指令可以完成得很好，但容易产生<b>局部完成度幻觉</b>：单看每一轮输出没问题，多轮迭代后旧规则被覆盖、边界场景缺失，造成整体逻辑失真。<b>根因</b>是 AI 只对本轮指令负责，不会主动持有全局规则。</p>
               <div class="contract-example">
-                <span>行为契约示例</span>
+                <span>行为契约示例（Given—When—Then）</span>
                 <code>Given 玩家有 50 阳光<br>When 放置豌豆射手<br>Then 消耗阳光并生成植物</code>
               </div>
             </div>
             <div class="change-governance__steps">
-              <article><span>01</span><h4>立约</h4><p>把自然语言需求转为 Given—When—Then 行为契约，先消除规则歧义。</p></article>
-              <article><span>02</span><h4>反审</h4><p>主动设计失败和边界用例：资源不足、格子占用、状态冲突时如何处理。</p></article>
-              <article><span>03</span><h4>实现</h4><p>裁决后只让 AI 修改最小代码范围，控制变更半径，避免牵连全局。</p></article>
-              <article><span>04</span><h4>回译</h4><p>从成品反推实际规则，与原始契约比对，发现 AI 是否悄悄改变全局逻辑。</p></article>
+              <article><span>01</span><h4>立约</h4><p>开发前用 Given—When—Then 定义行为契约，把自然语言需求转为可验收规则，先消除规则歧义。</p></article>
+              <article><span>02</span><h4>反审</h4><p>梳理边界条件与失败用例：资源不足、格子占用、状态冲突时如何处理。</p></article>
+              <article><span>03</span><h4>实现</h4><p>发生规则冲突由产品明确取舍优先级；只让 AI 修改最小代码范围，控制变更半径。</p></article>
+              <article><span>04</span><h4>回译</h4><p>用成品反向校验业务初始规则——发现 AI 是否悄悄改变全局逻辑。</p></article>
             </div>
           </div>
           <div class="governance-conclusion">
             <b>从"会调用 AI"升级到"能治理 AI 的连续变更"</b>
             <span>定义验收标准 · 裁决规则冲突 · 控制变更范围 · 验证状态闭环</span>
-            <p>Demo 能证明方案可实现，但不能证明用户需求和业务增量；它是决策对象，不是最终作品。验收标准 = 正常路径 + 边界条件 + 异常反馈。</p>
+            <p><b>局部完成 ≠ 整体成立</b>。Demo 能证明方案可实现，但不能证明用户需求和业务增量；它是决策对象，不是最终作品。验收标准 = 正常路径 + 边界条件 + 异常反馈。</p>
           </div>
         </div>
       </section>
     </div>
 
+    <!-- ============================== 增长底座 ============================== -->
     <section class="growth-foundation" id="growth-foundation">
       <div class="container">
         <div class="section-head">
@@ -649,6 +705,7 @@
       </div>
     </section>
 
+    <!-- ============================== 个人赋能 ============================== -->
     <section class="personal-ai-value">
       <div class="container">
         <div class="section-head">
@@ -664,6 +721,7 @@
       </div>
     </section>
 
+    <!-- ============================== REFLECTION + PLAN ============================== -->
     <section class="answer-method" id="method">
       <div class="container">
         <div class="section-head">

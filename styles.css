@@ -4595,6 +4595,8 @@ button {
   object-position: 50% 25%;
   background: #f5f5f4;
 }
+/* 抖音图右移露出点赞量 */
+.hobby-doublephones a:nth-child(2) img { object-position: 100% 25%; }
 .hobby-phone__caption {
   padding: 7px 10px;
   font-size: 11px;
@@ -4721,6 +4723,120 @@ button {
   font-weight: 700;
   font-family: 'Inter', sans-serif;
   letter-spacing: 0.04em;
+}
+
+/* ============== hobby 02 · 3痛点 × 3 AI 解法矩阵 ============== */
+.hobby-matrix {
+  background: #fff;
+  border: 1.5px solid #0a0a0a;
+  border-radius: 12px;
+  padding: 14px 16px 12px;
+  margin-top: 2px;
+}
+.hobby-matrix__head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #0a0a0a40;
+  margin-bottom: 8px;
+}
+.hobby-matrix__eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #0a0a0a;
+  background: #f7e653;
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-family: 'Inter', monospace;
+}
+.hobby-matrix__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0a0a0a;
+  line-height: 1.35;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+.hobby-matrix__title span {
+  background: linear-gradient(180deg, transparent 70%, #f7e65388 70%);
+  padding: 0 2px;
+}
+.hobby-matrix__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.hobby-matrix__row {
+  display: grid;
+  grid-template-columns: 32px 1fr 18px 1fr;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 4px;
+  border-radius: 7px;
+  background: #fafafa;
+  transition: background .15s ease;
+}
+.hobby-matrix__row:hover { background: #f5f4ef; }
+.hobby-matrix__row:nth-child(2) { background: #f5f4ef; }
+.hobby-matrix__pain {
+  font-family: 'Inter', monospace;
+  font-weight: 800;
+  font-size: 13px;
+  background: #0a0a0a;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 0;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+.hobby-matrix__painText {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  font-size: 12px;
+  color: #525252;
+  line-height: 1.4;
+}
+.hobby-matrix__painText b {
+  font-size: 13px;
+  color: #0a0a0a;
+  font-weight: 700;
+}
+.hobby-matrix__cross {
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 800;
+  color: #0a0a0a;
+  text-align: center;
+  opacity: 0.5;
+}
+.hobby-matrix__solText {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  font-size: 12px;
+  color: #525252;
+  line-height: 1.4;
+}
+.hobby-matrix__solText b {
+  font-size: 13px;
+  color: #0a0a0a;
+  font-weight: 700;
+}
+@media (max-width: 880px) {
+  .hobby-matrix__row {
+    grid-template-columns: 26px 1fr 14px 1fr;
+    gap: 6px;
+  }
+  .hobby-matrix__pain, .hobby-matrix__cross {
+    font-size: 11px;
+  }
+  .hobby-matrix__painText b, .hobby-matrix__solText b {
+    font-size: 12px;
+  }
 }
 
 /* ============== hobby 03 · AVG 大截图 + 角标 ============== */
@@ -4874,4 +4990,383 @@ button {
   cursor: pointer;
   transition: transform .2s ease;
 }
+
+/* ============== 业务框架图（FR·02）============== */
+.business-framework {
+  padding: 72px 0 56px;
+  background: linear-gradient(180deg, var(--color-soft, #f6f5f1) 0%, #fff 100%);
+  border-top: 1px dashed #0a0a0a40;
+  border-bottom: 1px dashed #0a0a0a40;
+}
+.business-framework__poster {
+  margin: 28px 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  border: 1.5px solid #0a0a0a;
+  position: relative;
+  box-shadow: 0 14px 40px -24px rgba(0,0,0,.18);
+}
+.business-framework__poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.business-framework__caption {
+  padding: 18px 24px;
+  background: #fff;
+  border-top: 1px solid #0a0a0a20;
+}
+.business-framework__caption span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #0a0a0a;
+  background: #f7e653;
+  padding: 3px 7px;
+  border-radius: 3px;
+  font-family: 'Inter', monospace;
+}
+.business-framework__caption p {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: #525252;
+  line-height: 1.6;
+}
+.business-framework__channels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 28px;
+}
+.business-framework__channels article {
+  background: #fff;
+  border: 1.5px solid #0a0a0a;
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+.business-framework__channels article span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #6b6b66;
+  text-transform: uppercase;
+}
+.business-framework__channels article b {
+  display: block;
+  margin: 6px 0 6px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #0a0a0a;
+  letter-spacing: 0.01em;
+}
+.business-framework__channels article p {
+  margin: 0;
+  font-size: 13px;
+  color: #525252;
+  line-height: 1.55;
+}
+.business-framework__channels article b + p b {
+  display: inline;
+  color: #0a0a0a;
+  font-weight: 700;
+}
+@media (max-width: 880px) {
+  .business-framework__channels { grid-template-columns: 1fr; }
+}
+
+/* ============== 搜索 · 改造前/后 ============== */
+.search-before-after {
+  margin: 36px 0;
+  padding: 28px 28px 24px;
+  background: #fff;
+  border: 1.5px solid #0a0a0a;
+  border-radius: 16px;
+}
+.search-before-after__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 18px;
+}
+.search-before-after__grid figure {
+  margin: 0;
+}
+.search-before-after__grid figure img {
+  display: block;
+  width: 100%;
+  height: 580px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 10px;
+  border: 1px solid #0a0a0a30;
+  background: #f5f5f4;
+}
+.search-before-after__after img { border: 2px solid #e11d48 !important; }
+.search-before-after__grid figcaption {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #525252;
+  line-height: 1.55;
+}
+.search-before-after__grid figcaption b {
+  color: #0a0a0a;
+  font-weight: 800;
+  font-family: 'Inter', monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+.search-before-after__after figcaption b {
+  color: #e11d48;
+}
+@media (max-width: 880px) {
+  .search-before-after__grid { grid-template-columns: 1fr; }
+  .search-before-after__grid figure img { height: 480px; }
+}
+
+/* ============== 搜索 · 数据看板 ============== */
+.search-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  margin: 24px 0;
+}
+.search-dashboard__block {
+  background: #fff;
+  border: 1.5px solid #0a0a0a;
+  border-radius: 14px;
+  padding: 18px 20px 20px;
+}
+.search-dashboard__block .framework-head {
+  margin-bottom: 14px;
+}
+.search-dashboard__block .framework-head h4 {
+  font-size: 15px;
+  margin: 2px 0 2px;
+  font-weight: 700;
+  color: #0a0a0a;
+}
+.search-dashboard__block .framework-head p {
+  font-size: 12px;
+  color: #6b6b66;
+  margin: 0;
+  line-height: 1.5;
+}
+.search-dashboard__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.search-dashboard__grid > div {
+  padding: 10px 12px 10px;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #0a0a0a15;
+}
+.search-dashboard__grid b {
+  display: block;
+  font-family: 'Inter', monospace;
+  font-size: 18px;
+  font-weight: 800;
+  color: #0a0a0a;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.search-dashboard__grid span {
+  display: block;
+  font-size: 11px;
+  color: #525252;
+  margin-top: 3px;
+}
+.search-dashboard__grid small {
+  display: block;
+  font-size: 10px;
+  color: #6b6b66;
+  margin-top: 2px;
+  font-family: 'Inter', monospace;
+}
+.search-dashboard__block--strong {
+  background: linear-gradient(160deg, #0a0a0a 0%, #1f2937 100%);
+  color: #fff;
+  border-color: #0a0a0a;
+}
+.search-dashboard__block--strong .framework-head h4,
+.search-dashboard__block--strong .framework-head p { color: #fff; }
+.search-dashboard__block--strong .framework-head span {
+  color: #fff;
+  background: #f7e653;
+  color: #0a0a0a;
+}
+.search-dashboard__block--strong .search-dashboard__grid > div {
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.1);
+}
+.search-dashboard__block--strong .search-dashboard__grid b {
+  color: #f7e653;
+}
+.search-dashboard__block--strong .search-dashboard__grid span,
+.search-dashboard__block--strong .search-dashboard__grid small { color: #c5c5c5; }
+@media (max-width: 880px) {
+  .search-dashboard { grid-template-columns: 1fr; }
+}
+
+/* 试点结果截图 */
+.search-dashboard__figure {
+  margin: 18px 0 8px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e4e2dc;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(10,10,10,.06);
+}
+.search-dashboard__figure img {
+  display: block;
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: 1px solid #eeece5;
+}
+.search-dashboard__figure figcaption {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #6b6a66;
+  text-align: center;
+}
+.search-dashboard__figure figcaption b {
+  color: #0a0a0a;
+}
+
+/* ============== 运营后台 4 张图 ============== */
+.admin-screens {
+  margin: 36px 0;
+  padding: 28px;
+  background: var(--color-soft, #f6f5f1);
+  border: 1.5px dashed #0a0a0a;
+  border-radius: 16px;
+}
+.admin-screens__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 20px;
+}
+.admin-screens__grid figure {
+  margin: 0;
+  background: #fff;
+  border: 1px solid #0a0a0a30;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.admin-screens__grid figure img {
+  display: block;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: top center;
+}
+.admin-screens__grid figcaption {
+  padding: 12px 16px 14px;
+  font-size: 12.5px;
+  color: #525252;
+  line-height: 1.55;
+  border-top: 1px solid #0a0a0a15;
+}
+.admin-screens__grid figcaption b {
+  color: #0a0a0a;
+  font-weight: 800;
+  font-family: 'Inter', monospace;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  display: block;
+  margin-bottom: 4px;
+}
+@media (max-width: 880px) {
+  .admin-screens__grid { grid-template-columns: 1fr; }
+}
+
+/* ============== 诗词游戏 8 张截图 ============== */
+.game-screens-8 {
+  margin: 36px 0;
+  padding: 28px;
+  background: linear-gradient(160deg, #0a0a0a 0%, #1f2937 100%);
+  color: #fff;
+  border-radius: 16px;
+}
+.game-screens-8 .framework-head span {
+  background: #f7e653;
+  color: #0a0a0a;
+}
+.game-screens-8 .framework-head h3 { color: #fff; }
+.game-screens-8 .framework-head p { color: #c5c5c5; }
+.game-screens-8__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 20px;
+}
+.game-screens-8__grid figure {
+  margin: 0;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.game-screens-8__grid figure img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 19;
+  object-fit: cover;
+  background: #f5f5f4;
+}
+.game-screens-8__grid figcaption {
+  padding: 10px 12px;
+  font-size: 11.5px;
+  color: #0a0a0a;
+  line-height: 1.45;
+  border-top: 1px solid #0a0a0a15;
+}
+.game-screens-8__grid figcaption b {
+  color: #0a0a0a;
+  font-weight: 800;
+  font-family: 'Inter', monospace;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  display: block;
+  margin-bottom: 3px;
+}
+@media (max-width: 880px) {
+  .game-screens-8__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 540px) {
+  .game-screens-8__grid { grid-template-columns: 1fr; }
+}
+
+/* ============== AI choice note ============== */
+.ai-choice__note {
+  margin-top: 14px;
+  padding: 12px 16px;
+  background: #fff;
+  border: 1px solid #0a0a0a30;
+  border-left: 4px solid #f7e653;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #0a0a0a;
+  line-height: 1.6;
+}
+.ai-choice__note b {
+  font-weight: 800;
+  color: #0a0a0a;
+  background: linear-gradient(180deg, transparent 70%, #f7e65388 70%);
+  padding: 0 2px;
+}
+
+/* ============== link-btn center ============== */
+.link-btn--center {
+  display: block;
+  margin: 36px auto 16px;
+  text-align: center;
+  max-width: 320px;
+}
+
 .pixel-dog:hover { transform: translateY(-3px) rotate(-4deg); }
