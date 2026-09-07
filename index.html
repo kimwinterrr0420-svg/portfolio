@@ -55,24 +55,26 @@
 
         <div class="hero-greeting">
           <span class="wave">👋</span>
-          <span>Hi, I'm winterduan, an aspiring</span>
+          <span>你好，我是</span>
         </div>
 
-        <h1 class="hero-title">
-          <span class="line-solid">AI PRODUCT</span>
-          <span class="line-outline">MANAGER</span>
-        </h1>
+        <h1 class="hero-name">段雨萱</h1>
+        <div class="hero-name-en">Xinran 'Winter' Duan</div>
 
-        <div class="hero-stage">
-          <div class="stage-side">
-            <strong>CURRENTLY</strong>
-            <div class="desc">腾讯 PCG · 在线视频 BU<br/>融媒体项目中心 · 推荐组<br/>AI 产品化实践 · 答辩进行中</div>
-          </div>
+        <div class="hero-subtitle">
+          <span class="hero-tag">AI 产品经理</span>
+          <i>·</i>
+          <span>武汉大学 · 金融硕士在读</span>
+          <i>·</i>
+          <span>前腾讯 / 百度 / 美团 / 京东 实习</span>
+        </div>
 
+        <div class="hero-stage hero-stage--two">
           <div class="hero-illust">
-            <div class="signature">段雨萱</div>
-            <div class="signature-en">Winter · Duan</div>
-            <div class="signature-tag">Vibe Coding · PM</div>
+            <div class="hero-portrait" id="hero-portrait">
+              <span class="hero-portrait__hint">证件照占位</span>
+            </div>
+            <div class="hero-portrait__tag">Vibe Coding · PM</div>
           </div>
 
           <div class="stage-side stage-right">
@@ -96,10 +98,10 @@
 
         <div class="hero-actions">
           <a class="btn btn--primary" href="./assets/resume.pdf" download>
-            <span>View résumé</span>
+            <span>查看简历</span>
             <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 8l4 4 4-4M3 14h10"/></svg>
           </a>
-          <a class="btn btn--ghost" href="#contact">Contact me</a>
+          <a class="btn btn--ghost" href="#contact">联系我</a>
         </div>
 
       </div>
@@ -138,7 +140,7 @@
 
             <p>我学的是金融，做的是产品，相信两件事可以叠加：金融学训练出的结构化思维 × 产品经理的判断力，能让我把模糊的需求变成可落地的方案。</p>
 
-            <p class="small">业余时间喜欢跑步、追剧、看 AI 论文、写公众号。目标是成为一个<strong>「用 AI 放大判断力」</strong>的产品经理。</p>
+            <p class="small">业余时间喜欢跑步、追剧、看 AI 论文，写公众号（根据爱好更新）。目标是成为一个<strong>「用 AI 放大判断力」</strong>的产品经理。</p>
 
             <div class="edu-line">
               <h4>教育经历 · EDUCATION</h4>
@@ -148,6 +150,8 @@
                   <div class="edu-step__body">
                     <span class="edu-step__name">武汉大学 · 金融学 本科</span>
                     <span class="edu-step__meta">2021 — 2025 · 经管学院</span>
+                    <span class="edu-step__meta edu-step__meta--accent">GPA 3.85 / 4.0 · 综排 3 / 93</span>
+                    <span class="edu-step__meta edu-step__meta--honor">校级优秀学生干部 · 校级三好学生 · 一等奖学金 · 三项国家级竞赛</span>
                   </div>
                 </div>
                 <span class="edu-arrow">→</span>
@@ -155,7 +159,7 @@
                   <img class="edu-step__logo" src="./assets/whu-logo.png" alt="武汉大学" />
                   <div class="edu-step__body">
                     <span class="edu-step__name">武汉大学 · 金融学 硕士</span>
-                    <span class="edu-step__meta">2025 — 2027 · GPA 3.85 / 4.0</span>
+                    <span class="edu-step__meta">2025 — 2027 · 金融学</span>
                   </div>
                 </div>
               </div>
@@ -171,7 +175,7 @@
         <div class="section-head">
           <span class="section-num">02 · INTERNSHIPS</span>
           <h2 class="section-title">实习路线图 <em>internship trail</em></h2>
-          <p class="section-sub">四家公司，两座城市——走过一条蛇形路径</p>
+          <p class="section-sub">从 2024 到 2026，四段实习串成一条「AI 产品化」的成长曲线</p>
         </div>
 
         <div class="internship-window">
@@ -374,45 +378,144 @@
 
         </div>
       </div>
-    </section><!-- ============== WORKS ============== -->
+    </section>
+
+    <!-- ============== FEATURED PROJECT ENTRIES ============== -->
+    <section class="intern-project-entries">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">02.1 · FEATURED</span>
+          <h2 class="section-title">详细项目入口 <em>featured projects</em></h2>
+          <p class="section-sub">两个最完整的项目详细拆解 — 业务背景、机制设计、数据验证、思考沉淀</p>
+        </div>
+
+        <div class="intern-project-grid">
+
+          <a class="intern-project-card" href="./project-finscope.html">
+            <div class="intern-project-card__head">
+              <img src="./assets/logo-baidu.png" alt="百度" />
+              <span>百度 · MEG 搜索产品部</span>
+            </div>
+            <h3>Finscope 金融智能体</h3>
+            <p>从意图识别、多模态升级到 AI 选股三阶段，把 Agent 从能力优化推到核心场景。</p>
+            <ul class="intern-project-card__metrics">
+              <li><b>1w → 5w+</b><span>日均分发</span></li>
+              <li><b>+30%</b><span>AI 选股 PV</span></li>
+              <li><b>80%</b><span>核心场景覆盖</span></li>
+            </ul>
+            <div class="intern-project-card__cta">
+              打开项目详情
+              <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </div>
+          </a>
+
+          <a class="intern-project-card" href="./project-yangshipin.html">
+            <div class="intern-project-card__head">
+              <img src="./assets/logo-tencent.png" alt="腾讯" />
+              <span>腾讯 · PCG 在线视频 BU</span>
+            </div>
+            <h3>央视频搜推全链路</h3>
+            <p>从运动员搜索的主题化聚合、摇一摇推剧的长尾分发，到诗词小游戏的 AI 全链路生产。</p>
+            <ul class="intern-project-card__metrics">
+              <li><b>+36% / +27%</b><span>搜索点击 / UV</span></li>
+              <li><b>22.64%</b><span>推剧播放转化</span></li>
+              <li><b>50.8%</b><span>聚合卡点击占比</span></li>
+            </ul>
+            <div class="intern-project-card__cta">
+              打开项目详情
+              <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== WORKS ============== -->
     <section id="works" class="works-rich">
       <div class="container">
         <div class="section-head">
           <span class="section-num">03 · WORKS</span>
           <h2 class="section-title">个人作品 <em>Projects</em></h2>
-          <p class="section-sub">独立完成的 Vibe Coding 作品 + 实习期间沉淀的项目</p>
+          <p class="section-sub">独立 Vibe Coding 作品 + 实习三个央视频项目 + 一段文游操盘经历</p>
         </div>
 
-        <div class="works-grid">
+        <div class="works-rail">
+          <button class="works-rail__nav works-rail__nav--prev" aria-label="向左">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+          </button>
+          <div class="works-rail__track" id="works-rail">
 
-          <a class="work-tile" href="./project-novel.html">
-            <div class="work-tile__img">
-              <img src="./assets/novel-shelf.png" alt="小说英语学习" loading="lazy" />
-            </div>
-            <span class="work-tile__tag">VIBE CODING · 独立作品</span>
-            <h3 class="work-tile__title">小说英语学习</h3>
-            <p class="work-tile__desc">自由导入英文小说、段落级双语互译、4 套分级词库、个人词本。完整跑通「立项 → 建模 → UI → 评测 → 部署」全部环节。</p>
-          </a>
+            <a class="work-tile work-tile--rail" href="./project-novel.html">
+              <div class="work-tile__img">
+                <img src="./assets/novel-shelf.png" alt="小说英语学习" loading="lazy" />
+              </div>
+              <span class="work-tile__tag">VIBE CODING · 独立作品</span>
+              <h3 class="work-tile__title">小说英语学习</h3>
+              <p class="work-tile__desc">自由导入英文小说、段落级双语互译、4 套分级词库、个人词本。完整跑通「立项 → 建模 → UI → 评测 → 部署」全部环节。</p>
+              <div class="work-tile__foot"><span>打开作品</span><i>↗</i></div>
+            </a>
 
-          <a class="work-tile" href="./project-finscope.html">
-            <div class="work-tile__img">
-              <img src="./assets/finscope-home.png" alt="Finscope 金融智能体" loading="lazy" />
-            </div>
-            <span class="work-tile__tag">实习项目 · 百度</span>
-            <h3 class="work-tile__title">Finscope 金融智能体</h3>
-            <p class="work-tile__desc">看懂行情、能选股、能复盘的金融 Agent。日均分发 1w → 5w+，AI 选股 PV +30%。</p>
-          </a>
+            <a class="work-tile work-tile--rail" href="./project-finscope.html">
+              <div class="work-tile__img">
+                <img src="./assets/finscope-home.png" alt="Finscope 金融智能体" loading="lazy" />
+              </div>
+              <span class="work-tile__tag">实习项目 · 百度</span>
+              <h3 class="work-tile__title">Finscope 金融智能体</h3>
+              <p class="work-tile__desc">看懂行情、能选股、能复盘的金融 Agent。日均分发 1w → 5w+，AI 选股 PV +30%。</p>
+              <div class="work-tile__foot"><span>打开项目</span><i>↗</i></div>
+            </a>
 
-          <a class="work-tile" href="./project-yangshipin.html">
-            <div class="work-tile__img">
-              <img src="./assets/tx-shake-home.png" alt="央视频搜推全链路" loading="lazy" />
-            </div>
-            <span class="work-tile__tag">实习项目 · 腾讯</span>
-            <h3 class="work-tile__title">央视频搜推全链路</h3>
-            <p class="work-tile__desc">从运动员搜索的语义召回，到摇一摇推剧，到诗词小游戏 AI 化生产，把 AI 当一个业务方来管理。</p>
-          </a>
+            <a class="work-tile work-tile--rail" href="./project-yangshipin.html#search-case">
+              <div class="work-tile__img">
+                <img src="./assets/tx-search-after.jpg" alt="运动员搜索优化" loading="lazy" />
+              </div>
+              <span class="work-tile__tag">实习项目 · 腾讯 · 01</span>
+              <h3 class="work-tile__title">运动员搜索优化</h3>
+              <p class="work-tile__desc">用 AI-Native 工作流做主题化看点聚合。试点点击 +36%、UV +27%，聚合卡点击占比 50.8%。</p>
+              <div class="work-tile__foot"><span>打开项目</span><i>↗</i></div>
+            </a>
 
+            <a class="work-tile work-tile--rail" href="./project-yangshipin.html#shake-case">
+              <div class="work-tile__img">
+                <img src="./assets/tx-shake-home.png" alt="摇一摇推剧" loading="lazy" />
+              </div>
+              <span class="work-tile__tag">实习项目 · 腾讯 · 02</span>
+              <h3 class="work-tile__title">摇一摇推剧小应用</h3>
+              <p class="work-tile__desc">盲盒式种草 + 情绪场景标签 + 旁路探索通道，唤醒沉睡长尾。22.64% 播放转化，2w+ 用户。</p>
+              <div class="work-tile__foot"><span>打开项目</span><i>↗</i></div>
+            </a>
+
+            <a class="work-tile work-tile--rail" href="./project-yangshipin.html#game-case">
+              <div class="work-tile__img">
+                <img src="./assets/tx-poetry-poets.jpg" alt="诗词小游戏" loading="lazy" />
+              </div>
+              <span class="work-tile__tag">实习项目 · 腾讯 · 03</span>
+              <h3 class="work-tile__title">诗词小游戏</h3>
+              <p class="work-tile__desc">诗词 + 策略战斗 + 收集驱动。日均 UV 1k+，留存 40%+。200+ 诗词收藏馆 + 诗人百科 + Roguelike 玩法矩阵。</p>
+              <div class="work-tile__foot"><span>打开项目</span><i>↗</i></div>
+            </a>
+
+            <a class="work-tile work-tile--rail work-tile--text" href="javascript:void(0)">
+              <div class="work-tile__textart">
+                <div class="work-tile__textart-cn">易次元 · 文游</div>
+                <div class="work-tile__textart-en">NETEASE · 163 · AVG</div>
+                <div class="work-tile__textart-fig">300w+</div>
+                <div class="work-tile__textart-cap">用户好评 / 站外衍生内容浏览量百万级 / DAU +300%</div>
+              </div>
+              <span class="work-tile__tag">商业项目 · 网易</span>
+              <h3 class="work-tile__title">女性向文游全流程操盘</h3>
+              <p class="work-tile__desc">统筹女性向 AVG 文游产品：资源采购 / 剧情创作 / 玩法设计 / UI 交互。300w+ 用户好评，DAU 提升 300%。</p>
+              <div class="work-tile__foot"><span>一段故事的起点</span><i>·</i></div>
+            </a>
+
+          </div>
+          <button class="works-rail__nav works-rail__nav--next" aria-label="向右">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
         </div>
+
+        <p class="works-rail__hint">← 左右滑动查看 6 个项目 · 鼠标滚轮也可横滚 →</p>
       </div>
     </section>
 
@@ -558,12 +661,12 @@
             <div class="hobby-card__body">
 
               <div class="hobby-illust">
-                <a class="hobby-calligraphy" href="javascript:void(0)" aria-label="楷书作品">
-                  <img src="./assets/me-calligraphy.png" alt="楷书临古作品" loading="lazy" />
+                <a class="hobby-calligraphy" href="javascript:void(0)" aria-label="苏轼《水调歌头》">
+                  <img src="./assets/me-calligraphy.png" alt="苏轼《水调歌头》行书" loading="lazy" />
                   <div class="hobby-calligraphy__seal">置雪堂</div>
                 </a>
                 <div class="hobby-illust__caption">
-                  临《宣和书谱》<br/>— 楷书·欧体骨·褚体韵
+                  苏轼《水调歌头·明月几时有》<br/>— 行书·宋人笔意
                 </div>
               </div>
 
@@ -817,6 +920,24 @@
     }
     window.addEventListener('scroll', setActive, { passive: true });
     setActive();
+
+    // ===== 个人作品横滑：左右按钮 + 滚轮横滚 =====
+    (() => {
+      const track = document.getElementById('works-rail');
+      if (!track) return;
+      const prev = document.querySelector('.works-rail__nav--prev');
+      const next = document.querySelector('.works-rail__nav--next');
+      const step = () => Math.max(280, track.clientWidth * 0.7);
+      prev?.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+      next?.addEventListener('click', () => track.scrollBy({ left:  step(), behavior: 'smooth' }));
+      // 鼠标滚轮横滚（带竖向 delta 转横向）
+      track.addEventListener('wheel', (e) => {
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+          e.preventDefault();
+          track.scrollBy({ left: e.deltaY, behavior: 'auto' });
+        }
+      }, { passive: false });
+    })();
   </script>
 </body>
 </html>

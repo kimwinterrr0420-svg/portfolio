@@ -129,6 +129,33 @@
 
     <div class="answer-work" id="work">
 
+      <!-- ============================== 3 项目 sticky tab 切换 ============================== -->
+      <nav class="case-tabs" aria-label="项目切换">
+        <div class="container">
+          <div class="case-tabs__head">
+            <span class="case-tabs__eyebrow">央视频 · 3 PROJECTS</span>
+            <span class="case-tabs__hint">← 点击切换 / 滚动自动联动 →</span>
+          </div>
+          <div class="case-tabs__list">
+            <button class="case-tab is-active" data-target="search-case">
+              <span class="case-tab__num">01</span>
+              <span class="case-tab__name">运动员搜索优化</span>
+              <span class="case-tab__desc">主题化看点聚合</span>
+            </button>
+            <button class="case-tab" data-target="shake-case">
+              <span class="case-tab__num">02</span>
+              <span class="case-tab__name">摇一摇推剧</span>
+              <span class="case-tab__desc">长尾盲盒式种草</span>
+            </button>
+            <button class="case-tab" data-target="game-case">
+              <span class="case-tab__num">03</span>
+              <span class="case-tab__name">诗词小游戏</span>
+              <span class="case-tab__desc">文化内容游戏化</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+
       <!-- ============================== PROJECT 01 · 运动员搜索优化 ============================== -->
       <section class="answer-case" id="search-case">
         <div class="container">
@@ -790,5 +817,49 @@
       </div>
     </footer>
   </main>
+
+  <script>
+    // ===== 3 项目 sticky tab 切换 =====
+    (() => {
+      const tabs = document.querySelectorAll('.case-tab');
+      const cases = ['search-case', 'shake-case', 'game-case']
+        .map(id => document.getElementById(id))
+        .filter(Boolean);
+      if (!tabs.length || !cases.length) return;
+
+      function activate(id, fromClick) {
+        tabs.forEach(t => t.classList.toggle('is-active', t.dataset.target === id));
+        if (fromClick) {
+          const target = document.getElementById(id);
+          if (target) {
+            const offset = document.querySelector('.case-tabs')?.offsetHeight || 0;
+            const y = target.getBoundingClientRect().top + window.scrollY - offset - 12;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }
+      }
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => activate(tab.dataset.target, true));
+      });
+
+      // IntersectionObserver：当前 case 进入视口时高亮
+      const io = new IntersectionObserver((entries) => {
+        const visible = entries
+          .filter(e => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) activate(visible.target.id, false);
+      }, { rootMargin: '-30% 0px -55% 0px', threshold: [0.1, 0.4, 0.7] });
+      cases.forEach(c => io.observe(c));
+
+      // 初次进入页面带 hash 时，跳到对应 case
+      if (location.hash) {
+        const id = location.hash.replace('#', '');
+        if (cases.find(c => c.id === id)) {
+          setTimeout(() => activate(id, true), 80);
+        }
+      }
+    })();
+  </script>
 </body>
 </html>
