@@ -3581,21 +3581,21 @@ button {
   grid-template-columns: minmax(260px, 0.75fr) 1.25fr;
   gap: 34px;
   margin-top: 42px;
-  background: var(--color-text);
-  color: #fff;
-  border-color: var(--color-text);
+  background: #fff;
+  color: var(--color-text);
+  border-color: var(--color-border);
 }
 
 .change-governance__intro > span {
-  color: #B9A5F5;
+  color: #7A5AF8;
 }
 
 .change-governance__intro h3 {
-  color: #fff;
+  color: var(--color-text);
 }
 
 .change-governance__intro > p {
-  color: rgba(255,255,255,0.58);
+  color: var(--color-text-2);
   font-size: 13px;
   line-height: 1.75;
 }
@@ -3604,18 +3604,18 @@ button {
   margin-top: 22px;
   padding: 16px;
   border-radius: 9px;
-  background: rgba(255,255,255,0.07);
+  background: #F3F0FF;
 }
 
 .contract-example span {
   display: block;
   margin-bottom: 9px;
-  color: rgba(255,255,255,0.42);
+  color: var(--color-text-2);
   font-size: 10px;
 }
 
 .contract-example code {
-  color: #B9A5F5;
+  color: #6B4EE6;
   font-family: "SF Mono", "PingFang SC", monospace;
   font-size: 11px;
   line-height: 1.8;
@@ -3629,13 +3629,13 @@ button {
 
 .change-governance__steps article {
   padding: 18px;
-  border: 1px solid rgba(255,255,255,0.13);
+  border: 1px solid var(--color-border);
   border-radius: 9px;
-  background: rgba(255,255,255,0.045);
+  background: #FAFAF9;
 }
 
 .change-governance__steps article span {
-  color: #B9A5F5;
+  color: #7A5AF8;
   font-size: 10px;
   font-weight: 700;
 }
@@ -3643,10 +3643,11 @@ button {
 .change-governance__steps h4 {
   margin: 12px 0 8px;
   font-size: 16px;
+  color: var(--color-text);
 }
 
 .change-governance__steps p {
-  color: rgba(255,255,255,0.56);
+  color: var(--color-text-2);
   font-size: 12px;
   line-height: 1.65;
 }
